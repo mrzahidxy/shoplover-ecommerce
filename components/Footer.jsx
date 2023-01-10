@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <div className="bg-[#1B1B1B] text-white pt-20 pb-11">
       <div className="container grid grid-cols-3 gap-36">
-        <div className="space-y-9">
+        <div className="space-y-9 text-base font-normal">
           <div>
             <img src="/sl-logo-2.svg" alt="" />
           </div>
@@ -47,48 +47,48 @@ const Footer = () => {
         </div>
         <div className="flex gap-44">
           <div className="space-y-4">
-            <div className="font-bold text-size-[18px] ">INFORMATIONS</div>
+            <div className="font-bold text-lg ">INFORMATIONS</div>
             <div className="space-y-2">
               {Informations.map((i) => (
-                <div className="font-normal font-base">{i.name}</div>
+                <div className="font-normal text-base">{i.name}</div>
               ))}
             </div>
           </div>
           <div className="space-y-4">
-            <span className="font-bold text-size-[18px]">QUICK LINKS</span>
+            <span className="font-bold text-lg">QUICK LINKS</span>
             <div className="space-y-2">
               {links.map((l) => (
-                <div className="font-normal font-base">{l.name}</div>
+                <div className="font-normal text-base">{l.name}</div>
               ))}
             </div>
             <div>
-              <span>Be A Seller</span>
-              <div className="border border-primary w-36 py-3 mt-5 flex justify-center items-center">
-                <span className="font-bold font-size-[18-x]">Apply here</span>
+              <span className="text-lg font-bold">Be A Seller</span>
+              <div className="border border-primary rounded-md bg-black w-36 py-3 mt-5 flex justify-center items-center">
+                <span className="font-bold text-lg">Apply here</span>
               </div>
             </div>
           </div>
         </div>
         <div className="space-y-7">
-          <span className="font-bold text-size-[18px]">CONTACT</span>
+          <span className="font-bold text-lg">CONTACT</span>
           <div className="space-y-3">
             <div className="flex flex-col">
-              <span className="font-base font-bold">Address:</span>
-              <span>
+              <span className="text-base font-bold">Address:</span>
+              <span className="fonnt-base font-normal">
                 Corporate Office: Road no-1A, House No-32, Baridhara J Block,
                 Dhaka.
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="font-base font-bold">Phone:</span>
-              <span className="font-base font-normal">+880 9678-161161</span>
-              <span className="font-base font-normal">
+              <span className="text-base font-bold">Phone:</span>
+              <span className="text-base font-normal">+880 9678-161161</span>
+              <span className="text-base font-normal">
                 (Saturday to Thursday, 9:30 AM to 6:30 PM).
               </span>
             </div>
           </div>
           <div className="mt-6 space-y-5">
-            <span className="font-base font-normal italic">
+            <span className="text-base text-normal italic">
               Get the App Now for exiting offers.
             </span>
             <div className="flex gap-5">

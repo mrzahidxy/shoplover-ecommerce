@@ -8,12 +8,12 @@ module.exports = {
     screens: {
       sm: "390px",
       md: "744px",
-      lg: "1200px",
-      xl: "1600px",
+      lg: "1320px",
+      xl: "1620px",
     },
     container: {
       center: true,
-      // padding: "1rem",
+      padding: "2rem",
     },
     extend: {
       fontFamily: {},
