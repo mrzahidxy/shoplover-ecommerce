@@ -2,14 +2,14 @@ const Header = () => {
   return (
     <div className="bg-black h-[90px]">
       <div className="h-full mx-24 text-white flex items-center gap-9">
-        <div className="w-4/12 gap-9 flex justify-between">
+        <div className="w-4/12 gap-9 flex">
           <img src="/sl-logo.svg" alt="logo" />
           <div className="flex items-center space-x-1">
             <img
-              className="bg-[#ffffff21] rounded-full p-1 h-7"
+              className="bg-[#ffffff21] rounded-full p-1 h-7 "
               src="/home-icon.svg"
             />
-            <span className="text-base">Deliver to:</span>
+            <span className="text-base font-normal">Deliver to :</span>
             <span className="text-base font-bold">Chittagong</span>
           </div>
         </div>
