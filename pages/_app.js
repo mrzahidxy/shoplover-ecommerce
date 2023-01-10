@@ -2,10 +2,22 @@ import "../styles/globals.css";
 import { Inter } from "@next/font/google";
 import Head from "next/head";
 import WebLayout from "../components/WebLayout";
+import UserLayout from "../components/users/UserLayout";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
+
+  if (Component.getLayout) {
+    return Component.getLayout(
+      <WebLayout>
+        <UserLayout>
+          <Component {...pageProps} />
+        </UserLayout>
+      </WebLayout>
+    );
+  }
+
   return (
     <>
       <Head>
@@ -16,7 +28,7 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       <WebLayout>
-        <main className={inter.className}>
+        <main>
           <Component {...pageProps} />
         </main>
       </WebLayout>
