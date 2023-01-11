@@ -11,7 +11,7 @@ module.exports = {
       lg: "1200px",
       xl: "1600px",
     },
-
+    
     container: {
       center: true,
       // padding: "1rem",
@@ -22,10 +22,13 @@ module.exports = {
       },
       colors: {
         primary: "#DE146A",
+        listBar: "#F8F5F5",
+        borderColor: '#DADADA',
+        mygrey: "#9C9C9C"
       },
       borderWidth:{
         "1": "1px"
-      }
+      },
     },
   },
   plugins: [],

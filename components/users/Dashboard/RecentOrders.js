@@ -25,7 +25,7 @@ const RecentOrders = () => {
             <h1 className='text-xl my-3'>Recent Orders</h1>
 
             <div className='flex flex-col lg:w-[1073px]'>
-                <div className='flex flex-row lg:w-[1073px] h-16 bg-[#F8F5F5] items-center font-sans font-semibold'>
+                <div className='flex flex-row lg:w-[1073px] h-16 bg-listBar items-center font-sans font-semibold'>
                     <h1 className='ml-6 sm:ml-12'>Order ID#</h1>
                     <h1 className='hidden md:flex ml-20 lg:ml-28'>Order Items</h1>
                     <h1 className='ml-6 md:ml-36 lg:ml-56'>Order Placed On</h1>
