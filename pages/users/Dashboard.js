@@ -1,6 +1,6 @@
 import React from 'react'
-import CartDetails from "../../components/users/CartDetails"
-import RecentOrders from "../../components/users/RecentOrders"
+import CartDetails from "../../components/users/Dashboard/CartDetails"
+import RecentOrders from "../../components/users/Dashboard/RecentOrders"
 
 
 const Dashboard = () => {

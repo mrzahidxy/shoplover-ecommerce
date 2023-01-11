@@ -1,15 +1,15 @@
 import {useState} from 'react'
 import Image from 'next/image'
 
-import shoe from "../../public/Nahin/product/shoe.png"
-import watch from "../../public/Nahin/product/watch.png"
-import coke from "../../public/Nahin/product/coke.png"
-import headphone from "../../public/Nahin/product/headphone.png"
-import ipad from "../../public/Nahin/product/ipad.png"
-import lemon from "../../public/Nahin/product/lemon.png"
-import perfume from "../../public/Nahin/product/perfume.png"
-import lens from "../../public/Nahin/product/lens.png"
-import rightArrow from "../../public/Nahin/icons/rarrow.svg"
+import shoe from "../../../public/Nahin/product/shoe.png"
+import watch from "../../../public/Nahin/product/watch.png"
+import coke from "../../../public/Nahin/product/coke.png"
+import headphone from "../../../public/Nahin/product/headphone.png"
+import ipad from "../../../public/Nahin/product/ipad.png"
+import lemon from "../../../public/Nahin/product/lemon.png"
+import perfume from "../../../public/Nahin/product/perfume.png"
+import lens from "../../../public/Nahin/product/lens.png"
+import rightArrow from "../../../public/Nahin/icons/rarrow.svg"
 
 
 const RecentOrders = () => {
