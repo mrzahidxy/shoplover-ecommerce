@@ -18,11 +18,14 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'tnr': ["Times", 'Times New Roman', "serif"]
+        'tnr': ["Times", 'Times New Roman', "serif"],
       },
       colors: {
         primary: "#DE146A",
       },
+      borderWidth:{
+        "1": "1px"
+      }
     },
   },
   plugins: [],

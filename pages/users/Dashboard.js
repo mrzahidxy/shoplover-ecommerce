@@ -7,12 +7,12 @@ const Dashboard = () => {
 
   return (
     <div>
-        <div className='flex flex-col ml-4 mt-4'>
+        <div className='flex flex-col ml-4'>
                 <div>
                     <CartDetails />
                 </div>
 
-                <div className='my-10'>
+                <div className=''>
                     <RecentOrders />
                 </div>
 
