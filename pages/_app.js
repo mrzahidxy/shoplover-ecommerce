@@ -15,11 +15,11 @@ export default function App({ Component, pageProps }) {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
 
-      <WebLayout>
-        <main className={inter.className}>
+      <main className={inter.className}>
+        <WebLayout>
           <Component {...pageProps} />
-        </main>
-      </WebLayout>
+        </WebLayout>
+      </main>
     </>
   );
 }

@@ -13,12 +13,13 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
     },
     extend: {
       fontFamily: {},
       colors: {
         primary: "#DE146A",
+        secondary: "#F6F6F6",
       },
     },
   },
