@@ -2,6 +2,8 @@ import Image from 'next/image'
 import {useState} from 'react'
 
 import bin from "../../public/Nahin/wishlist/bin.svg"
+import cart from "../../public/Nahin/wishlist/cart.svg"
+
 import speaker from "../../public/Nahin/wishlist/product/speaker.svg"
 import phone from "../../public/Nahin/wishlist/product/phone.svg"
 import bag from "../../public/Nahin/wishlist/product/bag.svg"
@@ -22,33 +24,69 @@ const wishlist = ({ Component, pageProps }) => {
     return (
         <div className='m-6'>
             <h1 className='mb-4 text-lg'>My Wishlist</h1>
-            <div className='h-10 flex flex-row bg-listBar items-center font-normal text-sm'>
-                <h1 className='ml-8'>Item</h1>
-                <h1 className='ml-[535px]'>Amount</h1>
-                <h1 className='ml-32'>Delete</h1>
-                <h1 className='ml-28 mr-24'>Purchase</h1>
+            {/* <div className='h-10  flex-row bg-listBar items-center font-normal text-sm hidden sm:flex'> */}
+            
+            <div className=''>
+                <div className='h-10 hidden md:grid grid-cols-10 bg-listBar'>
+                    {/* <h1 className='ml-8 mr-[535px]'>Item</h1>
+                    <h1 className=''>Amount</h1>
+                    <h1 className='ml-32 hidden lg:flex'>Delete</h1>
+                    <h1 className='ml-28 mr-24'>Purchase</h1> */}
 
+                    <h1 className=' col-span-5  ml-14'>Item</h1>
+                    <h1 className=' text-center'>Amount</h1>
+                    <h1 className=' text-center hidden lg:flex justify-center col-span-2'>Delete</h1>
+                    <h1 className=' col-span-2 sm:max-lg:ml-20'>Purchase</h1>
+
+                </div>
             </div>
+            
+            
 
             <div className='flex flex-col'>
                 {
                     Wishes.map((products)=>(
-                        <div className='mt-4 flex flex-row h-28 items-center border-b-1 border-borderColor'>
-                            <div className='ml-8 w-[440px] flex flex-row items-center'>
+                        // <div className='mt-4 flex flex-row h-28 items-center border-b-1 border-borderColor'>
+                            
+                        //     <div className='ml-8 w-[440px] flex flex-row items-center'>
+                        //         <input type='checkbox' className='mr-4' />
+                        //         <Image src={products.image} className="w-20 h-20 rounded-md border-1 border-borderColor"/>
+                        //         <h1 className='ml-7'>{products.title}</h1>
+                        //     </div>
+                        //     <div className='ml-32 w-16 h-11 flex flex-col items-center text-lg'>
+                        //         <h1 className='text-[#DE146A] font-medium'>৳{products.discounted}</h1>
+                        //         <h1 className='text-mygrey'>৳{products.original}</h1>
+                        //         <div className='-translate-y-3'><div className='w-14 h-0.5 bg-mygrey'></div></div>
+                        //     </div>
+                        //     <button className='ml-32 w-16 hidden lg:flex'>
+                        //         <Image src={bin} className="w-6 h-6 border-1"/>
+                        //     </button>
+                        //     <button className='ml-20 mr-24 bg-black text-white w-28 h-9 rounded-lg'>
+                        //         <h1 className='hidden sm:flex justify-center'>Add to cart</h1>
+                        //         <Image src={cart} className="w-8 h-8 sm:hidden" />
+                        //     </button>
+
+                        // </div>
+
+                        <div className='mt-4 grid md:grid-cols-10 items-center border-b-1 border-borderColor'>
+                            
+                            <div className=' ml-8 flex flex-row items-center col-span-5 '>
+                                <input type='checkbox' className='mr-4' />
                                 <Image src={products.image} className="w-20 h-20 rounded-md border-1 border-borderColor"/>
-                                <h1 className='ml-7'>{products.title}</h1>
+                                <h1 className='ml-2 md:ml-7 text-sm md:text-md'>{products.title}</h1>
                             </div>
-                            <div className='ml-32 w-16 h-11 flex flex-col items-center'>
-                                <h1 className='text-[#DE146A]'>৳{products.discounted}</h1>
-                                <h1 className='text-mygrey'>৳{products.original}</h1>
-                                <div className='-translate-y-3'><div className='w-14 h-0.5 bg-mygrey'></div></div>
+                            <div className='md:ml-6 h-11 flex flex-row md:flex-col items-center text-lg'>
+                                <h1 className='text-[#DE146A] text-sm font-medium'>৳{products.discounted}</h1>
+                                <h1 className='text-mygrey text-sm ml-1 md:ml-0'>৳{products.original}</h1>
+                                <div className='-translate-x-12 md:-translate-y-3'><div className='w-14 h-0.5 bg-mygrey'></div></div>
                             </div>
-                            <button className='ml-32 w-16'>
+                            <button className=' justify-center hidden lg:flex col-span-2'>
                                 <Image src={bin} className="w-6 h-6 border-1"/>
                             </button>
-                            <button className='ml-24 mr-24 bg-black text-white w-28 h-9 rounded-lg'>
-                                Add to cart
-                            </button>
+                            <div className=' text-white col-span-2 flex flex-col md:max-lg:ml-20'>
+                                <button className='bg-black rounded-lg hidden md:flex justify-center items-center w-28 h-9 '>Add to cart</button>
+                                <Image src={cart} className="w-8 h-8 md:hidden " />
+                            </div>
 
                         </div>
                     ))
