@@ -3,6 +3,7 @@ import { Inter } from "@next/font/google";
 import Head from "next/head";
 import WebLayout from "../components/WebLayout";
 import UserLayout from "../components/users/UserLayout";
+import WebLayout from "../components/WebLayout/WebLayout";
 
 const inter = Inter({
     weight: ['400', "500"],

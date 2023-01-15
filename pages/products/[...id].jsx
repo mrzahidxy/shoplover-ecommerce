@@ -1,13 +1,5 @@
-import React from 'react'
-import { useRouter } from 'next/router'
+const productView = () => {
+  return <div>productView</div>;
+};
 
-const products = () => {
-    const router = useRouter();
-    const {pid} = router.query;
-    console.log(pid);
-    return (
-        <h1>page id {pid}</h1>
-    )
-}
-
-export default products
+export default productView;

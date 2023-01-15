@@ -8,13 +8,13 @@ module.exports = {
     screens: {
       sm: "390px",
       md: "744px",
-      lg: "1200px",
-      xl: "1600px",
+      lg: "1320px",
+      xl: "1620px",
     },
     
     container: {
       center: true,
-      // padding: "1rem",
+      padding: "1rem",
     },
     extend: {
       fontFamily: {
@@ -27,7 +27,8 @@ module.exports = {
         mygrey: "#9C9C9C"
       },
       borderWidth:{
-        "1": "1px"
+        "1": "1px",
+        secondary: "#F6F6F6",
       },
     },
   },
