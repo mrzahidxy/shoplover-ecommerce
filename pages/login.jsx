@@ -2,7 +2,7 @@ import React from "react";
 
 function login() {
   return (
-    <div className="container py-10 px-40">
+    <div className="container">
       <div className="p-6 bg-[#F6F6F6] rounded-xl shadow-lg">
         <p className="mx-auto text-2xl text-center mb-8">
           Login To Your Account
@@ -12,7 +12,7 @@ function login() {
 
           <div>
             <p className="mb-2">Login or Register with Mobile Number</p>
-            <div className="mb-4 w-96 mx-auto">
+            <div className="mb-4 w-72 mx-auto">
               <div className="relative mt-1 rounded-md shadow-sm">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                   <div className="flex">
@@ -30,7 +30,7 @@ function login() {
               </div>
             </div>
 
-            <div className="mb-6 w-96 mx-auto">
+            <div className="mb-6 w-72 xl:w-96 mx-auto">
               <button className="rounded bg-black text-white w-full py-2 px-3">
                 Login with OTP
               </button>
