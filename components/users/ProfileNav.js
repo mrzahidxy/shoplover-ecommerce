@@ -38,7 +38,7 @@ const ProfileNav = () => {
     const [NavBtn, setNavBtn] = useState("none")
 
   return (
-    <div className=' border-1 rounded-sm border-[#DADADA] lg:w-96 lg:mr-4 pb-4'>
+    <div className=' border-1 rounded-md border-[#DADADA] max-h-[840px] m-4 lg:w-100 lg:mr-4 pb-4'>
         <div className='ml-5 pt-4'>
             <div className='flex'>
                 <h1 className='text-xl'>My Profile | </h1>

@@ -19,10 +19,15 @@ const wishlist = ({ Component, pageProps }) => {
         {image: bag, title: "Water Resistant Men Crossbody Sling Bag with USB Port", discounted: "279", original: "550"},
         {image: earbuds, title: "Realme Tws Wireless Earbuds", discounted: "330", original: "450"},
         {image: earbud2, title: "Realme Dizo Go Pods Tws - Black", discounted: "4670", original: "4799"},
+        {image: speaker, title: "JBL Party Box On-The-Go Portable Party And Wireless Mic", discounted: "1160", original: "1400"},
+        {image: phone, title: "Realme Narzo 50a Prime-4GB RAM/128GB ROM Mobile Smartphone", discounted: "12500", original: "13800"},
+        {image: bag, title: "Water Resistant Men Crossbody Sling Bag with USB Port", discounted: "279", original: "550"},
+        {image: earbuds, title: "Realme Tws Wireless Earbuds", discounted: "330", original: "450"},
+        {image: earbud2, title: "Realme Dizo Go Pods Tws - Black", discounted: "4670", original: "4799"},
     ])
 
     return (
-        <div className='m-6'>
+        <div className='m-6 lg:w-268'>
             <h1 className='mb-4 text-lg'>My Wishlist</h1>
             {/* <div className='h-10  flex-row bg-listBar items-center font-normal text-sm hidden sm:flex'> */}
             
@@ -75,10 +80,10 @@ const wishlist = ({ Component, pageProps }) => {
                                 <Image src={products.image} className="w-20 h-20 rounded-md border-1 border-borderColor"/>
                                 <h1 className='ml-2 md:ml-7 text-sm md:text-md'>{products.title}</h1>
                             </div>
-                            <div className='md:ml-6 h-11 flex flex-row md:flex-col items-center text-lg'>
-                                <h1 className='text-[#DE146A] text-sm font-medium'>৳{products.discounted}</h1>
-                                <h1 className='text-mygrey text-sm ml-1 md:ml-0'>৳{products.original}</h1>
-                                <div className='-translate-x-12 md:-translate-y-3'><div className='w-14 h-0.5 bg-mygrey'></div></div>
+                            <div className='w-28 md:w-full ml-36 md:ml-6 h-11 flex flex-row md:flex-col items-center text-lg'>
+                                <h1 className='text-[#DE146A] text-sm md:text-base font-medium'>৳{products.discounted}</h1>
+                                <h1 className='text-mygrey text-sm md:text-base ml-1 md:ml-0'>৳{products.original}</h1>
+                                <div className='-translate-x-12 md:-translate-x-0 md:-translate-y-3'><div className='w-14 h-0.5 bg-mygrey'></div></div>
                             </div>
                             <button className=' justify-center hidden lg:flex col-span-2'>
                                 <Image src={bin} className="w-6 h-6 border-1"/>
