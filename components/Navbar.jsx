@@ -7,7 +7,7 @@ const Navbar = () => {
     { id: 5, name: "Order Track" },
   ];
   return (
-    <div className="bg-[#1b1b1bf7] text-white h-11  ">
+    <div className="bg-[#1b1b1bf7] text-white h-11  hidden lg:block">
       <div className="h-full mx-24 flex justify-between items-center">
         <div className="font-base font-medium flex gap-2 ">
           <img src="/category-icon.svg" alt="" />

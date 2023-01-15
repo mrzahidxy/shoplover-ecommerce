@@ -17,7 +17,7 @@ const Footer = () => {
   ];
   return (
     <div className="bg-[#1B1B1B] text-white pt-20 pb-11">
-      <div className="container grid grid-cols-3 gap-36">
+      <div className="container grid grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-36 ">
         <div className="space-y-9 text-base font-normal">
           <div>
             <img src="/sl-logo-2.svg" alt="" />
@@ -45,12 +45,12 @@ const Footer = () => {
             <img src="/instagram-icon.svg" alt="" />
           </div>
         </div>
-        <div className="flex gap-44">
+        <div className="flex flex-col md:flex-row md:justify-center gap-10 md:gap-44">
           <div className="space-y-4">
             <div className="font-bold text-lg ">INFORMATIONS</div>
             <div className="space-y-2">
               {Informations.map((i) => (
-                <div className="font-normal text-base">{i.name}</div>
+                <div className="font-normal text-base" key={i.id}>{i.name}</div>
               ))}
             </div>
           </div>
@@ -58,7 +58,7 @@ const Footer = () => {
             <span className="font-bold text-lg">QUICK LINKS</span>
             <div className="space-y-2">
               {links.map((l) => (
-                <div className="font-normal text-base">{l.name}</div>
+                <div className="font-normal text-base" key={l.id}>{l.name}</div>
               ))}
             </div>
             <div>
