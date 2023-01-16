@@ -7,13 +7,14 @@ const Dashboard = () => {
 
   return (
     <div>
-        <div className='flex flex-col ml-4'>
-                <div>
+        <div className='flex flex-col bg-white mt-10'>
+                <div className='pl-10'>
                     <CartDetails />
+                    <RecentOrders />
                 </div>
 
                 <div className=''>
-                    <RecentOrders />
+                    
                 </div>
 
             </div>

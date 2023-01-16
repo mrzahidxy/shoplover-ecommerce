@@ -33,15 +33,20 @@ module.exports = {
         secondary: "#F6F6F6",
       },
       width:{
-        268: "1072px", //purchase history
-        167: "668px", //purchase history tab
         88: "352px", //purchase history mobile title bar
         100: "400px", //purchase history
+        167: "668px", //purchase history tab
+        268: "1072px", //purchase history
+        285: "1140px"
       },
       backgroundColor:{
         lightgreen: "rgba(67, 160, 71, 0.12)",  //delivery status
         lightorange: "rgba(255, 130, 54, 0.12)",  //delivery status
+      },
+      boxShadow:{
+        myshadow: "0 1px 1px 2px rgba(0, 0, 0, 0.1)"
       }
+      
     },
   },
   plugins: [],

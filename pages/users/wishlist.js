@@ -27,12 +27,12 @@ const wishlist = ({ Component, pageProps }) => {
     ])
 
     return (
-        <div className='m-6 lg:w-268'>
-            <h1 className='mb-4 text-lg'>My Wishlist</h1>
+        <div className=' lg:w-268 bg-white mt-10 px-10'>
+            <h1 className='mt-4 text-lg'>My Wishlist</h1>
             {/* <div className='h-10  flex-row bg-listBar items-center font-normal text-sm hidden sm:flex'> */}
             
-            <div className=''>
-                <div className='h-10 hidden md:grid grid-cols-10 bg-listBar'>
+            <div className='mt-5'>
+                <div className='h-12 hidden md:grid grid-cols-10 bg-listBar items-center'>
                     {/* <h1 className='ml-8 mr-[535px]'>Item</h1>
                     <h1 className=''>Amount</h1>
                     <h1 className='ml-32 hidden lg:flex'>Delete</h1>
@@ -76,7 +76,7 @@ const wishlist = ({ Component, pageProps }) => {
                         <div className='mt-4 grid md:grid-cols-10 items-center border-b-1 border-borderColor'>
                             
                             <div className=' ml-8 flex flex-row items-center col-span-5 '>
-                                <input type='checkbox' className='mr-4' />
+                                <input type='checkbox' className='mr-4 lg:hidden' />
                                 <Image src={products.image} className="w-20 h-20 rounded-md border-1 border-borderColor"/>
                                 <h1 className='ml-2 md:ml-7 text-sm md:text-md'>{products.title}</h1>
                             </div>
