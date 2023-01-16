@@ -35,6 +35,7 @@ module.exports = {
       width:{
         268: "1072px", //purchase history
         167: "668px", //purchase history tab
+        88: "352px", //purchase history mobile title bar
         100: "400px", //purchase history
       },
       backgroundColor:{
