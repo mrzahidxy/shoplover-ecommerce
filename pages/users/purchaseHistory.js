@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 import leftArrow from "../../public/Nahin/icons/left_arrow.svg"
 
@@ -11,6 +12,8 @@ import earbud2 from "../../public/Nahin/wishlist/product/earbud2.svg"
 
 
 const purchaseHistory = () => {
+
+    const router = useRouter();
 
     const [Orders, setOrders] = useState([
         {
@@ -121,7 +124,7 @@ const purchaseHistory = () => {
                                     <h1 className=' text-center invisible lg:visible'>{orders.date}</h1>
                                     <h1 className=' text-center'>৳{orders.amount}</h1>
                                     <h1 className="w-20 text-center py-1 px-2 rounded-sm col-span-2 lg:col-span-1" style={{backgroundColor:  background, color:text}}>{orders.status}</h1>
-                                    <u className='text-center hidden lg:flex'><a className='text-blue-400'>Veiw Details</a></u>
+                                    <u className='text-center hidden lg:flex text-blue-400'><button className='text-blue-400' onClick={()=>{router.push("/users/orderDetails")}}>Veiw Details</button></u>
                                 </div>
     
     

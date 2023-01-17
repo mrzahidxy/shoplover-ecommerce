@@ -4,23 +4,9 @@ import React, { useState } from 'react'
 import green from "../../../public/Nahin/order_details/green_check.svg"
 import white from "../../../public/Nahin/order_details/white_dot.svg"
 
-const Details = () => {
-
-
-    const [Details, setDetails] = useState({
-        date: "1 Nov 2022, 03:20pm",
-        amount: "620",
-        type: "Dimu Na",
-        payMethod: "Gold on Delivery",
-        shipMethod: "Plane Delivery",
-        status: "Delivering",
-    })
-
-    const [User, setUser] = useState({
-        username: "Rakibul Alam Nahin",
-        address: "Moon, Orbit-Earth, Cluster-SOL, Galaxy-Milky Way",
-        phone: "+8801401549873"
-    })
+const OrderDetails = ({Details, User}) => {
+console.log(Details);
+    
 
     const PaymentType = () => {
         if (Details.type == "Paid") {
@@ -43,7 +29,7 @@ const Details = () => {
     return (
         <>
             <div className='col-span-2 grid grid-cols-7 items-center my-2'>
-                <h1 className='ml-10 text-sm col-span-3'>Order ID : #SL22092837006</h1>
+                <h1 className='ml-8 text-sm col-span-3'>Order ID : #SL22092837006</h1>
                 <div className='flex flex-row col-span-4 items-center ml-2'>
                     <h1 className='mr-1 text-sm'>Order status:</h1>
                     <Status />
@@ -168,4 +154,4 @@ const Details = () => {
     )
 }
 
-export default Details
+export default OrderDetails
