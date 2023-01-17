@@ -1,5 +1,7 @@
 import {useState} from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+
 
 import user from "../../public/Nahin/icons/panel/user.svg"
 
@@ -18,22 +20,24 @@ import icon11 from "../../public/Nahin/icons/panel/11.svg"
 
 const ProfileNav = () => {
 
+    const router = useRouter()
+
     const [Profile, setProfile] = useState(
         {image:user, name:"Monkey D. Luffy", phone:'01401549873', mail:"luffy@pirateking.com"}
     )
 
     const [Navbar, setNavbar] = useState([
-        {image:icon1, name:"Dashboard", color:"none"},
-        {image:icon2, name:"Track Orders", color:"none"},
-        {image:icon3, name:"Purchase History", color:"none"},
-        {image:icon4, name:"My Wishlist", color:"none"},
-        {image:icon5, name:"Payment Method", color:"none"},
-        {image:icon6, name:"Refund Request", color:"none"},
-        {image:icon7, name:"Manage Shipping Address", color:"none"},
-        {image:icon8, name:"Change Password", color:"none"},
-        {image:icon9, name:"Change Language", color:"none"},
-        {image:icon10, name:"Support Ticket", color:"none"},
-        {image:icon11, name:"Terms & Conditions", color:"none"},
+        {image:icon1, name:"Dashboard", color:"none", link: "/users"},
+        {image:icon2, name:"Track Orders", color:"none", link: "/users/trackOrders"},
+        {image:icon3, name:"Purchase History", color:"none", link: "/users/purchaseHistory"},
+        {image:icon4, name:"My Wishlist", color:"none", link: "/users/wishlist"},
+        {image:icon5, name:"Payment Method", color:"none", link: "/users"},
+        {image:icon6, name:"Refund Request", color:"none", link: "/users"},
+        {image:icon7, name:"Manage Shipping Address", color:"none", link: "/users"},
+        {image:icon8, name:"Change Password", color:"none", link: "/users"},
+        {image:icon9, name:"Change Language", color:"none", link: "/users/changeLanguage"},
+        {image:icon10, name:"Support Ticket", color:"none", link: "/users"},
+        {image:icon11, name:"Terms & Conditions", color:"none", link: "/users"},
     ])
     const [NavBtn, setNavBtn] = useState("none")
 
@@ -67,7 +71,7 @@ const ProfileNav = () => {
                             hover:bg-rose-300 hover:text-rose-600 hover:stroke-rose-600 transition-all ease-linear duration-400'
                         style={{backgroundColor:NavBtn}}
                         onClick={()=>{
-                            
+                            router.push(items.link)
                         }}
                     >
                         <Image src={items.image} className="ml-5 w-4 h-4"/>
