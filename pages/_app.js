@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "antd/dist/reset.css";
 import { Inter } from "@next/font/google";
 import Head from "next/head";
 import WebLayout from "../components/WebLayout/WebLayout";

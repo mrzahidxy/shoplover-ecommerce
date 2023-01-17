@@ -17,9 +17,14 @@ module.exports = {
     },
     extend: {
       fontFamily: {},
+      spacing: {
+        '4.5': '18px',
+     
+      },
       colors: {
         primary: "#DE146A",
         secondary: "#F6F6F6",
+        lightblack: "#9C9C9C"
       },
     },
   },
