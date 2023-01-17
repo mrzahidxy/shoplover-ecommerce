@@ -61,7 +61,6 @@ const purchaseHistory = () => {
             {
                 Orders.map((orders) => {
 
-                    let color = ""
                     let background = ''
                     let text = ""
 
