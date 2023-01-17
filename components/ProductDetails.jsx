@@ -1,28 +1,20 @@
 const ProductDetails = () => {
   const colors = ["red-400", "blue-400", "green-400", "yellow-400"];
+  const stars = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
+  const imgs = [{ id: 1, link: "bag.png" }, { id: 2 , link: "bag.png" }, { id: 3 , link: "bag.png" }, { id: 4, link: "bag.png"  }];
   return (
-    <div className="lg:grid lg:grid-cols-9 gap-10">
+    <div className="grid grid-cols-1 lg:grid-cols-9 gap-10">
       {/* //?product image */}
       <div className="lg:col-span-4">
         <div className="flex gap-2 justify-center items-center">
           <div className="w-16 flex flex-col gap-2 items-center">
             <img src="/arrow-up.svg" />
-            <img
-              className="border border-secondary rounded-sm p-2"
-              src="/bag.png"
-            />
-            <img
-              className="border border-secondary rounded-sm p-2"
-              src="/bag.png"
-            />
-            <img
-              className="border border-secondary rounded-sm p-2"
-              src="/bag.png"
-            />
-            <img
-              className="border border-secondary rounded-sm p-2"
-              src="/bag.png"
-            />
+            {imgs.map((i) => (
+              <img
+                className="border border-secondary rounded-sm p-2"
+                src={`/${i.link}`}
+              />
+            ))}
             <img src="/arrow-down.svg" />
           </div>
           <div className="w-[537px] flex justify-center border border-secondary">
@@ -40,26 +32,30 @@ const ProductDetails = () => {
           </span>
           <hr className />
           <div className="flex items-center gap-2 divide-x-2">
-            <div className="font-normal text-base ">
-              Brand: <span className="text-primary">Quechua</span>
+            <div className="font-normal text-base">
+              Brand: <span className="text-primary font-medium">Quechua</span>
             </div>
             <div className="flex items-center gap-1 text-sm font-normal ">
-              <img className="w-4" src="/star-icon.svg" />
-              <img className="w-4" src="/star-icon.svg" />
-              <img className="w-4" src="/star-icon.svg" />
-              <img className="w-4" src="/star-icon.svg" />
-              <span className="text-lightblack">(10 Review)</span>
+              {stars.map((s) => (
+                <img className="w-4" src="/star-icon-orange.svg" key={s.id} />
+              ))}
+              <span className="text-lightblack font-normal text-sm">
+                (10 Review)
+              </span>
             </div>
           </div>
           <hr />
           <div>
             <span className="text-[25px] font-bold">৳3400 </span>{" "}
-            <span className="text-[23px] text-lightblack"> ৳4200 </span>
-            <span className="text-sm text-green-600">15% off</span>
+            <span className="text-[23px] text-lightblack font-normal">
+              {" "}
+              ৳4200{" "}
+            </span>
+            <span className="text-[15px] text-green-600">15% off</span>
           </div>
           <hr />
-          <div>
-            <span>Available Options:</span>
+          <div className="flex flex-col gap-5 font-normal text-base">
+            <span className="">Available Options:</span>
             <div className="flex gap-2 items-center">
               Colors:
               {colors.map((c) => (
@@ -69,7 +65,7 @@ const ProductDetails = () => {
             <div className="flex items-center gap-2">
               Quantity:
               <div className="flex border">
-                <span className="border border-collapse px-4 py-1">-</span>
+                <span className="border border-collapse px-5 py-1">-</span>
                 <span className="border border-collapse px-4 py-1">1</span>
                 <span className="border border-collapse px-4 py-1">+</span>
               </div>
@@ -86,12 +82,12 @@ const ProductDetails = () => {
           </div>
           <hr />
           <div>
-            <div>
-              <span className="flex gap-9 font-normal text-sm text-lightblack">
+            <div className="font-normal text-sm">
+              <span className="flex gap-9  text-lightblack">
                 Payment: <img src="/pay-method.png" />
               </span>
             </div>
-            <span className="flex gap-12 font-normal text-sm text-lightblack">
+            <span className="flex gap-12 text-lightblack">
               Return Policey:
               <span>
                 Vestibulum eu odio. Suspendisse potenti. Morbi mollis sapien.
@@ -100,7 +96,7 @@ const ProductDetails = () => {
             </span>
           </div>
           <hr />
-          <div className="flex gap-9">
+          <div className="flex items-center gap-9">
             <span className="text-lightblack">Share:</span>
             <img src="/social-sites.png" alt="" srcset="" />
           </div>
