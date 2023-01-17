@@ -2,7 +2,7 @@ import React from "react";
 
 function login() {
   return (
-    <div className="container">
+    <div className="container my-10">
       <div className="p-6 bg-[#F6F6F6] rounded-xl shadow-lg">
         <p className="mx-auto text-2xl text-center mb-8">
           Login To Your Account
@@ -38,7 +38,7 @@ function login() {
 
             <p className="mb-1">Or Login With</p>
 
-            <div className="flex justify-between">
+            <div className="flex justify-between gap-3">
               <a
                 href="#"
                 className="px-6 py-3 text-white no-underline bg-[#3B5998] rounded w-36"
@@ -65,7 +65,7 @@ function login() {
             <form action="#">
               <p className="mb-2">Login with Phone Number or Email</p>
 
-              <div className="mb-4 w-96 mx-auto">
+              <div className="mb-4 w-78 mx-auto">
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -73,7 +73,7 @@ function login() {
                 />
               </div>
 
-              <div className="w-96 mx-auto">
+              <div className="w-78 mx-auto">
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="password"
@@ -85,13 +85,13 @@ function login() {
                 Forgot Password?
               </a>
 
-              <div className="mb-2 w-96 mx-auto">
+              <div className="mb-2 w-78 mx-auto">
                 <button className="rounded bg-black text-white w-full py-2 px-3">
                   Login
                 </button>
               </div>
 
-              <div className="mb-4 w-96 mx-auto">
+              <div className="mb-4 w-78 mx-auto">
                 <p>
                   Don’t have any account?{" "}
                   <a href="#" className="font-medium">
