@@ -22,29 +22,27 @@ body {
   padding: 10px;
 }
 
-/* //!SUB CATOGORY SLIDE */
-/* .slick-slide {
-  margin: 0 5px;
-
-}
-
-@media only screen and (min-width: 745px) {
-  .slick-slide {
-    margin: 0 10px;
-  
-  }
-} */
-
 .ant-pagination .ant-pagination-item-active {
   background-color: #000;
   border-color: #000;
 }
 
-.ant-pagination .ant-pagination-item-active a{
+.ant-pagination .ant-pagination-item-active a {
   color: #fff;
 }
- 
-.ant-pagination-item .ant-pagination-item-1 .ant-pagination-item-active a:hover {
-    border-color: #fff;
-    color: #fff;
+
+.ant-pagination-item
+  .ant-pagination-item-1
+  .ant-pagination-item-active
+  a:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.ant-pagination .ant-pagination-item-active:hover {
+  border-color: white;
+}
+
+.ant-pagination .ant-pagination-item-active:hover a {
+  color: #fff;
 }
