@@ -13,6 +13,7 @@ const ProductDetails = () => {
               <img
                 className="border border-secondary rounded-sm p-2"
                 src={`/${i.link}`}
+                key={i.id}
               />
             ))}
             <img src="/arrow-down.svg" />
@@ -59,7 +60,7 @@ const ProductDetails = () => {
             <div className="flex gap-2 items-center">
               Colors:
               {colors.map((c) => (
-                <div className={`bg-${c} w-3 h-3`}></div>
+                <div className={`bg-${c} w-3 h-3`} key={c.id}></div>
               ))}
             </div>
             <div className="flex items-center gap-2">
@@ -98,7 +99,7 @@ const ProductDetails = () => {
           <hr />
           <div className="flex items-center gap-9">
             <span className="text-lightblack">Share:</span>
-            <img src="/social-sites.png" alt="" srcset="" />
+            <img src="/social-sites.png" alt="" />
           </div>
         </div>
       </div>

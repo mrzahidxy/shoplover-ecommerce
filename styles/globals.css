@@ -15,9 +15,36 @@ body {
 }
 
 .ant-tabs-tabpane {
-  border-inline: solid 1px #E9E9E9 ;
-  border-bottom: solid 1px #E9E9E9 ;
+  border-inline: solid 1px #e9e9e9;
+  border-bottom: solid 1px #e9e9e9;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 10px;
+}
+
+/* //!SUB CATOGORY SLIDE */
+/* .slick-slide {
+  margin: 0 5px;
+
+}
+
+@media only screen and (min-width: 745px) {
+  .slick-slide {
+    margin: 0 10px;
+  
+  }
+} */
+
+.ant-pagination .ant-pagination-item-active {
+  background-color: #000;
+  border-color: #000;
+}
+
+.ant-pagination .ant-pagination-item-active a{
+  color: #fff;
+}
+ 
+.ant-pagination-item .ant-pagination-item-1 .ant-pagination-item-active a:hover {
+    border-color: #fff;
+    color: #fff;
 }
