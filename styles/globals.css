@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -45,4 +46,18 @@ body {
 
 .ant-pagination .ant-pagination-item-active:hover a {
   color: #fff;
+}
+
+@layer components {
+  .flexCenter {
+      @apply flex flex-col justify-center items-center rounded-md
+  }
+
+  .recentOrders{
+      @apply h-12 overflow-hidden flex flex-wrap items-center
+  }
+
+  .blaa{
+    font-family: 'Robot', sans-serif;
+  }
 }
