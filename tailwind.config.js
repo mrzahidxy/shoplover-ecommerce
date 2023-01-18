@@ -49,6 +49,10 @@ module.exports = {
       fontSize:{
         toosm: "12px",
       },
+
+      fontWeight:{
+        
+      }
       
     },
   },

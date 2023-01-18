@@ -4,59 +4,63 @@ import React from 'react'
 const ProductDetails = ({ Details, User }) => {
     return (
         <>
-            <div className=' my-2'>
-                <div className='flex items-center'>
-                    <h1 className='ml-10 text-sm col-span-3'>Ordered Products</h1>
+            <div className=' my-2 rounded-md sm:max-md:border-2 sm:max-md:pt-3 sm:max-md:font-bold'>
+                <div className='flex items-center ml-6'>
+                    <h1 className=' text-sm sm:max-md:text-lg col-span-3'>Ordered Products</h1>
                     <h1 className='ml-2 w-5 h-5 flex justify-center items-center rounded-full bg-black text-white'>{Details.products.length}</h1>
 
                 </div>
 
-                <div className='mt-4 flex flex-col bg-white shadow-myshadow'>
+                <div className='mt-4 flex flex-col bg-white md:shadow-myshadow'>
 
                     {
                         Details.products.map((items) => (
-                            <div className='ml-8 flex flex-row w-[742px] justify-between'>
+                            <div className='sm:mx-4 lg:ml-8 px-2 md:grid md:grid-cols-2 sm:flex sm:flex-row  sm:max-md:justify-between'>
 
-                                {/* <div className='flex flex-row my-6 w'>
-                                    <Image src={products.image} className="ml-10 h-16 w-16 mr-4 rounded-md border-1" />
-                                    <div className='flex-col'>
-                                        <h1 className=' font-light text-sm'>{products.title}</h1>
-                                        <h1 className='text-sm font-light text-mygrey'>Qty: {products.quantity}</h1>
-                                        <h1 className='text-sm'>৳{products.price}</h1>
-
-                                    </div>
-                                </div> */}
-
-                                <div className='flex flex-row my-6'>
+                                <div className='flex flex-row my-4 sm:max-md:font-medium'>
                                     <Image className='w-12 h-12 mr-4' src={items.image} />
-                                    <div className='flex-col'>
-                                        <h1>{items.title}</h1>
-                                        <h1>Qty: {items.quantity} Color: {items.color}</h1>
+                                    <div>
+                                        <h1 className='flex-col sm:max-md:w-28 sm:max-md:h-5 sm:max-md:overflow-hidden'>{items.title}</h1>
+                                        <h1 className='text-toosm text-mygrey'>Qty: {items.quantity} Color: {items.color}</h1>
                                     </div>
                                 </div>
 
-                                <h1>৳{items.price}</h1>
+                                <div className='flex flex-row justify-end my-4 lg:w-64'>
+                                    <h1 className='flex flex-row'>৳{items.price}</h1>
+
+                                </div>
 
                             </div>
                         ))
                     }
-                    <div className='ml-8 w-[742px] border-t-2 border-dashed border-neutral-300'></div>
-{/* subTotal
-tax
-shipcost
-discount
-total */}
-                    <div className=' w-[742px] my-8 ml-8'>
-                        <div className='flex flex-row ml text-lg font-medium justify-between items-center'> <h1 clas>Sub Total</h1> <h1> ৳ {Details.subTotal}</h1> </div>
-                        <div className='flex flex-row ml text-lg font-medium justify-between'> <h1 clas>Tax</h1> <h1> ৳ {Details.tax}</h1> </div>
-                        <div className='flex flex-row ml text-lg font-medium justify-between'> <h1 clas>Shipping Cost</h1> <h1> ৳ {Details.shipcost}</h1> </div>
-                        <div className='flex flex-row ml text-lg font-medium justify-between'> <h1 clas>Discount</h1> <h1> ৳ {Details.discount}</h1> </div>
-                        
-                        <div className='my-4 w-[742px] border-t-2 border-dashed border-neutral-300'></div>
-                        
-                        <div className='flex flex-row ml text-lg font-medium justify-between'> <h1 clas>Grand Total</h1> <h1> ৳ {Details.total}</h1> </div>
-                    </div>
+                    <div className='sm:mx-4 lg:ml-8 border-t-2 border-dashed border-neutral-300'></div>
 
+                    <div className=' sm:mx-4 lg:ml-8 px-4 grid sm:grid-cols-2 my-2'>
+
+                        <div>
+                            <h1 className='my-1'>Sub Total</h1>
+                            <h1  className='my-1'>Tax</h1>
+                            <h1  className='my-1'>Shipping Cost</h1>
+                            <h1  className='my-1'>Discount</h1>
+
+
+                        </div>
+
+                        <div className='lg:w-64 flex flex-col items-end'>
+                            <h1 className='my-1'> ৳ {Details.subTotal}</h1>
+                            <h1 className='my-1'> ৳ {Details.tax}</h1>
+                            <h1 className='my-1'> ৳ {Details.shipcost}</h1>
+                            <h1 className='my-1'> ৳ {Details.discount}</h1>
+                        </div>
+
+                    </div>
+                    <div className='sm:mx-4 md:ml-8 px-4 border-t-2 border-dashed border-neutral-300'></div>
+
+                    <div className='sm:mx-4 lg:ml-8 px-4 grid md:grid-cols-2 my-6 sm:flex sm:flex-row  sm:max-md:justify-between'>
+                        <h1>Grand Total</h1>
+                        <h1 className='flex flex-row justify-end lg:w-64 '> ৳ {Details.total}</h1>
+
+                    </div>
 
                 </div>
 
