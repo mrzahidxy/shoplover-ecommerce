@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 
 import leftArrow from "../../public/Nahin/icons/left_arrow.svg"
 
+import PageName from '../../components/users/pageName'
+
 import speaker from "../../public/Nahin/wishlist/product/speaker.svg"
 import phone from "../../public/Nahin/wishlist/product/phone.svg"
 import bag from "../../public/Nahin/wishlist/product/bag.svg"
@@ -48,11 +50,8 @@ const purchaseHistory = () => {
     return (
         <div className=' sm:mt-10 sm:ml-5 lg:w-268 flex flex-col items-center lg:items-start'>
             <div className=' flex flex-col lg:flex-row lg:items-center mb-9 self-start'>
-                <span className='flex items-center mb-5 lg:mb-0'>
-                    <Image src={leftArrow} className="lg:hidden w-4 h-6 mr-3" />
-                    <h1 className='mr-12 text-xl font-medium lg:flex'>Purchase History</h1>
+                <PageName name={router.query.name} />
 
-                </span>
                 <div>
                     <button className=' p-1 px-3 text-md font-medium rounded-md hover:bg-[#FDEDF3] hover:text-[#DE146A]'>All</button>
                     <button className=' p-1 px-3 text-md font-medium rounded-md hover:bg-[#FDEDF3] hover:text-[#DE146A]'>Confirmed</button>

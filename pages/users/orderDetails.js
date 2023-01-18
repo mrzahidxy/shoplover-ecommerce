@@ -23,9 +23,9 @@ const orderDetails = () => {
         shipMethod: "Plane Delivery",
         status: "Delivering",
         products: [
-            { image: speaker, title: "JBL Party Box On-The-Go Portable Party And Wireless Mic", quantity: 1, price: 1400, color:"Yellow" },
-            { image: phone, title: "Realme Narzo 50a Prime-4GB RAM/128GB ROM Mobile Smartphone", quantity: 2, price: 5000, color:"Blue" },
-            { image: bag, title: "Water Resistant Men Crossbody Sling Bag with USB Port", quantity: 1, price: 1400, color:"white" },
+            { image: speaker, title: "JBL Party Box On-The-Go Portable Party And Wireless Mic", quantity: 1, price: 1400, color: "Yellow" },
+            { image: phone, title: "Realme Narzo 50a Prime-4GB RAM/128GB ROM Mobile Smartphone", quantity: 2, price: 5000, color: "Blue" },
+            { image: bag, title: "Water Resistant Men Crossbody Sling Bag with USB Port", quantity: 1, price: 1400, color: "white" },
         ],
         subTotal: 7800,
         tax: 0,
@@ -43,16 +43,16 @@ const orderDetails = () => {
     return (
         <div className='lg:w-285 mt-10 pt-6 lg:pl-10 bg-white'>
             <div className=' mx-3 flex'>
-            <button><Image src={left_arrow} className="mr-3 lg:hidden " /></button>
-            <h1 className='text-xl font-normal'>Order Details</h1>
+                <button><Image src={left_arrow} className="mr-3 lg:hidden " /></button>
+                <h1 className='text-xl font-normal'>Order Details</h1>
             </div>
 
             <div className='lg:w-268 mt-7 mx-3 px-1 rounded-sm grid md:bg-listBar'>
-                <OrderDetails Details={Details} User={User}/>
+                <OrderDetails Details={Details} User={User} />
             </div>
 
             <div className='lg:w-268 mt-7 mx-3 px-1 rounded-sm grid md:bg-listBar'>
-                <ProductDetails Details={Details} User={User} /> 
+                <ProductDetails Details={Details} User={User} />
             </div>
 
         </div>

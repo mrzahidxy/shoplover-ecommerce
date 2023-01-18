@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 
+
 import user from "../../public/Nahin/icons/panel/user.svg"
 
 import icon1 from "../../public/Nahin/icons/panel/1.svg"
@@ -34,7 +35,7 @@ const ProfileNav = () => {
         {image:icon5, name:"Payment Method", color:"none", link: "/users"},
         {image:icon6, name:"Refund Request", color:"none", link: "/users"},
         {image:icon7, name:"Manage Shipping Address", color:"none", link: "/users"},
-        {image:icon8, name:"Change Password", color:"none", link: "/users"},
+        {image:icon8, name:"Change Password", color:"none", link: "/users/changePassword"},
         {image:icon9, name:"Change Language", color:"none", link: "/users/changeLanguage"},
         {image:icon10, name:"Support Ticket", color:"none", link: "/users"},
         {image:icon11, name:"Terms & Conditions", color:"none", link: "/users"},
@@ -65,13 +66,13 @@ const ProfileNav = () => {
             {
                 Navbar.map((items, index)=>{
                     
-                    return (<button
+                    return (<button key={index}
                         className='flex flex-row items-center w-full h-14
                             border-b-2 border-slate-100 
                             hover:bg-rose-300 hover:text-rose-600 hover:stroke-rose-600 transition-all ease-linear duration-400'
                         style={{backgroundColor:NavBtn}}
                         onClick={()=>{
-                            router.push(items.link)
+                            router.push({pathname: items.link, query: {name:items.name}})
                         }}
                     >
                         <Image src={items.image} className="ml-5 w-4 h-4"/>

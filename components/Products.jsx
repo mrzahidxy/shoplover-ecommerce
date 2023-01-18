@@ -17,7 +17,7 @@ const Products = ({ products, title }) => {
             key={product.id}
           >
             <div className="h-[164px] md:h-[200px]  lg:h-[230px] bg-[#FAFAFA] flex items-center justify-center">
-              <img src={product.img} />
+              <img src={product.img} alt="" />
             </div>
             <div className="flex flex-col gap-2 p-3">
               <span className="w-[69px] bg-[#FFEBE6] text-xs font-semibold text-[#B92500] flex justify-center ">
@@ -27,10 +27,10 @@ const Products = ({ products, title }) => {
                 {product.title}
               </span>
               <div className="flex ">
-                <img src="/star-icon.svg" />
-                <img src="/star-icon.svg" />
-                <img src="/star-icon.svg" />
-                <img src="/star-icon.svg" />
+                <img src="/star-icon.svg" alt="" />
+                <img src="/star-icon.svg" alt="" />
+                <img src="/star-icon.svg" alt="" />
+                <img src="/star-icon.svg" alt="" />
                 <span className="text-xs font-[#7A869A]">(10)</span>
               </div>
               <div className="flex gap-1 items-baseline">
