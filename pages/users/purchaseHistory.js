@@ -61,7 +61,7 @@ const purchaseHistory = () => {
             </div>
 
             {
-                Orders.map((orders) => {
+                Orders.map((orders, index) => {
 
                     let background = ''
                     let text = ""
@@ -78,7 +78,7 @@ const purchaseHistory = () => {
                     return(
                         // view for tab or above
                         <>
-                        <div className=' hidden md:flex md:flex-col md:max-lg:w-167 lg:w-268 font-medium bg-listBar text-[#071529] max-h-[720px] mt-4 overflow-auto shadow-md'>
+                        <div  key={Math.random()} className=' hidden md:flex md:flex-col md:max-lg:w-167 lg:w-268 font-medium bg-listBar text-[#071529] max-h-[720px] mt-4 overflow-auto shadow-md'>
     
                             <div className='grid grid-cols-2 h-16 items-center'>
                                 <div>
@@ -101,9 +101,9 @@ const purchaseHistory = () => {
                                 <div className='flex flex-col'>
     
                                     {
-                                        orders.products.map((products) => (
-                                            <div className='flex flex-row my-6 w'>
-                                                <Image src={products.image} className="ml-10 h-16 w-16 mr-4 rounded-md border-1" />
+                                        orders.products.map((products, index) => (
+                                            <div className='flex flex-row my-6 w' key={Math.random()}>
+                                                <Image src={products.image} alt='' className="ml-10 h-16 w-16 mr-4 rounded-md border-1" />
                                                 <div className='flex-col'>
                                                     <h1 className=' font-light text-sm'>{products.title}</h1>
                                                     <h1 className='text-sm font-light text-mygrey'>Qty: {products.quantity}</h1>
@@ -148,9 +148,9 @@ const purchaseHistory = () => {
                                 <div className='flex flex-col'>
     
                                     {
-                                        orders.products.map((products) => (
-                                            <div className='flex flex-row my-4 h-14 px-4'>
-                                                <Image src={products.image} className="h-14 w-14 mr-4 rounded-full border-1" />
+                                        orders.products.map((products, index) => (
+                                            <div className='flex flex-row my-4 h-14 px-4' key={Math.random()}>
+                                                <Image src={products.image} alt='' className="h-14 w-14 mr-4 rounded-full border-1" />
                                                 <div className='flex-col'>
                                                     <h1 className=' font-light text-sm h-4 overflow-hidden'>{products.title}</h1>
                                                     <h1 className='text-sm font-light text-mygrey'>Qty: {products.quantity}</h1>

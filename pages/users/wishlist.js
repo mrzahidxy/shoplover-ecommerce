@@ -55,7 +55,7 @@ const wishlist = ({ Component, pageProps }) => {
 
             <div className='flex flex-col'>
                 {
-                    Wishes.map((products) => (
+                    Wishes.map((products, index) => (
                         // <div className='mt-4 flex flex-row h-28 items-center border-b-1 border-borderColor'>
 
                         //     <div className='ml-8 w-[440px] flex flex-row items-center'>
@@ -78,11 +78,11 @@ const wishlist = ({ Component, pageProps }) => {
 
                         // </div>
 
-                        <div className='mt-4 grid md:grid-cols-10 items-center border-b-1 border-borderColor'>
+                        <div key={index} className='mt-4 grid md:grid-cols-10 items-center border-b-1 border-borderColor'>
 
                             <div className=' ml-8 flex flex-row items-center col-span-5 '>
                                 <input type='checkbox' className='mr-4 lg:hidden' />
-                                <Image src={products.image} className="w-20 h-20 rounded-md border-1 border-borderColor" />
+                                <Image src={products.image} className="w-20 h-20 rounded-md border-1 border-borderColor" alt=''/>
                                 <h1 className='ml-2 md:ml-7 text-sm md:text-md'>{products.title}</h1>
                             </div>
                             <div className='w-28 md:w-full ml-36 md:ml-6 h-11 flex flex-row md:flex-col items-center text-lg'>
@@ -91,11 +91,11 @@ const wishlist = ({ Component, pageProps }) => {
                                 <div className='-translate-x-12 md:-translate-x-0 md:-translate-y-3'><div className='w-14 h-0.5 bg-mygrey'></div></div>
                             </div>
                             <button className=' justify-center hidden lg:flex col-span-2'>
-                                <Image src={bin} className="w-6 h-6 border-1" />
+                                <Image src={bin} className="w-6 h-6 border-1" alt=''/>
                             </button>
                             <div className=' text-white col-span-2 flex flex-col md:max-lg:ml-20'>
                                 <button className='bg-black rounded-lg hidden md:flex justify-center items-center w-28 h-9 '>Add to cart</button>
-                                <Image src={cart} className="w-8 h-8 md:hidden " />
+                                <Image src={cart} className="w-8 h-8 md:hidden " alt=''/>
                             </div>
 
                         </div>

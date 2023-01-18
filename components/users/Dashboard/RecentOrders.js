@@ -33,20 +33,20 @@ const RecentOrders = () => {
                 </div>
                 {
                     Orders.map((items, index)=>(
-                        <div className='flex flex-row'>
+                        <div className='flex flex-row' key={index}>
                             <div className='flex flex-row w-[1073px] h-16 items-center'>
                                 <h1 className='recentOrders w-32 sm:w-40 ml-6 sm:ml-12'>{items.id}</h1>
                                 <div className='recentOrders hidden md:flex w-56 lg:w-72 lg:ml-5'>
                                     {
-                                        items.products.map((prod)=>(
-                                            <Image src={prod} className="ml-2 w-10 h-10" />
+                                        items.products.map((prod, index2)=>(
+                                            <Image src={prod} key={index2} className="ml-2 w-10 h-10" alt=''/>
                                         ))
                                     }
                                 </div>
                                 <h1 className='recentOrders w-18 lg:ml-7'>{items.date}</h1>
                                 <h1 className='recentOrders w-20 lg:w-28 sm:ml-10 lg:ml-20'>{items.amount}</h1>
                                 <a className='hidden lg:flex ml-14 underline text-blue-400' href={items.details}>View Details</a>
-                                <button className='hidden md:flex lg:hidden hover:text-blue-500'><Image src={rightArrow} className="w-5 h-5"/></button>
+                                <button className='hidden md:flex lg:hidden hover:text-blue-500'><Image src={rightArrow} alt='' className="w-5 h-5"/></button>
                                 
                             </div>
                         </div>
