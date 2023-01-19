@@ -1,17 +1,17 @@
 import Link from "next/link";
 
 const navigations = [
-  { id: 1, name: "Deals", img: "deals-icon.svg", link: "/" },
-  { id: 2, name: "Menu", img: "deals-icon.svg" },
-  { id: 3, name: "Home", img: "deals-icon.svg", link: "/" },
-  { id: 4, name: "Cart", img: "deals-icon.svg", link: "cart" },
-  { id: 5, name: "Profile", img: "deals-icon.svg", link: "users" },
+  { id: 1, name: "Deals", img: "", link: "/" },
+  { id: 2, name: "Menu", img: "" },
+  { id: 3, name: "Home", img: "", link: "/" },
+  { id: 4, name: "Cart", img: "cart-bw-icon.svg", link: "cart" },
+  { id: 5, name: "Profile", img: "profile-icon.svg", link: "users" },
 ];
 const MobileNav = () => {
   return (
     <section
       id="bottom-navigation"
-      class="block fixed inset-x-0 bottom-0 z-10 bg-white shadow lg:hidden"
+      class="block fixed inset-x-0 bottom-0 z-10 bg-white drop-shadow-2xl lg:hidden"
     >
       <div class="flex justify-between p-5">
         {navigations.map((n) => (
