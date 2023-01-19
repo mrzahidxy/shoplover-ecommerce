@@ -6,23 +6,37 @@ const TrackOrders = () => {
 
     const router = useRouter();
 
-  return (
-    <div className='bg-white mt-10 pl-10 rounded-sm w-285'>
-        <PageName name={router.query.name} />
-        
-        <div className=' flex flex-col w-268 h-72 p-8 mt-8 rounded-sm shadow-myshadow'>
-            <h1 className='w-88 my-3'>Write your shoplover Order ID number to track your order.</h1>
-            <input className='w-96 h-12 my-3 border-1 border-slate-500 rounded-md pl-5' placeholder='Order ID'></input>
-            <button className='w-96 h-12 my-3 bg-black text-white rounded-md text-center'>Track</button>
+    return (
+
+        <div className='flex flex-col bg-white px-4 py-4 lg:p-11 lg:mt-10 '>
+
+            {/* <h1 className='text-lg ml-9 lg:mb-4'>Change Password</h1> */}
+            <PageName name={router.query.name} />
+
+            <div className='flex flex-col lg:w-268 shadow-myshadow rounded-md px-4 pb-6 md:p-9'>
+
+                <span className='flex flex-col lg:w-96'>
+                    <h1 className='my-3'>Write your shoplover Order ID number to track your order.</h1>
+                    <input type={'password'} placeholder="Order ID" className="mt-1 pl-4 w-full h-12 border-1 border-slate-400 rounded-md" />
+
+
+                    <button className=' mt-8 pl-4 w-full h-12 border-1 bg-black text-white rounded-md'>Track</button>
+                </span>
+
+
+
+
+            </div>
+
         </div>
-    </div>
-  )
+
+    )
 }
 
 export default TrackOrders
 
-TrackOrders.getLayout = function PageLayout(page){
-    return(
+TrackOrders.getLayout = function PageLayout(page) {
+    return (
         <>
             {page}
         </>

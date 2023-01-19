@@ -32,7 +32,7 @@ const wishlist = ({ Component, pageProps }) => {
     ])
 
     return (
-        <div className=' lg:w-268 bg-white mt-10 px-10'>
+        <div className=' lg:w-268 bg-white lg:mt-10 p-8'>
             <PageName name={router.query.name} />
             {/* <div className='h-10  flex-row bg-listBar items-center font-normal text-sm hidden sm:flex'> */}
 
@@ -78,9 +78,9 @@ const wishlist = ({ Component, pageProps }) => {
 
                         // </div>
 
-                        <div key={index} className='mt-4 grid md:grid-cols-10 items-center border-b-1 border-borderColor'>
+                        <div key={index} className='lg:p-4 grid md:grid-cols-10 items-center border-b-1 border-borderColor'>
 
-                            <div className=' ml-8 flex flex-row items-center col-span-5 '>
+                            <div className='flex flex-row items-center col-span-5 '>
                                 <input type='checkbox' className='mr-4 lg:hidden' />
                                 <Image src={products.image} className="w-20 h-20 rounded-md border-1 border-borderColor" alt=''/>
                                 <h1 className='ml-2 md:ml-7 text-sm md:text-md'>{products.title}</h1>
@@ -93,7 +93,7 @@ const wishlist = ({ Component, pageProps }) => {
                             <button className=' justify-center hidden lg:flex col-span-2'>
                                 <Image src={bin} className="w-6 h-6 border-1" alt=''/>
                             </button>
-                            <div className=' text-white col-span-2 flex flex-col md:max-lg:ml-20'>
+                            <div className=' text-white col-span-2 flex flex-col md:max-lg:ml-20s'>
                                 <button className='bg-black rounded-lg hidden md:flex justify-center items-center w-28 h-9 '>Add to cart</button>
                                 <Image src={cart} className="w-8 h-8 md:hidden " alt=''/>
                             </div>
