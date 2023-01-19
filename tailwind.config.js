@@ -34,6 +34,8 @@ module.exports = {
       },
       borderWidth:{
         "1": "1px",
+      },
+      borderColor:{
         secondary: "#F6F6F6",
         lightblack: "#9C9C9C"
       },
