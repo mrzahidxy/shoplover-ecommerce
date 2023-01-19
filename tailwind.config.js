@@ -17,6 +17,10 @@ module.exports = {
       padding: "1rem",
     },
     extend: {
+      fontFamily: {},
+      spacing: {
+        '4.5': '18px'},
+     
       fontFamily: {
         'tnr': ["Times", 'Times New Roman', "serif"],
       },
@@ -31,6 +35,7 @@ module.exports = {
       borderWidth:{
         "1": "1px",
         secondary: "#F6F6F6",
+        lightblack: "#9C9C9C"
       },
       width:{
         88: "352px", //purchase history mobile title bar
