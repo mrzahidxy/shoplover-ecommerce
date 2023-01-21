@@ -2,7 +2,7 @@ import React from "react";
 
 function register() {
   return (
-    <div className="container my-10">
+    <div className="container my-10 lg:px-40">
       <div className="p-6 bg-[#F6F6F6] rounded-xl shadow-lg">
         <p className="mx-auto text-2xl text-center mb-8">
           Create Shoplover Account
