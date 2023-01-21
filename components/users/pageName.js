@@ -7,9 +7,9 @@ import { useRouter } from 'next/router'
 const PageName = ({name}) => {
     const router = useRouter()
     return (
-        <div className=' text-lg flex'>
-            <button onClick={() => { router.back() }}><Image src={left_arrow} className="mr-3 lg:hidden " alt=''/></button>
-            <h1 className='text-xl font-normal'>{name}</h1>
+        <div className=' text-lg flex flex-row my-3'>
+            <button onClick={() => { router.back() }}><Image src={left_arrow} className="mr-3 lg:hidden" alt=''/></button>
+            <span className='text-xl font-normal'>{name}</span>
         </div>
     )
 }

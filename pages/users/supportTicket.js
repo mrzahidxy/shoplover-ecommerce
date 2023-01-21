@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import PageName from "../../components/users/pageName"
 
-import PendingTicket from '../../components/users/supportTicket.js/PendingTicket'
-import SolvedTicket from '../../components/users/supportTicket.js/SolvedTicket'
+import Ticket from '../../components/users/supportTicket.js/Ticket'
 import NoTicket from '../../components/users/supportTicket.js/NoTicket'
 
 import pending from "../../public/Nahin/support_ticket/pending.svg"
@@ -12,46 +11,56 @@ import Image from 'next/image'
 
 const supportTicket = () => {
 
-    const [Pending, setPending] = useState([]);
-    const [Solved, setSolved] = useState([]);
+    const [Solved, setSolved] = useState([])
+    const [Pending, setPending] = useState([
+        {ticketCode: "#2147483647", orderID: "SL6578932", problem: "Received damaged product", date: "14/12/22" }
+    ]);
     const [OptionSelected, setOptionSelected] = useState('pending');
+    const [OptionColor, setOptionColor] = useState(["text-pink-500", ""])
 
-    const showOptions=()=>{
-        if (Pending.length == 0 && Solved == 0){
+
+    const ShowOptions = () => {
+        if (Pending.length == 0 && Solved == 0) {
             return <NoTicket />
-        }else if(OptionSelected == 'solved'){
-            return <SolvedTicket/>
-        }else{
-            return <PendingTicket/>
+        } else if (OptionSelected == 'solved') {
+            return <Ticket Type={"solved"} />
+        } else {
+            return <Ticket  Type={"pending"} />
         }
     }
 
     return (
         <div className='mt-10 pt-3 lg:w-285 bg-white'>
-            <PageName name={"Support Ticket"} />
+            <div className='pl-6'>
+                <PageName name={"Support Ticket"} />
+            </div>
 
-            <div className='mt-2 lg:w-268 border-1 lg:h-[730px]'>
-                <div className='w-[377px] h-[730px] border-r-2'>
+            <div className='mt-2 lg:w-268 border-1 lg:h-[730px] sm:max-lg:mx-6 mb-2'>
+                <div className='lg:w-[377px] h-[730px] lg:border-r-2 '>
                     <div className='flex flex-row h-10 pl-6 items-center border-b-1'>
-                        <button className='flex text-toosm '>
-                            <Image src={pending} className="mr-2"/>
-                            <span className=''>Pending ({Pending.length})</span>
-                            <Image src={down_arrow}  className="mx-2"/>
+                        <button className='flex text-toosm '
+                            onClick={()=>{
+                                setOptionColor(["text-pink-500", ""]);
+                                setOptionSelected("pending")
+                            }}
+                        >
+                            <Image src={pending} alt="" className="mr-2" />
+                            <span className={OptionColor[0]}>Pending ({Pending.length})</span>
+                            <Image src={down_arrow} alt="" className="mx-2" />
                         </button>
 
-                        <button className='flex text-toosm ml-2'>
-                            <Image src={pending} className="mr-2"/>
-                            <span className=''>Solved ({Solved.length})</span>
-                            <Image src={down_arrow}  className="mx-2"/>
+                        <button className='flex text-toosm ml-2'
+                            onClick={()=>{
+                                setOptionColor(["", "text-pink-500"]);
+                                setOptionSelected("solved")
+                            }}
+                        >
+                            <span className={OptionColor[1]}>Solved ({Solved.length})</span>
+                            <Image src={down_arrow} alt="" className="mx-2" />
                         </button>
                     </div>
 
-                    <div className='flex flex-col w-full h-full items-center mt-32'>
-                        <Image src={notfound} />
-                        <span className='italic text-[#BFBFBF]'>Oops!</span>
-                        <span className='text-sm text-[#BFBFBF]'>You don't have any ticket yet</span>
-                        <button className='mt-5 flex justify-center items-center bg-black text-white py-1 px-4 rounded-md text-sm'>+ Create New</button>
-                    </div>
+                    <ShowOptions />
 
                 </div>
             </div>
