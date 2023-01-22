@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 const Navbar = () => {
   const nav = [
-    { id: 1, name: "Home" },
-    { id: 2, name: "Winter Sale" },
-    { id: 3, name: "Flash Sale" },
-    { id: 4, name: "Blogs" },
-    { id: 5, name: "Order Track" },
+    { id: 1, name: "Home", link: '/' },
+    { id: 2, name: "Winter Sale", link: "wintersale" },
+    { id: 3, name: "Flash Sale", link: "/flashsale" },
+    { id: 4, name: "Blogs", link: "/blogs" },
+    { id: 5, name: "Order Track", link: "/cart" },
   ];
   return (
     <div className="bg-[#1b1b1bf7] text-white h-11  hidden lg:block">
@@ -15,9 +17,9 @@ const Navbar = () => {
         </div>
         <nav className="flex gap-7">
           {nav.map((n) => (
-            <span className="font-base font-normal" key={n.id}>
+            <Link href={`${n.link}`} className="font-base font-normal" key={n.id}>
               {n.name}
-            </span>
+            </Link>
           ))}
         </nav>
         <span className="font-base font-normal">

@@ -11,16 +11,16 @@ const MobileNav = () => {
   return (
     <section
       id="bottom-navigation"
-      class="block fixed inset-x-0 bottom-0 z-10 bg-white drop-shadow-2xl lg:hidden"
+      className="block fixed inset-x-0 bottom-0 z-10 bg-white drop-shadow-2xl lg:hidden"
     >
-      <div class="flex justify-between p-5">
+      <div className="flex justify-between p-5">
         {navigations.map((n) => (
-          <Link href={`${n.link}`} class="">
+          <Link href={`${n.link}`} key={n.id}>
             <div className="flex flex-col items-center ">
               <span>
                 <img src={`${n.img}`} alt="" />
               </span>
-              <span class="text-sm font-medium">{n.name}</span>
+              <span className="text-sm font-medium">{n.name}</span>
             </div>
           </Link>
         ))}

@@ -207,7 +207,7 @@ export default function Home() {
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5">
           {categories.map((c) => (
-            <div className="flex flex-col justify-center items-center border boreder-secondary">
+            <div className="flex flex-col justify-center items-center border boreder-secondary" key={Math.random()}>
               <div className="bg-secondary px-6 py-3 rounded-full my-5">
                 <img src="/categories.png" className="" />
               </div>

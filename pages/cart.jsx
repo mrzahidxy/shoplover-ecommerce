@@ -34,7 +34,7 @@ const ordercart = () => {
           <hr />
 
           {orders.map((o) => (
-            <>
+            <div key={Math.random()}>
               <div className="hidden lg:block">
                 <div className="grid grid-cols-8 my-8 space-x-42">
                   <div className="w-16 h-16 p-1 border border-secondary">
@@ -72,11 +72,11 @@ const ordercart = () => {
 
               {/* small & medium screen */}
 
-              <>
+              <div>
                 <div className="mt-4 flex flex-row gap-2 lg:hidden">
                   <input type="checkbox" name="" id="" className="" />
                   <div className="grid grid-cols-3 md:grid-cols-4">
-                    <div className="w-16 h-16 p-1 border border-secondary">
+                    <div className="w-16 h-16 p-1 border">
                       <img src="/bag.png" alt="" />
                     </div>
                     <div className="col-span-2">
@@ -120,8 +120,8 @@ const ordercart = () => {
                   </div>
                 </div>
                 <hr />
-              </>
-            </>
+              </div>
+            </div>
           ))}
         </div>
 
