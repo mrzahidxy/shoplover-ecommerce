@@ -13,6 +13,9 @@ const Ticket = ({ Type }) => {
                 { ticketCode: "#2147483647", orderID: "SL6578932", problem: "Received damaged product", date: "14/12/22" },
                 { ticketCode: "#2147483648", orderID: "SL6578932", problem: "Product Problem", date: "14/12/22" },
                 { ticketCode: "#2147483649", orderID: "SL6578932", problem: "My product not deliver yet", date: "14/12/22" },
+                { ticketCode: "#2147483647", orderID: "SL6578932", problem: "Received damaged product", date: "14/12/22" },
+                { ticketCode: "#2147483648", orderID: "SL6578932", problem: "Product Problem", date: "14/12/22" },
+                { ticketCode: "#2147483649", orderID: "SL6578932", problem: "My product not deliver yet", date: "14/12/22" },
             ])
         }else if(Type == 'solved'){
             setTicketData([
