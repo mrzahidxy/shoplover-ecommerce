@@ -43,14 +43,14 @@ const ProfileNav = () => {
     const [NavBtn, setNavBtn] = useState("none")
 
     return (
-        <div className=' border-1 rounded-md bg-white shadow-sm border-[#DADADA] max-h-[840px] mt-10 lg:w-100 lg:mr-1 pb-4'>
+        <div className=' border-1 rounded-md bg-white shadow-sm border-[#DADADA] max-h-[795px] mt-10 lg:w-100 lg:mr-1'>
             <div className='ml-5 pt-4'>
                 <div className='flex'>
                     <h1 className='text-xl'>My Profile | </h1>
                     <button className='text-blue-500 ml-2'>Edit</button>
                 </div>
 
-                <div className='flex mt-4 h-24'>
+                <div className='flex mt-4 mb-6 h-24'>
                     <div><Image src={Profile.image} alt='' className="w-24 h-24 rounded-full" /></div>
                     {/* <Image src={Profile.image} className="object-fill" /> */}
                     <div className='ml-2'>
@@ -67,7 +67,7 @@ const ProfileNav = () => {
                     Navbar.map((items, index) => {
 
                         return (<button key={index}
-                            className='flex flex-row items-center w-full h-14
+                            className='flex flex-row items-center w-full h-12
                             border-b-2 border-slate-100 
                             hover:bg-rose-300 hover:text-rose-600 hover:stroke-rose-600 transition-all ease-linear duration-400'
                             style={{ backgroundColor: NavBtn }}
@@ -82,7 +82,7 @@ const ProfileNav = () => {
                 }
             </div>
 
-            <div className='flex flex-row bg-black text-white h-12 w-full justify-center items-center '><h1>Sell On Shoplover</h1></div>
+            <div className='flex flex-row bg-black border-2 rounded-md text-white h-12 w-full justify-center items-center '><h1>Sell On Shoplover</h1></div>
 
         </div>
     )
