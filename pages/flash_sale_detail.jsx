@@ -1,19 +1,5 @@
-import Products from "../components/Products";
-
-const categories = [
-  { id: 1, name: "Mobile & Devices" },
-  { id: 2, name: "Mobile & Devices" },
-  { id: 3, name: "Mobile & Devices" },
-  { id: 4, name: "Mobile & Devices" },
-  { id: 5, name: "Mobile & Devices" },
-  { id: 6, name: "Mobile & Devices" },
-  { id: 7, name: "Mobile & Devices" },
-  { id: 8, name: "Mobile & Devices" },
-  { id: 9, name: "Mobile & Devices" },
-  { id: 10, name: "Mobile & Devices" },
-  { id: 11, name: "Mobile & Devices" },
-  { id: 12, name: "Mobile & Devices" },
-];
+import React from "react";
+import Product from "../components/Product";
 
 const products = [
   {
@@ -162,80 +148,30 @@ const products = [
   },
 ];
 
-export default function Home() {
+function FlashSaleDetail() {
   return (
-    <div>
-      <div className="container pt-5">
-        <img src="/home-banner.png" className="w-full mb-4" />
+    <div className="container mb-5">
+      <div className="mt-5">
+        <img src="/flash_sale_banar.png" />
       </div>
 
-      <div className="container grid grid-cols-2 lg:grid-cols-3 justify-items-stretch mb-10">
-        <img src="/flash-sale.png" />
-        <img src="/discount.png" />
-        <div className="hidden lg:block">
-          <img src="/chorki.png" />
+      <div className="mt-4">
+        <h3 className="text-center text-2xl">Empower your smartphones</h3>
+        <div className="text-center mb-4 text-xl">
+          <span className="bg-black text-white px-2 py-1 rounded-sm">03</span>:
+          <span className="bg-black text-white px-2 py-1 rounded-sm">16</span>:
+          <span className="bg-black text-white px-2 py-1 rounded-sm">27</span>:
+          <span className="bg-black text-white px-2 py-1 rounded-sm">51</span>
         </div>
       </div>
 
-      <div className="md:hidden">
-        <Products
-          products={products.slice(0, 2)}
-          title="most popular products"
-        />
-      </div>
-      <div className="hidden md:block lg:hidden">
-        <Products
-          products={products.slice(0, 3)}
-          title="most popular products"
-        />
-      </div>
-
-      <div className="hidden md:hidden lg:block">
-        <Products
-          products={products.slice(0, 6)}
-          title="most popular products"
-        />
-      </div>
-
-      <div className="container mt-10">
-        <img src="/fruits.png" />
-      </div>
-
-      <div className="container my-10">
-        <h3 className="font-bold text-2xl capitalize pb-9">
-          Pupular Categories
-        </h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5">
-          {categories.map((c) => (
-            <div className="flex flex-col justify-center items-center border boreder-secondary" key={Math.random()}>
-              <div className="bg-secondary px-6 py-3 rounded-full my-5">
-                <img src="/categories.png" className="" />
-              </div>
-              <span className="bg-secondary w-full flex justify-center text-base font-semibold">
-                {c.name}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="container mb-10 grid grid-cols-2 md:grid-cols-4 gap-2 justify-items-stretch">
-        <img src="/men-exlusive-banner.png" className=" col-span-2 h-full" />
-        <img src="/vouge-banner.png" />
-        <img src="/adidas-banner.png" />
-      </div>
-
-      <Products products={products.slice(0, 6)} title="new arrivals" />
-      <div className="container my-14 ">
-        <img src="/smart-watch.png" />
-      </div>
-      <Products products={products} title="only for you" />
-
-      <div className="text-base font-medium flex justify-center my-6">
-        <span className="text-primary border bg-[#de146a29] border-primary px-12 py-4 rounded-md">
-          Load More
-        </span>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2.5">
+        {products.map((product, index) => (
+          <Product product={product} key={index} />
+        ))}
       </div>
     </div>
   );
 }
+
+export default FlashSaleDetail;

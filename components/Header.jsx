@@ -1,14 +1,19 @@
+import Link from "next/link";
+
 const Header = () => {
   return (
     <div className="bg-black">
       <div className="py-5 mx-4 md:mx-10 lg:mx-[90px] text-white lg:grid lg:grid-cols-7">
         <div className="flex gap-5 lg:col-span-2">
-          <img src="/sl-logo.svg" alt="logo" className="w-40 md:w-auto" />
+          <Link href="/">
+            <img src="/sl-logo.svg" alt="logo" className="w-40 md:w-auto" />
+          </Link>
           <div className="flex gap-2 justify-center items-center">
             <img
               className="bg-[#ffffff21] w-6 rounded-full"
               src="/home-icon.svg"
             />
+
             <span className="text-xs md:text-base font-normal">
               Deliver to :
             </span>
@@ -33,16 +38,16 @@ const Header = () => {
             <img src="/flag-icon.svg" />
             <span>English</span>
           </div>
-          <div className="flex items-center gap-2">
+          <Link href="/users" className="flex items-center gap-2">
             <img src="/user-icon.svg " />
             <span>Hi, Kajal</span>
-          </div>
-          <div className="flex items-center gap-2">
+          </Link>
+          <Link href="/cart" className="flex items-center gap-2">
             <div className="bg-[#ffffff21] rounded-full p-2">
               <img src="/cart-icon.svg" />
             </div>
             <span>4 items</span>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

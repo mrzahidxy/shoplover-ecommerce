@@ -1,6 +1,12 @@
+import Link from "next/link";
+
 const Product = ({ product }) => {
   return (
-    <div className="border border-color-[#E3E3E3] rounded-md ml-5" key={product.id}>
+    <Link
+      href={`/products/${product.id}`}
+      className="border border-color-[#E3E3E3] rounded-md ml-5"
+      key={Math.random()}
+    >
       <div className="h-[164px] md:h-[200px]  lg:h-[230px] bg-[#FAFAFA] flex items-center justify-center">
         <img src={product.img} />
       </div>
@@ -23,7 +29,7 @@ const Product = ({ product }) => {
           <span className="text-xs font-[#7A869A] line-through">৳1,86,400</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

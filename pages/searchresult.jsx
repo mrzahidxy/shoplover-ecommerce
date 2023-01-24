@@ -230,7 +230,7 @@ const searchresult = () => {
             <span className="text-[15px] font-base">
               620 item found for “Mobile”
             </span>
-            <div className="hidden lg:block border border-secondary px-2 mb-1 rounded-md">
+            <div className="hidden lg:block border px-2 mb-1 rounded-md">
               <span>Sort by: </span>
               <Select
                 defaultValue={"Newest"}
@@ -267,7 +267,7 @@ const searchresult = () => {
         <div className="flex justify-center pb-10">
           <Pagination
             defaultCurrent={1}
-            responsive={true}
+            // responsive={true}
             total={1000}
             showSizeChanger={false}
           />
