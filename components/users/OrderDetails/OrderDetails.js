@@ -45,7 +45,7 @@ const OrderDetails = ({ Details, User }) => {
                     <div className='mt-8 flex flex-row h-20'>
                         <h1 className='ml-8 h-8 w-10 flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
-                            <Image src={green} className="w-full ml-[2px]" />
+                            <Image src={green} alt='' className="w-full ml-[2px]" />
                             <div className='h-20 w-[3px] bg-green-500'></div>
                         </div>
                         <div className='flex flex-col w-56 mx-3 -mt-2'>
@@ -58,7 +58,7 @@ const OrderDetails = ({ Details, User }) => {
                     <div className='flex flex-row h-20'>
                         <h1 className='ml-8 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
-                            <Image src={green} className="w-full ml-[2px]" />
+                            <Image src={green} alt='' className="w-full ml-[2px]" />
                             <div className='h-20 w-[3px] bg-green-500'></div>
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
@@ -71,7 +71,7 @@ const OrderDetails = ({ Details, User }) => {
                     <div className='flex flex-row h-20'>
                         <h1 className='ml-8 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
-                            <Image src={green} className="w-full ml-[2px]" />
+                            <Image src={green} alt='' className="w-full ml-[2px]" />
                             <div className='h-20 w-[3px] bg-green-500'></div>
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
@@ -84,7 +84,7 @@ const OrderDetails = ({ Details, User }) => {
                     <div className='flex flex-row h-20'>
                         <h1 className='ml-8 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
-                            <Image src={green} className="w-full ml-[2px]" />
+                            <Image src={green} alt='' className="w-full ml-[2px]" />
                             <div className='h-20 w-[3px] bg-slate-300'></div>
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
@@ -97,7 +97,7 @@ const OrderDetails = ({ Details, User }) => {
                     <div className='flex flex-row h-20'>
                         <h1 className='ml-8 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col  items-center mx-3'>
-                            <Image src={white} className="w-full ml-[2px]" />
+                            <Image src={white} alt='' className="w-full ml-[2px]" />
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
                             <h1 className=' font-medium'>Delivered</h1>

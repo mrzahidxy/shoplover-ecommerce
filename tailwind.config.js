@@ -4,6 +4,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  important: true,
   theme: {
     screens: {
       sm: "390px",
@@ -34,6 +35,8 @@ module.exports = {
       },
       borderWidth:{
         "1": "1px",
+      },
+      borderColor:{
         secondary: "#F6F6F6",
         lightblack: "#9C9C9C"
       },

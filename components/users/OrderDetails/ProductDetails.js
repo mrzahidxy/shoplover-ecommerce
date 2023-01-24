@@ -18,7 +18,7 @@ const ProductDetails = ({ Details, User }) => {
                             <div className='sm:mx-4 lg:ml-8 px-2 md:grid md:grid-cols-2 sm:flex sm:flex-row  sm:max-md:justify-between'>
 
                                 <div className='flex flex-row my-4 sm:max-md:font-medium'>
-                                    <Image className='w-12 h-12 mr-4' src={items.image} />
+                                    <Image className='w-12 h-12 mr-4' src={items.image} alt='' />
                                     <div>
                                         <h1 className='flex-col sm:max-md:w-28 sm:max-md:h-5 sm:max-md:overflow-hidden'>{items.title}</h1>
                                         <h1 className='text-toosm text-mygrey'>Qty: {items.quantity} Color: {items.color}</h1>
