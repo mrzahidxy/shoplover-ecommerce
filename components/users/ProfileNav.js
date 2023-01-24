@@ -33,7 +33,7 @@ const ProfileNav = () => {
         { image: icon4, name: "My Wishlist", color: "none", link: "/users/wishlist" },
         { image: icon5, name: "Payment Method", color: "none", link: "/users/paymentMethod" },
         { image: icon6, name: "Refund Request", color: "none", link: "/users" },
-        { image: icon7, name: "Manage Shipping Address", color: "none", link: "/users" },
+        { image: icon7, name: "Manage Shipping Address", color: "none", link: "/users/shippingAddress" },
         { image: icon8, name: "Change Password", color: "none", link: "/users/changePassword" },
         { image: icon9, name: "Change Language", color: "none", link: "/users/changeLanguage" },
         { image: icon10, name: "Support Ticket", color: "none", link: "/users/supportTicket" },
