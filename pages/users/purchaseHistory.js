@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 
 import leftArrow from "../../public/Nahin/icons/left_arrow.svg"
 
+import PageName from '../../components/users/pageName'
+
 import speaker from "../../public/Nahin/wishlist/product/speaker.svg"
 import phone from "../../public/Nahin/wishlist/product/phone.svg"
 import bag from "../../public/Nahin/wishlist/product/bag.svg"
@@ -22,7 +24,7 @@ const purchaseHistory = () => {
                 { image: phone, title: "Realme Narzo 50a Prime-4GB RAM/128GB ROM Mobile Smartphone", quantity: 2, price: 5000 },
                 { image: bag, title: "Water Resistant Men Crossbody Sling Bag with USB Port", quantity: 1, price: 1400 },
             ],
-            orderid: "Nahin gorib manush",
+            orderid: "XXZ1111",
             date: "13 Dec, 2022",
             amount: 7800,
             status: "Delivering"
@@ -34,7 +36,7 @@ const purchaseHistory = () => {
                 { image: earbud2, title: "Realme Dizo Go Pods Tws - Black", quantity: 2, price: 2000 },
             ],
 
-            orderid: "Aro valo lagetese naa",
+            orderid: "XXZ111",
             date: "14 Dec, 2022",
             amount: 3400,
             status: "Delivered"
@@ -46,14 +48,11 @@ const purchaseHistory = () => {
 
 
     return (
-        <div className=' sm:mt-10 sm:ml-5 lg:w-268 flex flex-col items-center lg:items-start'>
-            <div className=' flex flex-col lg:flex-row lg:items-center mb-9 self-start'>
-                <span className='flex items-center mb-5 lg:mb-0'>
-                    <Image src={leftArrow} className="lg:hidden w-4 h-6 mr-3" />
-                    <h1 className='mr-12 text-xl font-medium lg:flex'>Purchase History</h1>
+        <div className=' sm:mt-10 p-5 md:p-8 flex flex-col items-center lg:items-start bg-white'>
+            <div className=' flex flex-col lg:flex-row lg:items-center mb-2 self-start'>
+                <PageName name={router.query.name} />
 
-                </span>
-                <div>
+                <div className='lg:ml-8 my-4'>
                     <button className=' p-1 px-3 text-md font-medium rounded-md hover:bg-[#FDEDF3] hover:text-[#DE146A]'>All</button>
                     <button className=' p-1 px-3 text-md font-medium rounded-md hover:bg-[#FDEDF3] hover:text-[#DE146A]'>Confirmed</button>
                     <button className=' p-1 px-3 text-md font-medium rounded-md hover:bg-[#FDEDF3] hover:text-[#DE146A]'>Delivering</button>
@@ -62,7 +61,7 @@ const purchaseHistory = () => {
             </div>
 
             {
-                Orders.map((orders) => {
+                Orders.map((orders, index) => {
 
                     let background = ''
                     let text = ""
@@ -79,9 +78,9 @@ const purchaseHistory = () => {
                     return(
                         // view for tab or above
                         <>
-                        <div className=' hidden md:flex md:flex-col md:max-lg:w-167 lg:w-268 font-medium bg-listBar text-[#071529] max-h-[720px] mt-4 overflow-auto shadow-md'>
+                        <div  key={Math.random()} className=' hidden md:flex md:flex-col  lg:w-268 font-medium bg-listBar text-[#071529] max-h-[720px] overflow-auto shadow-md'>
     
-                            <div className='grid grid-cols-2 h-16 items-center'>
+                            <div className='grid grid-cols-2 h-12 items-center'>
                                 <div>
                                     <h1 className='ml-10'>Order ID :{orders.orderid}</h1>
                                     <h1 className='ml-10 lg:hidden text-sm text-mygrey'>Ordered on {orders.date}</h1>
@@ -102,9 +101,9 @@ const purchaseHistory = () => {
                                 <div className='flex flex-col'>
     
                                     {
-                                        orders.products.map((products) => (
-                                            <div className='flex flex-row my-6 w'>
-                                                <Image src={products.image} className="ml-10 h-16 w-16 mr-4 rounded-md border-1" />
+                                        orders.products.map((products, index) => (
+                                            <div className='flex flex-row my-6 w' key={Math.random()}>
+                                                <Image src={products.image} alt='' className="ml-10 h-16 w-16 mr-4 rounded-md border-1" />
                                                 <div className='flex-col'>
                                                     <h1 className=' font-light text-sm'>{products.title}</h1>
                                                     <h1 className='text-sm font-light text-mygrey'>Qty: {products.quantity}</h1>
@@ -149,9 +148,9 @@ const purchaseHistory = () => {
                                 <div className='flex flex-col'>
     
                                     {
-                                        orders.products.map((products) => (
-                                            <div className='flex flex-row my-4 h-14 px-4'>
-                                                <Image src={products.image} className="h-14 w-14 mr-4 rounded-full border-1" />
+                                        orders.products.map((products, index) => (
+                                            <div className='flex flex-row my-4 h-14 px-4' key={Math.random()}>
+                                                <Image src={products.image} alt='' className="h-14 w-14 mr-4 rounded-full border-1" />
                                                 <div className='flex-col'>
                                                     <h1 className=' font-light text-sm h-4 overflow-hidden'>{products.title}</h1>
                                                     <h1 className='text-sm font-light text-mygrey'>Qty: {products.quantity}</h1>

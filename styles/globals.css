@@ -60,4 +60,9 @@ body {
   .blaa{
     font-family: 'Robot', sans-serif;
   }
+
+  .notFlex{
+    display: flex !important;
+    flex-direction: column;
+  }
 }
