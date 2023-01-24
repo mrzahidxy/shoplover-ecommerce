@@ -2,7 +2,7 @@ import React from "react";
 
 function login() {
   return (
-    <div className="container my-10">
+    <div className="container my-10 lg:px-40">
       <div className="p-6 bg-[#F6F6F6] rounded-xl shadow-lg">
         <p className="mx-auto text-2xl text-center mb-8">
           Login To Your Account
@@ -10,9 +10,9 @@ function login() {
         <div className="flex justify-between">
           <div className="absolute left-1/2 -ml-0.5 w-px h-44 mt-10 bg-gray-600"></div>
 
-          <div>
+          <div className="lg:ml-8">
             <p className="mb-2">Login or Register with Mobile Number</p>
-            <div className="mb-4 w-72 mx-auto">
+            <div className="mb-4 w-72 lg:w-96 mx-auto">
               <div className="relative mt-1 rounded-md shadow-sm">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                   <div className="flex">
@@ -30,7 +30,7 @@ function login() {
               </div>
             </div>
 
-            <div className="mb-6 w-72 xl:w-96 mx-auto">
+            <div className="mb-6 w-72 lg:w-96 mx-auto">
               <button className="rounded bg-black text-white w-full py-2 px-3">
                 Login with OTP
               </button>
@@ -61,11 +61,11 @@ function login() {
             </div>
           </div>
 
-          <div>
+          <div className="lg:mr-8">
             <form action="#">
               <p className="mb-2">Login with Phone Number or Email</p>
 
-              <div className="mb-4 w-78 mx-auto">
+              <div className="mb-4 w-78 lg:w-96 mx-auto">
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
@@ -73,7 +73,7 @@ function login() {
                 />
               </div>
 
-              <div className="w-78 mx-auto">
+              <div className="w-78 lg:w-96 mx-auto">
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="password"
@@ -85,13 +85,13 @@ function login() {
                 Forgot Password?
               </a>
 
-              <div className="mb-2 w-78 mx-auto">
+              <div className="mb-2 w-78 lg:w-96 mx-auto">
                 <button className="rounded bg-black text-white w-full py-2 px-3">
                   Login
                 </button>
               </div>
 
-              <div className="mb-4 w-78 mx-auto">
+              <div className="mb-4 w-78 lg:w-96 mx-auto">
                 <p>
                   Don’t have any account?{" "}
                   <a href="#" className="font-medium">
