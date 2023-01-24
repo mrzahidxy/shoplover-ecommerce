@@ -94,11 +94,11 @@ const supportTicket = () => {
 
                                             <span className='w-10 h-10 rounded-md flex flex-row items-center justify-center bg-white'>{item.user[0]}</span>
 
-                                            <span className=''>
+                                            <span className=' w-full max-w-[70%]'>
                                                 {
                                                     item.chat.map((item2, index2) => (
                                                         <span key={index2} className='ml-2 mt-5 flex flex-row'>
-                                                            <span className='bg-[#FFECF0] max-w-[70%] min-h-[50px] p-2 flex items-center rounded-md'>{item2}</span>
+                                                            <span className='bg-[#FFECF0] min-h-[50px] p-2 flex items-center rounded-md'>{item2}</span>
                                                         </span>
                                                     ))
                                                 }
@@ -113,11 +113,11 @@ const supportTicket = () => {
 
                                             <span className='w-10 h-10 rounded-md flex flex-row items-center justify-center mx-2 bg-white'>{item.user[0]}</span>
 
-                                            <span className=''>
+                                            <span className='w-full max-w-[70%]'>
                                                 {
                                                     item.chat.map((item2, index2) => (
                                                         <span key={index2} className=' mt-5 flex flex-row  justify-end'>
-                                                            <span className='bg-white max-w-[70%] min-h-[50px] p-2 flex items-center rounded-md'>{item2}</span>
+                                                            <span className='bg-white min-h-[50px] p-2 flex items-center rounded-md'>{item2}</span>
                                                         </span>
                                                     ))
                                                 }
