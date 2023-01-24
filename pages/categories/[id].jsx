@@ -1,10 +1,10 @@
-import Product from "../components/Product";
+import Product from "../../components/Product";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Pagination, Select } from "antd";
 import Slider from "react-slick";
 
-import Filters from "../components/Filters";
+import Filters from "../../components/Filters";
 
 const category = () => {
   const categories = [
