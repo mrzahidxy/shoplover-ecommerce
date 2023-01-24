@@ -18,9 +18,9 @@ const flashSales = [
 function FlashSaleAll() {
   return (
     <div className="container mb-5">
-      <div className="mt-5">
+      {/* <div className="mt-5">
         <h3 className="text-2xl font-semibold">Flash deals</h3>
-      </div>
+      </div> */}
 
       <div className="mt-4"></div>
 
