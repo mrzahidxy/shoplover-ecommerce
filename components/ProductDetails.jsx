@@ -1,7 +1,17 @@
+import { useEffect } from "react";
+
 const ProductDetails = () => {
   const colors = ["red-400", "blue-400", "green-400", "yellow-400"];
   const stars = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
-  const imgs = [{ id: 1, link: "bag.png" }, { id: 2 , link: "bag.png" }, { id: 3 , link: "bag.png" }, { id: 4, link: "bag.png"  }];
+  const imgs = [
+    { id: 1, link: "bag.png" },
+    { id: 2, link: "bag.png" },
+    { id: 3, link: "bag.png" },
+    { id: 4, link: "bag.png" },
+  ];
+
+
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-9 gap-10">
       {/* //?product image */}
@@ -11,14 +21,14 @@ const ProductDetails = () => {
             <img src="/arrow-up.svg" />
             {imgs.map((i) => (
               <img
-                className="border border-secondary rounded-sm p-2"
+                className="border rounded-sm p-2"
                 src={`/${i.link}`}
-                key={i.id}
+                key={Math.random()}
               />
             ))}
             <img src="/arrow-down.svg" />
           </div>
-          <div className="w-[537px] flex justify-center border border-secondary">
+          <div className="w-[537px] flex justify-center border ">
             <img src="/bag.png" />
           </div>
         </div>
@@ -31,14 +41,18 @@ const ProductDetails = () => {
             The American Tourister Mickey 2 Piece Set includes 21" and 28"
             softside spinners
           </span>
-          <hr className />
+          <hr />
           <div className="flex items-center gap-2 divide-x-2">
             <div className="font-normal text-base">
               Brand: <span className="text-primary font-medium">Quechua</span>
             </div>
             <div className="flex items-center gap-1 text-sm font-normal ">
               {stars.map((s) => (
-                <img className="w-4" src="/star-icon-orange.svg" key={s.id} />
+                <img
+                  className="w-4"
+                  src="/star-icon-orange.svg"
+                  key={Math.random()}
+                />
               ))}
               <span className="text-lightblack font-normal text-sm">
                 (10 Review)
@@ -59,9 +73,9 @@ const ProductDetails = () => {
             <span className="">Available Options:</span>
             <div className="flex gap-2 items-center">
               Colors:
-              {colors.map((c) => (
+              {/* {colors.map((c) => (
                 <div className={`bg-${c} w-3 h-3`} key={c.id}></div>
-              ))}
+              ))} */}
             </div>
             <div className="flex items-center gap-2">
               Quantity:

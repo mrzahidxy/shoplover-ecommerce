@@ -1,0 +1,83 @@
+//colors
+
+$black: black;
+$light_black: #3c4257;
+$white: #fff;
+
+.crumb {
+  display: flex;
+
+  span {
+    font-size: 14px;
+    // float: left;
+    // height: 56px;
+    line-height: 56px;
+    a {
+      width: 250px;
+      color: red;
+      display: block;
+      background: $white;
+      text-decoration: none;
+      position: relative;
+      padding: 0 50px;
+      margin-right: 40px;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        border: 0 solid $white;
+        border-width: 28px 20px;
+        // width: 0;
+        // height: 0;
+        left: -30px;
+        border-left-color: transparent;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        border: 0 solid $white;
+        border-width: 28px 20px;
+        // width: 0;
+        // height: 0;
+        left: 100%;
+        border-color: transparent;
+        border-left-color: $white;
+      }
+    }
+
+    //first and last
+    &:first-child a {
+      padding-left: 40px;
+      &:before {
+        border: none;
+      }
+    }
+    &:last-child a {
+      padding-right: 40px;
+      border-radius: 10px;
+      &:after {
+        border: none;
+      }
+    }
+
+    //active
+    &.active a {
+      background-color: $black;
+      color: $white;
+      &:before {
+        border-color: $black;
+        border-left-color: transparent;
+      }
+      &:after {
+        border-left-color: $black;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 744px) {
+  .crumb {
+    overflow-x: scroll;
+  }
+}
