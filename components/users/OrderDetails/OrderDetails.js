@@ -1,8 +1,10 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
+import Lottie from "lottie-react";
 
 import green from "../../../public/Nahin/order_details/green_check.svg"
 import white from "../../../public/Nahin/order_details/white_dot.svg"
+import red from "../../../public/Nahin/order_details/red_pulsing_dot.json"
 
 const OrderDetails = ({ Details, User }) => {
 
@@ -34,6 +36,8 @@ const OrderDetails = ({ Details, User }) => {
                     <Status />
                 </div>
             </div>
+
+            
 
             <div className='col-span-2 bg-white grid md:grid-cols-2 lg:grid-cols-7 md:shadow-myshadow'>
 
@@ -84,11 +88,11 @@ const OrderDetails = ({ Details, User }) => {
                     <div className='flex flex-row h-20'>
                         <h1 className='ml-8 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
-                            <Image src={green} alt='' className="w-full ml-[2px]" />
+                            <Lottie animationData={red} className="h-10"/>
                             <div className='h-20 w-[3px] bg-slate-300'></div>
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
-                            <h1 className=' font-medium'>Picked Up</h1>
+                            <h1 className=' font-medium'>On the way</h1>
                             <h1 className=' text-toosm text-mygrey'>Your package is being sent by a rider, to the destination address.</h1>
                         </div>
                     </div>

@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 
-
 import user from "../../public/Nahin/icons/panel/user.svg"
 
 import icon1 from "../../public/Nahin/icons/panel/1.svg"
@@ -37,7 +36,7 @@ const ProfileNav = () => {
         { image: icon7, name: "Manage Shipping Address", color: "none", link: "/users" },
         { image: icon8, name: "Change Password", color: "none", link: "/users/changePassword" },
         { image: icon9, name: "Change Language", color: "none", link: "/users/changeLanguage" },
-        { image: icon10, name: "Support Ticket", color: "none", link: "/users" },
+        { image: icon10, name: "Support Ticket", color: "none", link: "/users/supportTicket" },
         { image: icon11, name: "Terms & Conditions", color: "none", link: "/users" },
     ])
     const [NavBtn, setNavBtn] = useState("none")
