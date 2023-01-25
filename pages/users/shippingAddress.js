@@ -13,14 +13,16 @@ const shippingAddress = () => {
     return (
 
 
-        <div className=" flex flex-col w-285 gap-6 mt-10 rounded-md bg-white">
-            
-            <div className='border-b-1 pl-6 flex flex-row items-center'>
-            <PageName name={router.query.name}/>
-            <button className='ml-24 w-[150px] h-9 flex flex-row items-center justify-center bg-black text-white rounded-md'>+ Create New</button>
+        <div className=" flex flex-col p-2 lg:w-285 gap-6 mt-10 rounded-md bg-white">
+
+            <div className='lg:border-b-1 pl-3 lg:pl-6 flex flex-col mt-3 lg:flex-row lg:items-center'>
+                <div className='mb-3'><PageName name={router.query.name} /></div>
+                <button className=' mb-3 lg:ml-24 w-[150px] h-9 flex flex-row items-center justify-center bg-black text-white rounded-md'
+                    onClick={()=>{router.push("/users/createShippingAddress")}}
+                >+ Create New</button>
             </div>
-            
-            <div className="max-w-[389px] space-y-4  ml-6 border-2 rounded-md">
+
+            <div className="max-w-[389px] space-y-4 ml-2 border-2 rounded-md">
                 <div className=" bg-[#F6F6F6] grid grid-cols-6 gap-3 p-4">
                     <div className="col-span-5 flex flex-col gap-1">
                         <span className="w-[65px] mb-2 py-1 font-medium text-xs bg-black text-white text-center">
@@ -37,14 +39,14 @@ const shippingAddress = () => {
                     <div>
                         <span className="text-primary text-sm">EDIT</span>
                         <div className="mt-11">
-                        <Image src={white_dot} alt="" />
+                            <Image src={white_dot} alt="" />
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <div className="max-w-[389px] space-y-4  ml-6 border-2 rounded-md">
+            <div className="max-w-[389px] space-y-4 ml-2 border-2 rounded-md">
                 <div className=" bg-[#F6F6F6] grid grid-cols-6 gap-3 p-4">
                     <div className="col-span-5 flex flex-col gap-1">
                         <span className="w-[65px] mb-2 py-1 font-medium text-xs bg-black text-white text-center">

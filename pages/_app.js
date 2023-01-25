@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
         return Component.getLayout(
 
             <WebLayout>
-                <main className={inter.className}>
+                <main className={"bg-[#F6F6F6]"} >
                     <UserLayout>
                         <Component {...pageProps} />
                     </UserLayout>
