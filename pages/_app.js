@@ -10,7 +10,7 @@ const inter = Inter({
     style: ['normal'],
     subsets: ["latin"],
     variable: '--font-inter'
- });
+});
 
 export default function App({ Component, pageProps }) {
 
@@ -18,10 +18,14 @@ export default function App({ Component, pageProps }) {
         return Component.getLayout(
 
             <WebLayout>
-                <main className={inter.className}>
-                    <UserLayout>
-                        <Component {...pageProps} />
-                    </UserLayout>
+                {/* <main className={[inter.className]} > */}
+                <main className="bg-[#F6F6F6]">
+                    <div className={[inter.className]}>
+                        <UserLayout>
+                            <Component {...pageProps} />
+                        </UserLayout>
+                    </div>
+
                 </main>
             </WebLayout>
 

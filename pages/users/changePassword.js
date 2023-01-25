@@ -14,14 +14,17 @@ const changePassword = () => {
     console.log(router.query.name);
 
     return (
-        <div className='bg-white mt-10 pt-9 flex flex-col'>
+        <div className='bg-white lg:w-285 mt-10 flex flex-col'>
 
 
             {/* <h1 className='text-lg ml-9 lg:mb-4'>Change Password</h1> */}
+            <div className='pl-8 lg:border-b-1'>
+                <PageName name={router.query.name} />
 
-            <PageName name={router.query.name} />
+            </div>
 
-            <div className='flex flex-col lg:w-[473px]  lg:border-1 p-9'>
+
+            <div className='flex flex-col lg:w-[473px] p-10'>
 
                 <span className='flex'>
                     <h1 className='text-slate-400'>New Password</h1>
