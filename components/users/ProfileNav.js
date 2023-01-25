@@ -33,7 +33,7 @@ const ProfileNav = () => {
         { image: icon4, name: "My Wishlist", color: "none", link: "/users/wishlist" },
         { image: icon5, name: "Payment Method", color: "none", link: "/users/paymentMethod" },
         { image: icon6, name: "Refund Request", color: "none", link: "/users" },
-        { image: icon7, name: "Manage Shipping Address", color: "none", link: "/users" },
+        { image: icon7, name: "Manage Shipping Address", color: "none", link: "/users/shippingAddress" },
         { image: icon8, name: "Change Password", color: "none", link: "/users/changePassword" },
         { image: icon9, name: "Change Language", color: "none", link: "/users/changeLanguage" },
         { image: icon10, name: "Support Ticket", color: "none", link: "/users/supportTicket" },
@@ -42,7 +42,7 @@ const ProfileNav = () => {
     const [NavBtn, setNavBtn] = useState("none")
 
     return (
-        <div className=' border-1 rounded-md bg-white shadow-sm border-[#DADADA] max-h-[795px] mt-10 lg:w-100 lg:mr-1'>
+        <div className='hidden lg:block border-1 rounded-md bg-white shadow-sm border-[#DADADA] max-h-[795px] mt-10 lg:w-100 lg:mr-1'>
             <div className='ml-5 pt-4'>
                 <div className='flex'>
                     <h1 className='text-xl'>My Profile | </h1>

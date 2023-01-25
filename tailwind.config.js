@@ -57,9 +57,8 @@ module.exports = {
       fontSize:{
         toosm: "12px",
       },
-
-      fontWeight:{
-        
+      gridTemplateColumns:{
+        "dashboard": "repeat(3, 210px)"
       }
       
     },

@@ -47,7 +47,7 @@ const OrderDetails = ({ Details, User }) => {
                     {/* Order Placed */}
 
                     <div className='mt-8 flex flex-row h-20'>
-                        <h1 className='ml-8 h-8 w-10 flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
+                        <h1 className='ml-5 h-8 w-10 flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
                             <Image src={green} alt='' className="w-full ml-[2px]" />
                             <div className='h-20 w-[3px] bg-green-500'></div>
@@ -60,7 +60,7 @@ const OrderDetails = ({ Details, User }) => {
 
                     {/* Confirmed */}
                     <div className='flex flex-row h-20'>
-                        <h1 className='ml-8 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
+                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
                             <Image src={green} alt='' className="w-full ml-[2px]" />
                             <div className='h-20 w-[3px] bg-green-500'></div>
@@ -73,7 +73,7 @@ const OrderDetails = ({ Details, User }) => {
 
                     {/* Picked Up */}
                     <div className='flex flex-row h-20'>
-                        <h1 className='ml-8 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
+                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
                             <Image src={green} alt='' className="w-full ml-[2px]" />
                             <div className='h-20 w-[3px] bg-green-500'></div>
@@ -86,7 +86,7 @@ const OrderDetails = ({ Details, User }) => {
 
                     {/* On the way */}
                     <div className='flex flex-row h-20'>
-                        <h1 className='ml-8 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
+                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
                             <Lottie animationData={red} className="h-10"/>
                             <div className='h-20 w-[3px] bg-slate-300'></div>
@@ -99,7 +99,7 @@ const OrderDetails = ({ Details, User }) => {
 
                     {/* Delivered */}
                     <div className='flex flex-row h-20'>
-                        <h1 className='ml-8 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
+                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
                         <div className='flex flex-col  items-center mx-3'>
                             <Image src={white} alt='' className="w-full ml-[2px]" />
                         </div>
