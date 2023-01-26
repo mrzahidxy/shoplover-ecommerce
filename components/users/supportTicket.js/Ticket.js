@@ -40,12 +40,12 @@ const Ticket = ({ Type }) => {
         <>
             {
                 TicketData.map((items, index) => (
-                    <button className=' w-full h-32 px-5 py-3 border-b-1 grid grid-cols-3 focus:bg-[#DE146A]/5' key={index}
+                    <button className=' w-full h-32 px-2 py-1 border-b-1 grid grid-cols-3 focus:bg-[#DE146A]/5' key={index}
                         
                     >
-                        <div className='flex flex-col col-span-2 items-start'>
+                        <div className='flex flex-col col-span-2 justify-start items-start'>
                             <span className='py-0.5 text-blue-400 text-sm'>Ticket Code: {items.ticketCode}</span>
-                            <span className='py-0.5 text-slate-400 text-sm'>Order ID: {items.orderID}</span>
+                            <span className='py-0.5 text-slate-400 text-toosm'>Order ID: {items.orderID}</span>
                             <span className='py-0.5 font-medium text-sm'>{items.problem}</span>
                             <span className='py-0.5 text-slate-400 text-toosm'>Created at {items.date}</span>
 
