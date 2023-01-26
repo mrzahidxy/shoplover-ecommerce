@@ -153,6 +153,7 @@ function FlashSaleDetail() {
     <div className="container mb-5">
       <div className="mt-5">
         <img src="/flash_sale_banar.png" />
+        {/* <img src="/flashsale-main.png" /> */}
       </div>
 
       <div className="mt-4">

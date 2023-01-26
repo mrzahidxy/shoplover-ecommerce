@@ -20,6 +20,7 @@ function Flash_sale() {
     <div className="container mb-5">
       <div className="mt-5">
         <img src="/flash_sale_banar.png" />
+        {/* <img src="/flashsale-main.png" /> */}
       </div>
 
       <div className="mt-4"></div>
@@ -29,6 +30,7 @@ function Flash_sale() {
           <div className=" border boreder-secondary" key={index}>
             <div className="">
               <img src="/flash_sale_banar.png" className="" />
+              {/* <img src="/flashsale-sub.png" className="" /> */}
             </div>
             <div className="flex justify-between mt-1">
               <div className="text-base font-semibold">{flashSale.name}</div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Product from "../components/Product";
 
-const newArrivalsProducts = [
+const products = [
   {
     id: 1,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
@@ -74,9 +74,6 @@ const newArrivalsProducts = [
     price: "৳98,50",
     img: "/product6.png",
   },
-];
-
-const topSellingProducts = [
   {
     id: 13,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
@@ -151,7 +148,7 @@ const topSellingProducts = [
   },
 ];
 
-const SellerPage = () => {
+const SellerAllProducts = () => {
   return (
     <div className="container my-5">
       <div className="bg-black h-[172px] p-6">
@@ -174,10 +171,10 @@ const SellerPage = () => {
 
       <div className="flex justify-between border">
         <div>
+          <button className="px-5 py-3">Home Page</button>
           <button className="bg-[#FBEAF1] px-5 py-3 border-b-4 border-b-[#DE146A]">
-            Home Page
+            All Products
           </button>
-          <button className="px-5 py-3">All Products</button>
         </div>
 
         <div>
@@ -195,18 +192,10 @@ const SellerPage = () => {
         </div>
       </div>
 
-      <h3 className="text-2xl mt-8">New Arrivals </h3>
+      <h3 className="text-2xl mt-8">All Products </h3>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2.5">
-        {newArrivalsProducts.map((product, index) => (
-          <Product product={product} key={index} />
-        ))}
-      </div>
-
-      <h3 className="text-2xl mt-8">Top Selling </h3>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2.5">
-        {topSellingProducts.map((product, index) => (
+        {products.map((product, index) => (
           <Product product={product} key={index} />
         ))}
       </div>
@@ -214,18 +203,4 @@ const SellerPage = () => {
   );
 };
 
-export default SellerPage;
-
-// const SellerPage = ({ Component, pageProps }) => {
-//   return (
-//     <div className=" lg:w-268 bg-white mt-10 px-10">
-//       <h1 className="mt-4 text-lg">Teeeeesting</h1>
-//     </div>
-//   );
-// };
-
-// SellerPage.getLayout = function PageLayout(page) {
-//   return <>{page}</>;
-// };
-
-// export default SellerPage;
+export default SellerAllProducts;
