@@ -87,16 +87,16 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 1000,
   pauseOnHover: true,
-  nextArrow: (
-    <div>
-      <img src="/next-icon.svg" alt="" />
-    </div>
-  ),
-  prevArrow: (
-    <div>
-      <img src="/prev-icon.svg" alt="" />
-    </div>
-  ),
+  // nextArrow: (
+  //   <div>
+  //     <img src="/next-icon.svg" alt="" />
+  //   </div>
+  // ),
+  // prevArrow: (
+  //   <div>
+  //     <img src="/prev-icon.svg" alt="" />
+  //   </div>
+  // ),
   responsive: [
     {
       breakpoint: 745,
@@ -125,7 +125,7 @@ const ProductSlider = () => {
         <div
           href={`/products/${p.id}`}
           className="border border-color-[#E3E3E3] rounded-md"
-          key={Math.random()}
+          key={p.id}
         >
           <div className="h-[164px] md:h-[200px]  lg:h-[230px] bg-[#FAFAFA] flex items-center justify-center">
             <img src={p.img} />
