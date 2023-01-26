@@ -39,7 +39,7 @@ const supportTicket = () => {
     }
 
     return (
-        <div className='mt-10 pt-3 lg:w-285 bg-white'>
+        <div className='mt-10 xl:w-285 bg-white'>
             <div className='flex flex-row px-6 items-center justify-between ' >
                 <PageName name={"Support Ticket"} />
                 <button className="lg:hidden transition-all ease-in-out duration-700" style={{rotate: Rotate+"deg"}} onClick={() => {
@@ -56,7 +56,7 @@ const supportTicket = () => {
             {/* <div className='mt-2 lg:w-268 border-1 lg:h-[730px] sm:max-lg:mx-6 mb-2'> */}
             <div className='grid grid-cols-1 lg:grid-cols-3 border-1 sm:max-lg:mx-6 mb-2'>
                 {/* <div className={'mb-2 lg:w-[377px] h-[500px] lg:h-[730px] lg:border-r-2 col-span-1 overflow-y-auto sm:max-lg:'+ShowTicket}> */}
-                <div className={'mb-2 lg:w-[377px] h-[500px] lg:h-[730px] lg:border-r-2 col-span-1 overflow-y-auto'} style={{display:ShowTicket}} >
+                <div className={'mb-2 xl:w-[377px] h-[500px] lg:h-[730px] lg:border-r-2 col-span-1 overflow-y-auto'} style={{display:ShowTicket}} >
                     <div className='flex flex-row h-10 pl-6 items-center border-b-1'>
                         <button className='flex text-toosm '
                             onClick={() => {

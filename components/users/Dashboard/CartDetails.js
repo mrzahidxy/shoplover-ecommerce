@@ -44,7 +44,7 @@ const CartDetails = () => {
 
         // </div>
 
-        <div className='flex flex-col lg:flex-row lg:gap-5'>
+        <div className='flex flex-col xl:flex-row lg:gap-5'>
 
             <span  className='grid grid-cols-2 gap-5 md:grid-cols-dashboard  items-center'>
                 <div className='flexCenter w-[170px] md:w-52 h-[121px] md:h-36 border-1 border-[#004CFF]'>
