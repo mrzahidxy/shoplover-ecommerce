@@ -41,17 +41,17 @@ const orderDetails = () => {
     })
 
     return (
-        <div className='lg:w-285 mt-10 pt-6 lg:pl-10 bg-white'>
+        <div className='xl:w-285 mt-10 pt-6 lg:pl-10 bg-white'>
             <div className=' mx-3 flex'>
                 <button><Image src={left_arrow} alt='' className="mr-3 lg:hidden " /></button>
                 <h1 className='text-xl font-normal'>Order Details</h1>
             </div>
 
-            <div className='lg:w-268 mt-7 mx-3 px-1 rounded-sm grid md:bg-listBar'>
+            <div className='xl:w-268 mt-7 mx-3 px-1 rounded-sm grid md:bg-listBar'>
                 <OrderDetails Details={Details} alt='' User={User} />
             </div>
 
-            <div className='lg:w-268 mt-7 mx-3 px-1 rounded-sm grid md:bg-listBar'>
+            <div className='xl:w-268 mt-7 mx-3 px-1 rounded-sm grid md:bg-listBar'>
                 <ProductDetails Details={Details} alt='' User={User} />
             </div>
 
