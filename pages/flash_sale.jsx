@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const flashSales = [
   { id: 1, name: "Books Collection" },
@@ -27,10 +28,11 @@ function Flash_sale() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {flashSales.map((flashSale, index) => (
-          <div className=" border boreder-secondary" key={index}>
+          // <div className=" border boreder-secondary" key={index}>
+          <Link className="" key={index} href={`/flash_sale_detail`}>
             <div className="">
-              <img src="/flash_sale_banar.png" className="" />
-              {/* <img src="/flashsale-sub.png" className="" /> */}
+              {/* <img src="/flash_sale_banar.png" className="" /> */}
+              <img src="/flashsale-sub.png" className="" />
             </div>
             <div className="flex justify-between mt-1">
               <div className="text-base font-semibold">{flashSale.name}</div>
@@ -52,7 +54,7 @@ function Flash_sale() {
                 </span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
