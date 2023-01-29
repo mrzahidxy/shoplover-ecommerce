@@ -1,6 +1,6 @@
 import { Pagination, Select } from "antd";
-import Filters from "../components/Filters";
-import Product from "../components/Product";
+import Filters from "./Filters";
+import Product from "./Product";
 
 const products = [
   {
@@ -215,7 +215,7 @@ const colors = [
   { id: 6, label: "#F8EBD6" },
 ];
 
-const searchresult = () => {
+const AllProducts = ({title}) => {
   return (
     <div className="container grid grid-cols-6 mt-[30px] lg:mt-11 mb-4">
       {/* //? FILTERS */}
@@ -228,7 +228,7 @@ const searchresult = () => {
         <div className="">
           <div className="flex justify-between">
             <span className="text-[15px] font-base">
-              620 item found for “Mobile”
+              {title}
             </span>
             <div className="hidden lg:block border px-2 mb-1 rounded-md">
               <span>Sort by: </span>
@@ -277,4 +277,4 @@ const searchresult = () => {
   );
 };
 
-export default searchresult;
+export default AllProducts;

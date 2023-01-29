@@ -1,3 +1,5 @@
+import Link from "next/link";
+import PopularProduct from "../components/PopularProduct";
 import Products from "../components/Products";
 
 const categories = [
@@ -177,25 +179,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="md:hidden">
-        <Products
-          products={products.slice(0, 2)}
-          title="most popular products"
-        />
-      </div>
-      <div className="hidden md:block lg:hidden">
-        <Products
-          products={products.slice(0, 3)}
-          title="most popular products"
-        />
-      </div>
-
-      <div className="hidden md:hidden lg:block">
-        <Products
-          products={products.slice(0, 6)}
-          title="most popular products"
-        />
-      </div>
+      <PopularProduct products={products} />
 
       <div className="container mt-10">
         <img src="/fruits.png" />
@@ -207,7 +191,10 @@ export default function Home() {
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5">
           {categories.map((c) => (
-            <div className="flex flex-col justify-center items-center border boreder-secondary" key={Math.random()}>
+            <div
+              className="flex flex-col justify-center items-center border boreder-secondary"
+              key={Math.random()}
+            >
               <div className="bg-secondary px-6 py-3 rounded-full my-5">
                 <img src="/categories.png" className="" />
               </div>
@@ -225,16 +212,20 @@ export default function Home() {
         <img src="/adidas-banner.png" />
       </div>
 
-      <Products products={products.slice(0, 6)} title="new arrivals" />
+      <Products
+        products={products.slice(0, 6)}
+        title="new arrivals"
+        link="products/newarrival"
+      />
       <div className="container my-14 ">
         <img src="/smart-watch.png" />
       </div>
-      <Products products={products} title="only for you" />
+      <Products products={products} title="only for you" link="/products" />
 
       <div className="text-base font-medium flex justify-center my-6">
-        <span className="text-primary border bg-[#de146a29] border-primary px-12 py-4 rounded-md">
+        <Link href='/products' className="text-black border bg-primary/[.16] hover:bg-primary/[.50] border-black px-12 py-4 rounded-md">
           Load More
-        </span>
+        </Link>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import Link from "next/link";
 const Product = ({ product }) => {
   return (
     <Link
-      href={`/products/${product.id}`}
+      href={`/product/${product.id}`}
       className="border border-color-[#E3E3E3] rounded-md ml-5"
       key={Math.random()}
     >
