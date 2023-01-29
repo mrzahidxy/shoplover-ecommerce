@@ -3,7 +3,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <div className="bg-black">
-      <div className="py-5 mx-4 md:mx-10 lg:mx-[90px] text-white lg:grid lg:grid-cols-7">
+      <div className="py-5 mx-4 md:mx-10 lg:mx-[90px] text-white lg:grid lg:grid-cols-6 xl:grid-cols-7">
         <div className="flex gap-5 lg:col-span-2">
           <Link href="/">
             <img src="/sl-logo.svg" alt="logo" className="w-40 md:w-auto" />
@@ -24,16 +24,16 @@ const Header = () => {
             <span>English</span>
           </div>
         </div>
-        <div className=" col-span-3 flex">
+        <div className="col-span-2 xl:col-span-3 flex">
           <input
             className="w-full h-11 rounded-l-sm pl-2 text-black focus:outline-none"
             placeholder="I want to buy..."
           />
-          <div className="w-14  bg-primary flex items-center justify-center rounded-sm">
+          <Link href="/searchresult" className="w-14  bg-primary flex items-center justify-center rounded-sm">
             <img src="/search-icon.svg" />
-          </div>
+          </Link>
         </div>
-        <div className="hidden col-span-2 lg:flex lg:gap-20 lg:justify-end">
+        <div className="hidden col-span-2 lg:flex lg:gap-10 xl:gap-20 lg:justify-end">
           <div className="flex items-center gap-2">
             <img src="/flag-icon.svg" />
             <span>English</span>

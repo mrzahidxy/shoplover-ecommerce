@@ -47,7 +47,7 @@ const RecentOrders = () => {
                                 </div>
                                 <h1 className='recentOrders w-18 lg:ml-7'>{items.date}</h1>
                                 <h1 className='recentOrders w-20 lg:w-28 sm:ml-10 lg:ml-20'>{items.amount}</h1>
-                                <a className='hidden lg:flex ml-14 underline text-blue-400' href={items.details}>View Details</a>
+                                <a className='hidden xl:flex ml-14 underline text-blue-400' href={items.details}>View Details</a>
                                 <button className='hidden md:flex lg:hidden hover:text-blue-500'><Image src={rightArrow} alt='' className="w-5 h-5"/></button>
                                 
                             </div>
