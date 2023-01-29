@@ -10,7 +10,7 @@ const paymentMethod = () => {
     const router = useRouter();
     console.log(router.query.name);
     return (
-        <div className='container bg-white mt-10 w-285 pt-9 flex flex-col'>
+        <div className='container bg-white mt-10 w-285 flex flex-col'>
 
 
             {/* <h1 className='text-lg ml-9 lg:mb-4'>Change Password</h1> */}
@@ -22,7 +22,7 @@ const paymentMethod = () => {
 
                 {/* <div className='flex flex-row'> */}
                     <span className='w-100 h-14 px-4 bg-listBar flex flex-row justify-between items-center border-1 rounded-md border-neutral-300'>
-                        <span className='text-sm text-pink-500'>Saved bkash account</span>
+                        <span className='text-sm'>Saved bkash account</span>
                         <span className='text-sm text-gray-400 font-medium'>01444455986</span>
                     </span>
 

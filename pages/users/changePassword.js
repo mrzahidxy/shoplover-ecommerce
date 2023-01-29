@@ -28,14 +28,14 @@ const changePassword = () => {
 
                 <span className='flex'>
                     <h1 className='text-slate-400'>New Password</h1>
-                    <h1 className='ml-1 text-pink-600'>*</h1>
+                    <h1 className='ml-1 text-[#FFC800]'>*</h1>
                 </span>
                 <input type={'password'} className="mt-1 pl-4 w-full h-12 border-1 border-slate-400 rounded-md" />
 
                 
                 <span className='flex mt-6'>
                     <h1 className='text-slate-400'>New Password</h1>
-                    <h1 className='ml-1 text-pink-600'>*</h1>
+                    <h1 className='ml-1 text-[#FFC800]'>*</h1>
                 </span>
                 <input type={'password'} className="mt-1 pl-4 w-full h-12 border-1 border-slate-400 rounded-md" />
 

@@ -49,14 +49,16 @@ const purchaseHistory = () => {
 
     return (
         <div className=' sm:mt-10 p-5 md:p-8 flex flex-col items-center lg:items-start bg-white'>
-            <div className=' flex flex-col lg:flex-row lg:items-center mb-2 self-start'>
+            <div className='lg:border-b-2 w-full'>
                 <PageName name={router.query.name} />
-
-                <div className='lg:ml-8 my-4'>
-                    <button className=' p-1 px-3 text-md font-medium rounded-md hover:bg-[#FDEDF3] hover:text-[#DE146A]'>All</button>
-                    <button className=' p-1 px-3 text-md font-medium rounded-md hover:bg-[#FDEDF3] hover:text-[#DE146A]'>Confirmed</button>
-                    <button className=' p-1 px-3 text-md font-medium rounded-md hover:bg-[#FDEDF3] hover:text-[#DE146A]'>Delivering</button>
-                    <button className=' p-1 px-3 text-md font-medium rounded-md hover:bg-[#FDEDF3] hover:text-[#DE146A]'>Delivered</button>
+            </div>
+            
+            <div className=' flex flex-col lg:flex-row lg:items-center mb-2 self-start'>
+                <div className=' my-4'>
+                    <button className=' p-1 px-2 text-md font-medium rounded-md focus:bg-[#FFECA5] hover:bg-[#FFECA5]'>All</button>
+                    <button className=' p-1 px-2 text-md font-medium rounded-md focus:bg-[#FFECA5] hover:bg-[#FFECA5]'>Confirmed</button>
+                    <button className=' p-1 px-2 text-md font-medium rounded-md focus:bg-[#FFECA5] hover:bg-[#FFECA5]'>Delivering</button>
+                    <button className=' p-1 px-2 text-md font-medium rounded-md focus:bg-[#FFECA5] hover:bg-[#FFECA5]'>Delivered</button>
                 </div>
             </div>
 
@@ -78,7 +80,7 @@ const purchaseHistory = () => {
                     return(
                         // view for tab or above
                         <>
-                        <div  key={Math.random()} className=' hidden md:flex md:flex-col xl:w-268 font-medium bg-listBar text-[#071529] max-h-[720px] overflow-auto shadow-md'>
+                        <div  key={Math.random()} className='mb-5 hidden md:flex md:flex-col xl:w-268 font-medium bg-listBar text-[#071529] max-h-[720px] overflow-auto shadow-md'>
     
                             <div className='grid grid-cols-2 h-12 items-center'>
                                 <div>
@@ -132,7 +134,7 @@ const purchaseHistory = () => {
                         </div>
 
                         {/* View for mobile view */}
-                        <div className=' md:hidden flex flex-col w-88 font-medium bg-listBar text-[#071529] max-h-[720px] mt-4 overflow-auto shadow-md'>
+                        <div className='mb-5 md:hidden flex flex-col w-88 font-medium bg-listBar text-[#071529] max-h-[720px] mt-4 overflow-auto shadow-md'>
     
                             <div className='grid grid-cols-2 h-16 items-center'>
                                 <div>

@@ -26,7 +26,6 @@ module.exports = {
         'tnr': ["Times", 'Times New Roman', "serif"],
       },
       colors: {
-        primary: "#DE146A",
         listBar: "#F8F5F5",
         borderColor: '#DADADA',
         mygrey: "#9C9C9C",
