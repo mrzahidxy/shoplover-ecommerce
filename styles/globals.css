@@ -17,12 +17,15 @@ body {
 
 /* zahid-style */
 
+.css-1u9des2-indicatorSeparator {
+  display: none;
+}
+
 /* product slider */
 .slick-track {
   display: flex !important;
   gap: 10px;
 }
-
 
 /* pagenation */
 .ant-tabs-tabpane {
@@ -59,8 +62,6 @@ body {
 }
 
 /* zahid-style */
-
-
 
 /* nahin-style */
 
