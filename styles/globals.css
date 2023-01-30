@@ -17,8 +17,68 @@ body {
 
 /* zahid-style */
 
+/* language select */
 .css-1u9des2-indicatorSeparator {
   display: none;
+}
+
+/* slider */
+.slick-dots {
+  bottom: 25px !important;
+  right: 45px !important;
+}
+
+/* mega menu */
+
+.dropdown:hover > .dropdown-content {
+	display: hidden;
+  
+}
+
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item:hover, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item:hover,
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active,
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active {
+  background-color: transparent;
+}
+
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active,
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active{
+    background-color: yellow;
+  }
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
 }
 
 /* product slider */

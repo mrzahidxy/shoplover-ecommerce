@@ -6,8 +6,8 @@ import { useState } from "react";
 const items = [
   {
     label: (
-      <a href="/user" className="flex  items-center gap-2">
-        <img src="/icons/my-acc.svg" alt="" srcset="" /> My Account
+      <a href="/users" className="flex  items-center gap-2">
+        <img src="/icons/my-acc.svg" alt="" /> My Account
       </a>
     ),
     key: "0",
@@ -17,8 +17,8 @@ const items = [
   },
   {
     label: (
-      <a href="/user" className="flex items-center gap-2">
-        <img src="/icons/track-order.svg" alt="" srcset="" /> Track Orders
+      <a href="/users/trackOrders" className="flex items-center gap-2">
+        <img src="/icons/track-order.svg" alt="" /> Track Orders
       </a>
     ),
     key: "1",
@@ -28,8 +28,8 @@ const items = [
   },
   {
     label: (
-      <a href="/user" className="flex  items-center gap-2">
-        <img src="/icons/my-wishlist.svg" alt="" srcset="" /> My Wishlist
+      <a href="/users/wishlist" className="flex  items-center gap-2">
+        <img src="/icons/my-wishlist.svg" alt="" /> My Wishlist
       </a>
     ),
     key: "2",
@@ -39,8 +39,8 @@ const items = [
   },
   {
     label: (
-      <a href="/user" className="flex  items-center gap-2">
-        <img src="/icons/log-out.svg" alt="" srcset="" /> Log Out
+      <a href="" className="flex  items-center gap-2">
+        <img src="/icons/log-out.svg" alt="" /> Log Out
       </a>
     ),
     key: "3",
@@ -66,46 +66,34 @@ const Header = () => {
       ...base,
       border: "none",
       background: "#000",
-      fontColor: "#fff",
-      // match with the menu
-      // borderRadius: state.isFocused ? "3px 3px 0 0" : 3,
-      // // Overwrittes the different states of border
-      // borderColor: state.isFocused ? "yellow" : "green",
-      // // Removes weird border around container
-      // boxShadow: state.isFocused ? null : null,
-      // "&:hover": {
-      //   // Overwrittes the different states of border
-      //   borderColor: state.isFocused ? "red" : "blue"
-      // }
-
+      fontColor: "#000",
       boxShadow: state.isFocused ? null : null,
       "&:hover": {
-        // Overwrittes the different states of border
         border: "none",
       },
     }),
     menu: (base) => ({
       ...base,
-      // override border radius to match the box
-      // borderRadius: 0,
-      // // kill the gap
-      // marginTop: 0
-
       color: "#000",
     }),
-    // menuList: base => ({
-    //   ...base,
-    //   // kill the white space on first and last option
-    //   padding: 0
-    // })
+
+    option: (provided, state) => ({
+      ...provided,
+      // backgroundColor: state.isSelected ? '#FFC800' : 'inherit',
+      // '&:hover': { backgroundColor: state.isSelected ? '#FFC800' : 'rgb(222, 235, 255)' }
+      color: "#000",
+      padding: "10px",
+      backgroundColor: state.isSelected && '#fff',
+      '&:hover': { backgroundColor: '#FFC800' }
+    }),
   };
 
   const languages = [
     {
       value: "BD",
       label: (
-        <div className="flex flex-row gap-2 ">
-          <img src="/icons/bd.svg" alt="" srcset="" />
+        <div className="flex flex-row gap-2  items-center">
+          <img src="/icons/bd.svg" alt="" />
           Bangla{" "}
         </div>
       ),
@@ -113,8 +101,8 @@ const Header = () => {
     {
       value: "EN",
       label: (
-        <div className="flex flex-row gap-2 ">
-          <img src="/icons/us.svg" alt="" srcset="" />
+        <div className="flex flex-row gap-2 items-center">
+          <img src="/icons/us.svg" alt="" />
           English{" "}
         </div>
       ),
@@ -159,13 +147,12 @@ const Header = () => {
             href="/searchresult"
             className="w-14  bg-primary flex items-center justify-center rounded-sm"
           >
-            <img src="/search-icon.svg" />
+            <img src="/icons/search.svg" />
           </Link>
         </div>
         <div className="hidden col-span-2 lg:flex lg:gap-10 xl:gap-20 lg:justify-end">
           <div className="flex items-center gap-2">
-            {/* <img src="/flag-icon.svg" />
-            <span>English</span> */}
+
 
             <Select
               styles={customStyles}
@@ -173,23 +160,19 @@ const Header = () => {
               options={languages}
             />
           </div>
-          {/* <Link href="/users" className="flex items-center gap-2">
-            <img src="/user-icon.svg " />
-            <span>Hi, Kajal</span>
-          </Link> */}
-          <div className="flex items-center gap-2">
-            <img src="/user-icon.svg " />
-            <Dropdown
-              menu={{
-                items,
-              }}
-              trigger={["click"]}
-            >
-              <a onClick={(e) => e.preventDefault()}>
-                <span>Hi, User</span>
-              </a>
-            </Dropdown>
-          </div>
+
+
+          <Dropdown
+            menu={{
+              items,
+            }}
+            trigger={["click"]}
+          >
+            <div className="flex items-center gap-2">
+              <img src="/user-icon.svg " />
+              <span>Hi, User</span>
+            </div>
+          </Dropdown>
           {/* <Link href="/cart" className="flex items-center gap-2">
             <div className="bg-[#ffffff21] rounded-full p-2">
               <img src="/cart-icon.svg" />
@@ -217,11 +200,11 @@ const Header = () => {
               <div className="flex justify-between">
                 <div className="space-x-2">
                   <span>Items</span>
-                  <span className="bg-primary rounded-full px-[5px] text-white">
+                  <span className="bg-primary rounded-full px-[5px] text-black text-base">
                     3
                   </span>
                 </div>
-                <div className="space-x-2">
+                <div className="space-x-2 text-[#979797]">
                   <span>Close</span>
                   <button
                     className="bg-white px-2 rounded-full"
@@ -238,9 +221,9 @@ const Header = () => {
               {[{ id: 1 }, { id: 2 }, { id: 3 }].map((p) => (
                 <>
                   <div className="grid grid-cols-10 gap-2">
-                    <div className="flex flex-col col-span-1">
+                    <div className="flex flex-col gap-[1px] col-span-1">
                       <button
-                        className="border p-1  focus:bg-secondary focus:text-white"
+                        className="border p-1  focus:bg-secondary focus:ring-1"
                         onClick={() => setCount(count + 1)}
                       >
                         +
@@ -249,7 +232,7 @@ const Header = () => {
                         {count}
                       </button>
                       <button
-                        className="border p-1 focus:bg-secondary focus:text-white"
+                        className="border p-1 focus:bg-secondary focus:ring-1"
                         onClick={() => count > 0 && setCount(count - 1)}
                       >
                         -
@@ -265,16 +248,16 @@ const Header = () => {
                         Water Resistant High Quality Backpack...
                       </span>
                       <div className="space-x-2">
-                        <span className="text-secondary text-sm">
+                        <span className="text-[#979797] text-sm">
                           Color: Black
                         </span>
-                        <span className="text-secondary text-sm">Size: S</span>
+                        <span className="text-[#979797] text-sm">Size: S</span>
                       </div>
                     </div>
 
                     <div className="flex flex-col items-center justify-center col-span-2">
                       <span className="text-primary text-base">৳350</span>
-                      <span className="text-secondary text-sm line-through">
+                      <span className="text-[#979797] text-sm line-through">
                         ৳450
                       </span>
                     </div>

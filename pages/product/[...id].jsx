@@ -117,12 +117,12 @@ const productView = () => {
 
             <div className="space-y-12">
               {products.map((p) => (
-                <div className="flex gap-3" key={p.id}>
+                <div className="flex gap-3 p-1 hover:shadow-xl" key={p.id}>
                   <div className="w-[83px]  border border-[#E9E9E9] rounded-sm flex justify-center items-center p-2">
                     <img src={p.img} alt="" />
                   </div>
 
-                  <div className="flex flex-col gap-[13px]">
+                  <div className="flex flex-col gap-[10px]">
                     <span className="font-normal text-sm">{p.title}</span>
                     <div className="flex items-center gap-1 text-sm font-normal ">
                       <img className="w-[10] h-[10]" src="/star-icon.svg" />
