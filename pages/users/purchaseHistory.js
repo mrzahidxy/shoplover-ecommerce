@@ -52,7 +52,7 @@ const purchaseHistory = () => {
             <div className='lg:border-b-2 w-full'>
                 <PageName name={router.query.name} />
             </div>
-            
+
             <div className=' flex flex-col lg:flex-row lg:items-center mb-2 self-start'>
                 <div className=' my-4'>
                     <button className=' p-1 px-2 text-md font-medium rounded-md focus:bg-[#FFECA5] hover:bg-[#FFECA5]'>All</button>
@@ -68,113 +68,113 @@ const purchaseHistory = () => {
                     let background = ''
                     let text = ""
 
-                    if(orders.status === "Delivering"){
+                    if (orders.status === "Delivering") {
                         background = "rgba(255, 130, 54, 0.12)";
                         text = "rgb(255, 130, 54)";
 
-                    }else if(orders.status === "Delivered"){
+                    } else if (orders.status === "Delivered") {
                         background = "rgba(67, 160, 71, 0.12)";
                         text = "rgb(67, 160, 71)";
                     }
 
-                    return(
+                    return (
                         // view for tab or above
                         <>
-                        <div  key={Math.random()} className='mb-5 hidden md:flex md:flex-col xl:w-268 font-medium bg-listBar text-[#071529] max-h-[720px] overflow-auto shadow-md'>
-    
-                            <div className='grid grid-cols-2 h-12 items-center'>
-                                <div>
-                                    <h1 className='ml-10'>Order ID :{orders.orderid}</h1>
-                                    <h1 className='ml-10 lg:hidden text-sm text-mygrey'>Ordered on {orders.date}</h1>
+                            <div key={index} className='mb-5 hidden md:flex md:flex-col xl:w-268 font-medium bg-listBar text-[#071529] max-h-[720px] overflow-auto shadow-md'>
 
+                                <div className='grid grid-cols-2 h-12 items-center'>
+                                    <div>
+                                        <h1 className='ml-10'>Order ID :{orders.orderid}</h1>
+                                        <h1 className='ml-10 lg:hidden text-sm text-mygrey'>Ordered on {orders.date}</h1>
+
+                                    </div>
+
+
+                                    <div className='grid grid-cols-4'>
+                                        <h1 className='text-center invisible lg:visible'>Order Placed On</h1>
+                                        <h1 className='text-center'>Amount</h1>
+                                        <h1 className=''>Status</h1>
+                                        <h1 className='text-center hidden lg:flex'>Manage</h1>
+                                    </div>
                                 </div>
 
-    
-                                <div className='grid grid-cols-4'>
-                                    <h1 className='text-center invisible lg:visible'>Order Placed On</h1>
-                                    <h1 className='text-center'>Amount</h1>
-                                    <h1 className=''>Status</h1>
-                                    <h1 className='text-center hidden lg:flex'>Manage</h1>
-                                </div>
-                            </div>
-    
-                            <div className='grid grid-cols-2 bg-white items-center'>
-    
-                                <div className='flex flex-col'>
-    
-                                    {
-                                        orders.products.map((products, index) => (
-                                            <div className='flex flex-row my-6 w' key={Math.random()}>
-                                                <Image src={products.image} alt='' className="ml-10 h-16 w-16 mr-4 rounded-md border-1" />
-                                                <div className='flex-col'>
-                                                    <h1 className=' font-light text-sm'>{products.title}</h1>
-                                                    <h1 className='text-sm font-light text-mygrey'>Qty: {products.quantity}</h1>
-                                                    <h1 className='text-sm'>৳{products.price}</h1>
-    
+                                <div className='grid grid-cols-2 bg-white items-center'>
+
+                                    <div className='flex flex-col'>
+
+                                        {
+                                            orders.products.map((products, index2) => (
+                                                <div className='flex flex-row my-6 w' key={index2}>
+                                                    <Image src={products.image} alt='' className="ml-10 h-16 w-16 mr-4 rounded-md border-1" />
+                                                    <div className='flex-col'>
+                                                        <h1 className=' font-light text-sm'>{products.title}</h1>
+                                                        <h1 className='text-sm font-light text-mygrey'>Qty: {products.quantity}</h1>
+                                                        <h1 className='text-sm'>৳{products.price}</h1>
+
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        ))
-                                    }
-    
-    
-                                </div>
-    
-    
-    
-                                <div className='grid grid-cols-4 text-sm font-light'>
-                                    <h1 className=' text-center invisible lg:visible'>{orders.date}</h1>
-                                    <h1 className=' text-center'>৳{orders.amount}</h1>
-                                    <h1 className="w-20 text-center py-1 px-2 rounded-sm col-span-2 lg:col-span-1" style={{backgroundColor:  background, color:text}}>{orders.status}</h1>
-                                    <u className='text-center hidden lg:flex text-blue-400'><button className='text-blue-400' onClick={()=>{router.push("/users/orderDetails")}}>Veiw Details</button></u>
-                                </div>
-    
-    
-                            </div>
-    
-                        </div>
+                                            ))
+                                        }
 
-                        {/* View for mobile view */}
-                        <div className='mb-5 md:hidden flex flex-col w-88 font-medium bg-listBar text-[#071529] max-h-[720px] mt-4 overflow-auto shadow-md'>
-    
-                            <div className='grid grid-cols-2 h-16 items-center'>
-                                <div>
-                                    <h1 className='ml-5 text-sm'>Order ID :{orders.orderid}</h1>
-                                    <h1 className='ml-5 text-[12px] lg:hidden text-sm text-mygrey'>Ordered on {orders.date}</h1>
+
+                                    </div>
+
+
+
+                                    <div className='grid grid-cols-4 text-sm font-light'>
+                                        <h1 className=' text-center invisible lg:visible'>{orders.date}</h1>
+                                        <h1 className=' text-center'>৳{orders.amount}</h1>
+                                        <h1 className="w-20 text-center py-1 px-2 rounded-sm col-span-2 lg:col-span-1" style={{ backgroundColor: background, color: text }}>{orders.status}</h1>
+                                        <u className='text-center hidden lg:flex text-blue-400'><button className='text-blue-400' onClick={() => { router.push("/users/orderDetails") }}>Veiw Details</button></u>
+                                    </div>
+
+
                                 </div>
-                                <h1 className=" w-24 h-6 py-3 ml-10 rounded-sm flex text-sm justify-center items-center " style={{backgroundColor:  background, color:text}}>{orders.status}</h1>
 
                             </div>
-    
-                            <div className='flex flex-col bg-white'>
-    
-                                <div className='flex flex-col'>
-    
-                                    {
-                                        orders.products.map((products, index) => (
-                                            <div className='flex flex-row my-4 h-14 px-4' key={Math.random()}>
-                                                <Image src={products.image} alt='' className="h-14 w-14 mr-4 rounded-full border-1" />
-                                                <div className='flex-col'>
-                                                    <h1 className=' font-light text-sm h-4 overflow-hidden'>{products.title}</h1>
-                                                    <h1 className='text-sm font-light text-mygrey'>Qty: {products.quantity}</h1>
-                                                    <h1 className='text-sm'>৳{products.price}</h1>
-    
+
+                            {/* View for mobile view */}
+                            <div key={index+1} className='mb-5 md:hidden flex flex-col w-88 font-medium bg-listBar text-[#071529] max-h-[720px] mt-4 overflow-auto shadow-md'>
+
+                                <div className='grid grid-cols-2 h-16 items-center'>
+                                    <div>
+                                        <h1 className='ml-5 text-sm'>Order ID :{orders.orderid}</h1>
+                                        <h1 className='ml-5 text-[12px] lg:hidden text-sm text-mygrey'>Ordered on {orders.date}</h1>
+                                    </div>
+                                    <h1 className=" w-24 h-6 py-3 ml-10 rounded-sm flex text-sm justify-center items-center " style={{ backgroundColor: background, color: text }}>{orders.status}</h1>
+
+                                </div>
+
+                                <div className='flex flex-col bg-white'>
+
+                                    <div className='flex flex-col'>
+
+                                        {
+                                            orders.products.map((products, index2) => (
+                                                <div className='flex flex-row my-4 h-14 px-4' key={index2}>
+                                                    <Image src={products.image} alt='' className="h-14 w-14 mr-4 rounded-full border-1" />
+                                                    <div className='flex-col'>
+                                                        <h1 className=' font-light text-sm h-4 overflow-hidden'>{products.title}</h1>
+                                                        <h1 className='text-sm font-light text-mygrey'>Qty: {products.quantity}</h1>
+                                                        <h1 className='text-sm'>৳{products.price}</h1>
+
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        ))
-                                    }
-    
-    
+                                            ))
+                                        }
+
+
+                                    </div>
+
+                                    <div className='ml-6 mb-5 flex'>
+                                        <h1 className='font-light'>Amount: </h1>
+                                        <h1 className=''>৳{orders.amount}</h1>
+                                    </div>
+
+
                                 </div>
 
-                                <div className='ml-6 mb-5 flex'>
-                                    <h1 className='font-light'>Amount: </h1>
-                                    <h1 className=''>৳{orders.amount}</h1>
-                                </div>
-    
-    
                             </div>
-    
-                        </div>
                         </>
                     )
                 })

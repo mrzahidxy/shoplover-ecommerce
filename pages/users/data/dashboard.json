@@ -1,0 +1,90 @@
+{
+  "ordered": 3,
+  "cart": 3,
+  "wishlist": 3,
+  "address": {
+    "name": "Monkey D. Luffy",
+    "location": "Jasmine Garden, Hasan Uddin Road, Uttar Badda",
+    "phone": "01401549873"
+  },
+  "Orders": [
+    {
+      "_id": 0,
+      "id": "SL 123456745",
+      "date": "13-Dec-2022",
+      "status":"Delivered",
+      "payment_status": "Paid",
+      "payment_method": "Kidney on Delivery",
+      "shipping_method": "Car Delivery",
+      "sub_total": 190000,
+      "shipping_cost": 1000,
+      "tax": 28650,
+      "discount": 0,
+      "grand_total": 219650,
+      "progress":[1, 1, 0, -1, -1],
+      "progress_date": ["1 Jan 12:27", "1 Jan 10:27", "", "", ""],
+      "products": [
+        {
+          "image": "/Nahin/product/ipad.png",
+          "name": "IPad mini Pink",
+          "price": 80000,
+          "quantity": 1,
+          "color": "Pink"
+        },
+        {
+          "image": "/Nahin/product/mobile.png",
+          "name": "Realme Narzo 50a Prime-4GB RAM/128GB ROM Mobile Smartphone",
+          "price": 90000,
+          "quantity": 2,
+          "color": "Blue"
+        },
+        {
+          "image": "/Nahin/product/shoe.png",
+          "name": "Original Nike shoes 2024 Future edition",
+          "price": 20000,
+          "quantity": 1,
+          "color": "White"
+        }
+      ]
+    },
+    {
+      "_id": 1,
+      "id": "SL 987654321",
+      "date": "30-Jan-2022",
+      "status":"Delivering",
+      "payment_status": "Unpaid",
+      "payment_method": "Cash on Delivery",
+      "shipping_method": "Cycle Delivery",
+      "sub_total": 19000,
+      "shipping_cost": 100,
+      "tax": 2865,
+      "discount": 0,
+      "grand_total": 21965,
+      "progress":[1, 1, 1, 1, 0],
+      "progress_date": ["1 Jan 12:27", "1 Jan 10:27", "1 Jan 14:27", "1 Jan 16:27", ""],
+      "products": [
+        {
+          "image": "/Nahin/product/ipad.png",
+          "name": "IPad mini Pink",
+          "price": 8000,
+          "quantity": 1,
+          "color": "Pink"
+        },
+        {
+          "image": "/Nahin/product/mobile.png",
+          "name": "Realme Narzo 50a Prime-4GB RAM/128GB ROM Mobile Smartphone",
+          "price": 9000,
+          "quantity": 2,
+          "color": "Blue"
+        },
+        {
+          "image": "/Nahin/product/shoe.png",
+          "name": "Original Nike shoes 2024 Future edition",
+          "price": 2000,
+          "quantity": 1,
+          "color": "White"
+        }
+      ]
+    }
+  ]
+}

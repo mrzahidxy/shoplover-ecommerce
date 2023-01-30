@@ -14,13 +14,13 @@ const ProductDetails = ({ Details, User }) => {
                 <div className='mt-4 flex flex-col bg-white md:shadow-myshadow'>
 
                     {
-                        Details.products.map((items) => (
-                            <div className='sm:mx-4 lg:ml-8 px-2 md:grid md:grid-cols-2 sm:flex sm:flex-row  sm:max-md:justify-between'>
+                        Details.products.map((items, index) => (
+                            <div key={index} className='sm:mx-4 lg:ml-8 px-2 md:grid md:grid-cols-2 sm:flex sm:flex-row  sm:max-md:justify-between'>
 
                                 <div className='flex flex-row my-4 sm:max-md:font-medium'>
-                                    <Image className='w-12 h-12 mr-4' src={items.image} alt='' />
+                                    <Image className='w-12 h-12 mr-4' src={items.image} width={40} height={10} alt='' />
                                     <div>
-                                        <h1 className='flex-col sm:max-md:w-28 sm:max-md:h-5 sm:max-md:overflow-hidden'>{items.title}</h1>
+                                        <h1 className='flex-col sm:max-md:w-28 sm:max-md:h-5 sm:max-md:overflow-hidden'>{items.name}</h1>
                                         <h1 className='text-toosm text-mygrey'>Qty: {items.quantity} Color: {items.color}</h1>
                                     </div>
                                 </div>
@@ -35,22 +35,22 @@ const ProductDetails = ({ Details, User }) => {
                     }
                     <div className='sm:mx-4 lg:ml-8 border-t-2 border-dashed border-neutral-300'></div>
 
-                    <div className=' sm:mx-4 lg:ml-8 px-4 grid sm:grid-cols-2 my-2'>
+                    <div className=' sm:mx-4 lg:ml-8 px-4 grid sm:grid-cols-2 my-2 '>
 
-                        <div>
+                        <div className=' flex flex-col'>
                             <h1 className='my-1'>Sub Total</h1>
-                            <h1  className='my-1'>Tax</h1>
-                            <h1  className='my-1'>Shipping Cost</h1>
-                            <h1  className='my-1'>Discount</h1>
+                            <h1 className='my-1'>Tax</h1>
+                            <h1 className='my-1'>Shipping Cost</h1>
+                            <h1 className='my-1'>Discount</h1>
 
 
                         </div>
 
-                        <div className='lg:w-64 flex flex-col items-end'>
-                            <h1 className='my-1'> ৳ {Details.subTotal}</h1>
-                            <h1 className='my-1'> ৳ {Details.tax}</h1>
-                            <h1 className='my-1'> ৳ {Details.shipcost}</h1>
-                            <h1 className='my-1'> ৳ {Details.discount}</h1>
+                        <div className='lg:w-64 flex flex-col justify-end'>
+                            <h1 className='my-1 '> ৳ {Details.sub_total}</h1>
+                            <h1 className='my-1 '> ৳ {Details.tax}</h1>
+                            <h1 className='my-1 '> ৳ {Details.shipping_cost}</h1>
+                            <h1 className='my-1 '> ৳ {Details.discount}</h1>
                         </div>
 
                     </div>
@@ -58,7 +58,7 @@ const ProductDetails = ({ Details, User }) => {
 
                     <div className='sm:mx-4 lg:ml-8 px-4 grid md:grid-cols-2 my-6 sm:flex sm:flex-row  sm:max-md:justify-between'>
                         <h1>Grand Total</h1>
-                        <h1 className='flex flex-row justify-end lg:w-64 '> ৳ {Details.total}</h1>
+                        <h1 className='flex flex-row justify-end lg:w-64 '> ৳ {Details.grand_total}</h1>
 
                     </div>
 

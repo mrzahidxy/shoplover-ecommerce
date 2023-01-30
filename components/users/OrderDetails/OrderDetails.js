@@ -10,10 +10,10 @@ const OrderDetails = ({ Details, User }) => {
 
 
     const PaymentType = () => {
-        if (Details.type == "Paid") {
-            return <h1 className='text-green-500 font-medium'>{Details.type}</h1>
+        if (Details.payment_status == "Paid") {
+            return <h1 className='text-green-500 font-medium'>{Details.payment_status}</h1>
         } else {
-            return <h1 className='text-red-500 font-medium'>{Details.type}</h1>
+            return <h1 className='text-red-500 font-medium'>{Details.payment_status}</h1>
 
         }
     }
@@ -27,10 +27,35 @@ const OrderDetails = ({ Details, User }) => {
         }
     }
 
+    const Progress=({progress})=>{
+        if(progress == 1){
+            return(
+                <>
+                    <Image src={green} alt='' className="w-full ml-[2px]" />
+                </>
+
+            ) 
+        }else if(progress == 0){
+            return(
+                <>
+                    <Lottie animationData={red} className="h-10"/>
+                </>
+
+            ) 
+        }else{
+            return(
+                <>
+                    <Image src={white} alt='' className="w-full ml-[2px]" />
+                </>
+
+            ) 
+        }
+    }
+
     return (
         <>
             <div className='hidden md:grid col-span-2 grid-cols-7 items-center my-2'>
-                <h1 className='ml-8 text-sm col-span-3'>Order ID : {Details.orderID}</h1>
+                <h1 className='ml-8 text-sm col-span-3'>Order ID : {Details.id}</h1>
                 <div className='flex flex-row col-span-4 items-center ml-2'>
                     <h1 className='mr-1 text-sm'>Order status:</h1>
                     <Status />
@@ -47,10 +72,10 @@ const OrderDetails = ({ Details, User }) => {
                     {/* Order Placed */}
 
                     <div className='mt-8 flex flex-row h-20'>
-                        <h1 className='ml-5 h-8 w-10 flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
+                        <h1 className='ml-5 h-8 w-10 flex-wrap text-toosm text-mygrey'>{Details.progress_date[0]}</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
-                            <Image src={green} alt='' className="w-full ml-[2px]" />
-                            <div className='h-20 w-[3px] bg-green-500'></div>
+                            <Progress progress={Details.progress[0]} /> 
+                            {(Details.progress[0] == 1)?<div className='h-20 w-[3px] bg-green-500'></div>:<div className='h-20 w-[3px] bg-slate-300'></div>}
                         </div>
                         <div className='flex flex-col w-56 mx-3 -mt-2'>
                             <h1 className='font-medium'>Order Placed</h1>
@@ -60,10 +85,10 @@ const OrderDetails = ({ Details, User }) => {
 
                     {/* Confirmed */}
                     <div className='flex flex-row h-20'>
-                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
+                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>{Details.progress_date[1]}</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
-                            <Image src={green} alt='' className="w-full ml-[2px]" />
-                            <div className='h-20 w-[3px] bg-green-500'></div>
+                            <Progress progress={Details.progress[1]} />
+                            {(Details.progress[1] == 1)?<div className='h-20 w-[3px] bg-green-500'></div>:<div className='h-20 w-[3px] bg-slate-300'></div>}
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
                             <h1 className=' font-medium'>Confirmed</h1>
@@ -73,10 +98,10 @@ const OrderDetails = ({ Details, User }) => {
 
                     {/* Picked Up */}
                     <div className='flex flex-row h-20'>
-                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
+                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>{Details.progress_date[2]}</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
-                            <Image src={green} alt='' className="w-full ml-[2px]" />
-                            <div className='h-20 w-[3px] bg-green-500'></div>
+                            <Progress progress={Details.progress[2]} />
+                            {(Details.progress[2] == 1)?<div className='h-20 w-[3px] bg-green-500'></div>:<div className='h-20 w-[3px] bg-slate-300'></div>}
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
                             <h1 className=' font-medium'>Picked Up</h1>
@@ -86,10 +111,10 @@ const OrderDetails = ({ Details, User }) => {
 
                     {/* On the way */}
                     <div className='flex flex-row h-20'>
-                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
+                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>{Details.progress_date[3]}</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
-                            <Lottie animationData={red} className="h-10"/>
-                            <div className='h-20 w-[3px] bg-slate-300'></div>
+                            <Progress progress={Details.progress[3]} />
+                            {(Details.progress[3] == 1)?<div className='h-20 w-[3px] bg-green-500'></div>:<div className='h-20 w-[3px] bg-slate-300'></div>}
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
                             <h1 className=' font-medium'>On the way</h1>
@@ -99,9 +124,9 @@ const OrderDetails = ({ Details, User }) => {
 
                     {/* Delivered */}
                     <div className='flex flex-row h-20'>
-                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>1 Nov 15:20</h1>
+                        <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>{Details.progress_date[4]}</h1>
                         <div className='flex flex-col  items-center mx-3'>
-                            <Image src={white} alt='' className="w-full ml-[2px]" />
+                            <Progress progress={Details.progress[4]} />
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
                             <h1 className=' font-medium'>Delivered</h1>
@@ -119,7 +144,7 @@ const OrderDetails = ({ Details, User }) => {
                         
                         <div className=' flex justify-between mt-2'>
                             <h1 className='text-neutral-400'>Order Id:</h1>
-                            <h1>{Details.orderID}</h1>
+                            <h1>{Details.id}</h1>
                         </div>
 
                         <div className=' flex justify-between mt-2'>
@@ -130,19 +155,19 @@ const OrderDetails = ({ Details, User }) => {
                         <div className=' flex justify-between mt-2'>
                             <h1 className='text-neutral-400'>Total Amount:</h1>
                             <span className='flex  font-semibold'>
-                                <h1>৳ {Details.amount}</h1>
+                                <h1>৳ {Details.grand_total}</h1>
                                 (<PaymentType />)
                             </span>
                         </div>
 
                         <div className=' flex justify-between mt-2'>
                             <h1 className='text-neutral-400 '>Payment Method:</h1>
-                            <h1>{Details.payMethod}</h1>
+                            <h1>{Details.payment_method}</h1>
                         </div>
 
                         <div className=' flex justify-between mt-2'>
                             <h1 className='text-neutral-400'>Shipping Method:</h1>
-                            <h1>{Details.shipMethod}</h1>
+                            <h1>{Details.shipping_method}</h1>
                         </div>
                     </div>
 
@@ -151,8 +176,8 @@ const OrderDetails = ({ Details, User }) => {
                     {/* shipping details */}
                     <div className='mt-2 w-80 h-36 flex flex-col text-md'>
                         <h1 className='text-neutral-400'>Shipping Address:</h1>
-                        <h1>{User.username}</h1>
-                        <h1>{User.address}</h1>
+                        <h1>{User.name}</h1>
+                        <h1>{User.location}</h1>
                         <h1 className='text-neutral-400'>{User.phone}</h1>
                     </div>
 
