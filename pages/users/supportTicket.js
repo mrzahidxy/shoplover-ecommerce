@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 
 import chat from "./chat.json"
+import tickets from "./data/tickets.json"
 
 import PageName from "../../components/users/pageName"
 
@@ -27,16 +28,26 @@ const supportTicket = () => {
     const [Rotate, setRotate] = useState("180")
     const [ShowTicket, setShowTicket] = useState("block")
 
+    const [ChatID, setChatID] = useState(0)
+    const chatHandler = useCallback((chatID)=>{
+        setChatID(chatID)
+    })
+    
+    console.log("chat id- ",ChatID);
 
     const ShowOptions = () => {
         if (Pending.length == 0 && Solved == 0) {
+            console.log("showing option no ticket");
             return <NoTicket />
         } else if (OptionSelected == 'solved') {
-            return <Ticket Type={"solved"} />
+            console.log("showing option solved");
+            return <Ticket data={tickets} Type="solved" change={chatHandler}/>
         } else {
-            return <Ticket Type={"pending"} />
+            console.log("showing option pending");
+            return <Ticket data={tickets} Type="pending" change={chatHandler} />
         }
     }
+
 
     return (
         <div className='mt-10 xl:w-285 bg-white'>
@@ -87,7 +98,7 @@ const supportTicket = () => {
                 <div className='col-span-2 bg-[#D3DCFC] p-6 min-h-[500px] lg:h-[730px]'>
                     <div className='w-full h-3/4 overflow-y-auto flex flex-col'>
                         {
-                            chat.map((item, index) => {
+                            tickets[ChatID].chat.map((item, index) => {
                                 if (index % 2 == 0) {
                                     return (
                                         <span key={index} className='flex flex-row'>

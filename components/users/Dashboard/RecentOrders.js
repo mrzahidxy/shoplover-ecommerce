@@ -1,5 +1,6 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import shoe from "../../../public/Nahin/product/shoe.png"
 import watch from "../../../public/Nahin/product/watch.png"
@@ -10,15 +11,29 @@ import lemon from "../../../public/Nahin/product/lemon.png"
 import perfume from "../../../public/Nahin/product/perfume.png"
 import lens from "../../../public/Nahin/product/lens.png"
 import rightArrow from "../../../public/Nahin/icons/rarrow.svg"
+import Link from 'next/link'
 
 
-const RecentOrders = () => {
+const RecentOrders = ({data}) => {
+
+    const router = useRouter()
 
     const [Orders, setOrders] = useState([
-        {id: "SL 123456745", products: [shoe, watch], date: "13 Dec, 2022", amount: "৳1009", details: 'https://www.google.com'},
-        {id: "SL 123456769", products: [coke, headphone, ipad ], date: "14 Dec, 2022", amount: "৳8690", details: 'https://www.google.com'},
-        {id: "SL 123456742", products: [lemon, perfume, lens], date: "15 Dec, 2022", amount: "৳3785", details: 'https://www.google.com'},
+        {id: "SL 123456745", products: [shoe, watch], date: "13 Dec, 2022", amount: "৳1009", details: '/users/orderDetails'},
+        {id: "SL 123456769", products: [coke, headphone, ipad ], date: "14 Dec, 2022", amount: "৳8690", details: '/users/orderDetails'},
+        {id: "SL 123456742", products: [lemon, perfume, lens], date: "15 Dec, 2022", amount: "৳3785", details: '/users/orderDetails'},
     ])
+
+    useEffect(() => {
+      if(data != [] || data != undefined){
+        setOrders(data.Orders)
+      }
+    
+      return () => {
+        <></>
+      }
+    }, [])
+    
 
     return (
         <div>
@@ -41,13 +56,13 @@ const RecentOrders = () => {
                                 <div className='recentOrders hidden md:flex w-56 lg:w-72 lg:ml-5'>
                                     {
                                         items.products.map((prod, index2)=>(
-                                            <Image src={prod} key={index2} className="ml-2 w-10 h-10" alt=''/>
+                                            <Image key={index2} src={prod.image} width={40} height={10} className="ml-2" alt=''/>
                                         ))
                                     }
                                 </div>
                                 <h1 className='recentOrders w-18 lg:ml-7'>{items.date}</h1>
-                                <h1 className='recentOrders w-20 lg:w-28 sm:ml-10 lg:ml-20'>{items.amount}</h1>
-                                <a className='hidden xl:flex ml-14 underline text-blue-400' href={items.details}>View Details</a>
+                                <h1 className='recentOrders w-20 lg:w-28 sm:ml-10 lg:ml-20'>৳ {items.grand_total}</h1>
+                                <Link href={`/users/orderDetails/${items._id}`} className='hidden xl:flex ml-14 underline text-blue-400'>View Details</Link>
                                 <button className='hidden md:flex lg:hidden hover:text-blue-500'><Image src={rightArrow} alt='' className="w-5 h-5"/></button>
                                 
                             </div>

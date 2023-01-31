@@ -27,17 +27,17 @@ const ProfileNav = () => {
     )
 
     const [Navbar, setNavbar] = useState([
-        { image: icon1, name: "Dashboard", color: "none", link: "/users" },
-        { image: icon2, name: "Track Orders", color: "none", link: "/users/trackOrders" },
-        { image: icon3, name: "Purchase History", color: "none", link: "/users/purchaseHistory" },
-        { image: icon4, name: "My Wishlist", color: "none", link: "/users/wishlist" },
-        { image: icon5, name: "Payment Method", color: "none", link: "/users/paymentMethod" },
-        { image: icon6, name: "Refund Request", color: "none", link: "/users" },
-        { image: icon7, name: "Manage Shipping Address", color: "none", link: "/users/shippingAddress" },
-        { image: icon8, name: "Change Password", color: "none", link: "/users/changePassword" },
-        { image: icon9, name: "Change Language", color: "none", link: "/users/changeLanguage" },
-        { image: icon10, name: "Support Ticket", color: "none", link: "/users/supportTicket" },
-        { image: icon11, name: "Terms & Conditions", color: "none", link: "/users" },
+        { image: icon1, name: "Dashboard", color: "none", link: "/users", pop: "" },
+        { image: icon2, name: "Track Orders", color: "none", link: "/users/trackOrders", pop: "" },
+        { image: icon3, name: "Purchase History", color: "none", link: "/users/purchaseHistory", pop: "New" },
+        { image: icon4, name: "My Wishlist", color: "none", link: "/users/wishlist", pop: "" },
+        { image: icon5, name: "Payment Method", color: "none", link: "/users/paymentMethod", pop: "" },
+        { image: icon6, name: "Refund Request", color: "none", link: "/users", pop: "" },
+        { image: icon7, name: "Manage Shipping Address", color: "none", link: "/users/shippingAddress", pop: "" },
+        { image: icon8, name: "Change Password", color: "none", link: "/users/changePassword", pop: "" },
+        { image: icon9, name: "Change Language", color: "none", link: "/users/changeLanguage", pop: "" },
+        { image: icon10, name: "Support Ticket", color: "none", link: "/users/supportTicket", pop: "02" },
+        { image: icon11, name: "Terms & Conditions", color: "none", link: "/users", pop: "" },
     ])
     const [NavBtn, setNavBtn] = useState("none")
 
@@ -70,7 +70,7 @@ const ProfileNav = () => {
 
                         return (
                             <button key={index}
-                                className='flex flex-row items-center w-full h-12
+                                className=' w-full h-12 px-5 flex flex-row items-center justify-between
                                 border-b-2 border-slate-100 focus:bg-[#FFC800]
                                 hover:bg-[#FFC800] transition-all ease-linear duration-400'
                                 style={{ backgroundColor: NavBtn }}
@@ -78,12 +78,16 @@ const ProfileNav = () => {
                                     router.push({ pathname: items.link, query: { name: items.name } })
                                 }}
                             >
-                                <Image src={items.image} className="ml-5 w-4 h-4" alt='' />
-                                <span className='ml-3 font-medium'>{items.name}</span>
+                                <span className='flex flex-row'>
+                                    <Image src={items.image} className="w-4 h-4" alt='' />
+                                    <span className='ml-3 font-medium'>{items.name}</span>
+                                </span>
+
+                                {(items.pop != "")?<span className='bg-[#004CFF]/20 rounded-md text-sm py-1 px-3'>{items.pop}</span>:<></>}
                             </button>
                         )
 
-                        
+
                     })
                 }
             </div>
