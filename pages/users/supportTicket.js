@@ -39,12 +39,9 @@ const supportTicket = () => {
         if (Pending.length == 0 && Solved == 0) {
             console.log("showing option no ticket");
             return <NoTicket />
-        } else if (OptionSelected == 'solved') {
-            console.log("showing option solved");
-            return <Ticket data={tickets} Type="solved" change={chatHandler}/>
         } else {
-            console.log("showing option pending");
-            return <Ticket data={tickets} Type="pending" change={chatHandler} />
+            console.log("showing option pending/solved");
+            return <Ticket data={tickets} Type={OptionSelected} change={chatHandler} />
         }
     }
 
