@@ -234,7 +234,7 @@ const AllProducts = ({ title }) => {
           <div className="flex justify-between">
             {
               route.split('/')[2] !== 'searchresult' ?
-                <div><h3 className="text-2xl font-medium">{title}</h3>  <hr class="w-44 h-1 bg-black" /> </div>
+                <div><h3 className="text-2xl font-medium">{title}</h3>  <hr class="w-44 lg:w-72 h-1 bg-black" /> </div>
                 : <div><span className="text-[15px] font-base ">{title}</span>  <hr class="w-52 h-1 bg-black mt-4" /> </div>
             }
 

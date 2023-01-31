@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
 
 const shipping = () => {
@@ -7,7 +8,7 @@ const shipping = () => {
 
       <div className="container flex flex-col items-center gap-6 my-24 rounded-md">
         <div className="max-w-[389px] space-y-4">
-          <div className=" bg-[#F6F6F6] grid grid-cols-6 gap-3 p-4">
+          <Link href="/cart/payment" className=" bg-[#F6F6F6] grid grid-cols-6 gap-3 p-4">
             <div className="col-span-5 flex flex-col gap-1">
               <span className="w-[65px] mb-2 py-1 font-medium text-xs bg-black text-white text-center">
                 Home
@@ -26,8 +27,8 @@ const shipping = () => {
                 <img src="/green-ticks.svg" alt="" />
               </div>
             </div>
-          </div>
-          <div className=" bg-[#F6F6F6] grid grid-cols-6 gap-3 p-4">
+          </Link>
+          <Link href="payment" className=" bg-[#F6F6F6] grid grid-cols-6 gap-3 p-4">
             <div className="col-span-5 flex flex-col gap-1">
               <span className="w-[65px] mb-2 py-1 font-medium text-xs bg-black text-white text-center">
                 Office
@@ -46,7 +47,7 @@ const shipping = () => {
                 <img src="/green-ticks.svg" alt="" />
               </div>
             </div>
-          </div>
+          </Link>
 
           <div className=" w-min-[360px] bg-[#F6F6F6] text-primary text-center py-10">
             + Create New

@@ -217,7 +217,7 @@ export default function Home() {
               <div className="bg-secondary px-6 py-3 rounded-full my-5">
                 <img src="/categories.png" className="" />
               </div>
-              <span className="bg-secondary w-full flex justify-center text-base font-semibold">
+              <span className="bg-secondary w-full flex justify-center text-base font-semibold py-2">
                 {c.name}
               </span>
             </Link>

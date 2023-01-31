@@ -35,13 +35,13 @@ const Product = ({ product }) => {
               <img src="/star-icon.svg" />
               <img src="/star-icon.svg" />
             </div>
-            <span className="text-[10px] font-[#7A869A]">(10)</span>
+            <span className="text-[10px] text-[#7A869A]">(10)</span>
           </div>
           <div className="flex gap-1 items-baseline">
             <span className="text-sm md:text-lg lg:text-xl">
               {product.price}
             </span>
-            <span className="text-xs font-[#7A869A] line-through">
+            <span className="text-xs text-[#7A869A] line-through">
               ৳1,86,400
             </span>
           </div>

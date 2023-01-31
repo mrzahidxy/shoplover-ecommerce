@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 
 const ProductDetails = () => {
@@ -92,9 +93,9 @@ const ProductDetails = () => {
             <span className="bg-[#DADADA] px-9 py-3 rounded-md hover:bg-black hover:text-white">
               Add to Cart
             </span>
-            <span className="bg-black text-white px-9 py-3 rounded-md hover:bg-slate-700">
+            <Link href='/cart' className="bg-black text-white px-9 py-3 rounded-md hover:bg-slate-700">
               Buy Now
-            </span>
+            </Link>
           </div>
           <hr />
           <di className="space-y-2 ">

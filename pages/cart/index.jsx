@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const orders = [
   {
     id: 1,
@@ -126,14 +128,14 @@ const ordercart = () => {
         </div>
 
         {/* large screen total */}
-        <div className="hidden lg:block space-y-3">
+        <div className="hidden lg:flex flex-col gap-2">
           <span className="mb-2 text-2xl font-medium">Cart Totals</span>
           <div className="bg-[#F8F8F8] flex justify-between p-4 text-lg">
             <span>Subtotal</span> <span className="text-primary">৳700</span>
           </div>
-          <div className="bg-black text-white p-4 text-xl">
+          <Link href="/cart/deliveryinfo" className="bg-black text-white p-4 text-xl mt-4">
             Proceed to Checkout
-          </div>
+          </Link>
         </div>
       </div>
 
@@ -147,7 +149,7 @@ const ordercart = () => {
         <div className="bg-black text-white rounded-md px-6 py-2">Checkout</div>
       </div>
 
-      <div className="hidden lg:block w-3/12 text-lg font-medium text-center border border-secondary p-4">
+      <div className="hidden lg:block w-3/12 text-lg font-medium text-center border border-[#DFDFDF] p-4">
         Continue Shopping
       </div>
     </div>
