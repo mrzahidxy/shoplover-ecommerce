@@ -208,8 +208,9 @@ export default function Home() {
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5">
           {categories.map((c) => (
-            <div
-              className="flex flex-col justify-center items-center border boreder-secondary  hover:shadow-xl "
+            <Link
+              href="/categories/:id"
+              className="flex flex-col justify-center items-center border boreder-secondary  hover:shadow-xl ease-in-out duration-300"
               key={Math.random()}
             >
               <div className="bg-secondary px-6 py-3 rounded-full my-5">
@@ -218,7 +219,7 @@ export default function Home() {
               <span className="bg-secondary w-full flex justify-center text-base font-semibold">
                 {c.name}
               </span>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -237,6 +238,7 @@ export default function Home() {
         title="new arrivals"
         link="products/newarrival"
       />
+
       <div className="container my-14 ">
         <img src="/images/banner-2.png" />
       </div>

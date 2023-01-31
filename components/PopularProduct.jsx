@@ -11,31 +11,31 @@ const PopularProduct = ({ products }) => {
           </h3>
           <Link
             href="/products/popularproducts"
-            className="text-base font-medium border border-[#161D25] p-1 md:p-2.5 rounded-md capitalize hover:bg-black hover:text-white"
+            className="text-base font-medium border border-[#161D25] p-1 md:p-2.5 rounded-md capitalize hover:bg-black hover:text-white ease-in-out duration-300 "
           >
             view all
           </Link>
         </div>
-        <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
-          <div className="col-span-1 relative ">
-            <img src="/images/sale-30p.png" className="h-full " />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
+          <div className="col-span-1 relative md:mr-2">
+            <img src="/images/sale-30p.png" className="h-full" />
 
-            <span className="absolute bottom-[20%] left-[30%] text-white z-10 border px-4 py-2 rounded-md hover:bg-white hover:text-black">
+            <span className="absolute bottom-[20%] left-[30%] text-white z-10 border px-4 py-2 rounded-md hover:bg-primary hover:text-black ease-in-out duration-300 ">
               View All
             </span>
           </div>
           <div className="col-span-1 md:col-span-2 lg:col-span-4  xl:col-span-5">
-            <div className="hidden xl:grid xl:grid-cols-5 gap-2.5">
+            <div className="hidden lg:grid lg:grid-cols-5 gap-2.5">
               {products.slice(0, 5).map((product) => (
                 <Product product={product} key={Math.random()} />
               ))}
             </div>
-            <div className="hidden lg:grid grid-cols-4 gap-2.5 xl:hidden">
+            {/* <div className="hidden lg:grid grid-cols-4 gap-2.5 xl:hidden">
               {products.slice(0, 4).map((product) => (
                 <Product product={product} key={Math.random()} />
               ))}
-            </div>
-            <div className="hidden md:grid md:grid-cols-2 lg:hidden">
+            </div> */}
+            <div className="hidden md:grid md:grid-cols-2 gap-3 lg:hidden">
               {products.slice(0, 2).map((product) => (
                 <Product product={product} key={Math.random()} />
               ))}

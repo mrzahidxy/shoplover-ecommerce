@@ -10,7 +10,7 @@ const Products = ({ products, title, link }) => {
         </h3>
         <Link
           href={link}
-          className="text-base font-medium border border-[#161D25] p-1 md:p-2.5 rounded-md capitalize hover:bg-black hover:text-white"
+          className="text-base font-medium border border-[#161D25] p-1 md:p-2.5 rounded-md capitalize hover:bg-black hover:text-white ease-in-out duration-300"
         >
           view all
         </Link>
@@ -26,12 +26,12 @@ const Products = ({ products, title, link }) => {
           <Product product={product} key={Math.random()} />
         ))}
       </div>
-      <div className=" md:hidden lg:grid lg:grid-cols-5 xl:hidden gap-2.5">
+      {/* <div className=" md:hidden lg:grid lg:grid-cols-5 xl:hidden gap-2.5">
         {products.slice(0, 5).map((product) => (
           <Product product={product} key={Math.random()} />
         ))}
-      </div>
-      <div className="lg:hidden xl:grid xl:grid-cols-6 gap-2.5">
+      </div> */}
+      <div className="hidden lg:grid lg:grid-cols-6 gap-2.5">
         {products.map((product) => (
           <Product product={product} key={Math.random()} />
         ))}

@@ -7,7 +7,7 @@ const Product = ({ product }) => {
   return (
     <Link
       href={`/product/${product.id}`}
-      className="border border-color-[#E3E3E3] rounded-md hover:shadow-xl group relative"
+      className="border border-color-[#E3E3E3] rounded-md hover:shadow-xl ease-in-out duration-300 group relative"
       key={Math.random()}
     >
       <div className="flex flex-col gap-1">
