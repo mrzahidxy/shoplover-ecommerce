@@ -40,7 +40,7 @@ const Product = ({ product }) => {
           <div className="flex gap-1 items-baseline">
             <span className="text-sm md:text-lg lg:text-xl">
               {product.price}
-            </span>{" "}
+            </span>
             <span className="text-xs font-[#7A869A] line-through">
               ৳1,86,400
             </span>

@@ -24,73 +24,73 @@ const productView = () => {
       id: 1,
       title: "Apple Macbook- 16core 16GB RAM 1TB",
       price: " ৳1,86,400",
-      img: "/product1.png",
+      img: "/images/product1.png",
     },
     {
       id: 2,
       title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
       price: "৳1,449",
-      img: "/product2.png",
+      img: "/images/product2.png",
     },
     {
       id: 3,
       title: "Sony Mirrorless camera with Multifuncktion Key",
       price: "৳65,600",
-      img: "/product3.png",
+      img: "/images/product3.png",
     },
     {
       id: 4,
       title: "Mibro Waterproof Smartwatch 3” Display",
       price: "৳2,400",
-      img: "/product4.png",
+      img: "/images/product4.png",
     },
     {
       id: 5,
       title: "phillips Rice Cooker 8 Litre 2 Cups",
       price: "৳98,50",
-      img: "/product5.png",
+      img: "/images/product5.png",
     },
     {
       id: 6,
       title: "JBL Airdots WithNoise cancelletion -Black",
       price: "৳98,50",
-      img: "/product6.png",
+      img: "/images/product6.png",
     },
     {
       id: 7,
       title: "Apple Macbook- 16core 16GB RAM 1TB",
       price: " ৳1,86,400",
-      img: "/product1.png",
+      img: "/images/product1.png",
     },
     {
       id: 8,
       title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
       price: "৳1,449",
-      img: "/product2.png",
+      img: "/images/product2.png",
     },
     {
       id: 9,
       title: "Sony Mirrorless camera with Multifuncktion Key",
       price: "৳65,600",
-      img: "/product3.png",
+      img: "/images/product3.png",
     },
     {
       id: 10,
       title: "Mibro Waterproof Smartwatch 3” Display",
       price: "৳2,400",
-      img: "/product4.png",
+      img: "/images/product4.png",
     },
     {
       id: 11,
       title: "phillips Rice Cooker 8 Litre 2 Cups",
       price: "৳98,50",
-      img: "/product5.png",
+      img: "/images/product5.png",
     },
     {
       id: 12,
       title: "JBL Airdots WithNoise cancelletion -Black",
       price: "৳98,50",
-      img: "/product6.png",
+      img: "/images/product6.png",
     },
   ];
 
@@ -114,14 +114,12 @@ const productView = () => {
           {/* //?top selling products */}
           <div className="hidden lg:block space-y-7 border border-[#E9E9E] px-7 py-5 rounded-sm">
             <h3 className="text-lg font-bold">Top Selling Products</h3>
-
-            <div className="space-y-12">
+            <div className="space-y-8">
               {products.map((p) => (
-                <div className="flex gap-3 p-1 hover:shadow-xl" key={p.id}>
+                <div className="flex gap-3 p-1 hover:bg-secondary " key={p.id}>
                   <div className="w-[83px]  border border-[#E9E9E9] rounded-sm flex justify-center items-center p-2">
                     <img src={p.img} alt="" />
                   </div>
-
                   <div className="flex flex-col gap-[10px]">
                     <span className="font-normal text-sm">{p.title}</span>
                     <div className="flex items-center gap-1 text-sm font-normal ">
@@ -129,11 +127,11 @@ const productView = () => {
                       <img className="w-[10] h-[10]" src="/star-icon.svg" />
                       <img className="w-[10] h-[10]" src="/star-icon.svg" />
                       <img className="w-[10] h-[10]" src="/star-icon.svg" />
-                      <span className="text-lightblack">(10)</span>
+                      <span className="text-[ #7A869A]">(10)</span>
                     </div>
                     <div className="space-x-1">
-                      <span className="medium">{p.price}</span>
-                      <span className="text-[8px] font-lightblack">৳1800</span>
+                      <span className="font-medium">{p.price}</span>
+                      <span className="text-[8px] text-[#7A869A] line-through">৳1800</span>
                     </div>
                   </div>
                 </div>
@@ -152,7 +150,7 @@ const productView = () => {
         {/* //?related products */}
         <div className="pt-11 px-5">
           <h3 className="text-lg font-bold mb-4">Related Products</h3>
-          <ProductSlider />
+          <ProductSlider products={products} />
         </div>
       </div>
     </div>

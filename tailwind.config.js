@@ -28,6 +28,7 @@ module.exports = {
       colors: {
         primary: "#FFC800",
         secondary: "#F6F6F6",
+      
         listBar: "#F8F5F5",
         borderColor: '#DADADA',
         mygrey: "#9C9C9C",
