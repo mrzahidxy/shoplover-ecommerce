@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
@@ -41,6 +41,9 @@ const ProfileNav = () => {
     ])
     const [NavBtn, setNavBtn] = useState("none")
 
+
+
+
     return (
         <div className='hidden lg:block border-1 rounded-sm bg-white shadow-sm border-[#DADADA] max-h-[795px] mt-10 min-w-[350px] xl:w-100'>
             <div className='ml-5 pt-4'>
@@ -65,18 +68,22 @@ const ProfileNav = () => {
                 {
                     Navbar.map((items, index) => {
 
-                        return (<button key={index}
-                            className='flex flex-row items-center w-full h-12
-                            border-b-2 border-slate-100 
-                            hover:bg-rose-300 hover:text-rose-600 hover:stroke-rose-600 transition-all ease-linear duration-400'
-                            style={{ backgroundColor: NavBtn }}
-                            onClick={() => {
-                                router.push({ pathname: items.link, query: { name: items.name } })
-                            }}
-                        >
-                            <Image src={items.image} className="ml-5 w-4 h-4" alt='' />
-                            <span className='ml-3 font-medium'>{items.name}</span>
-                        </button>)
+                        return (
+                            <button key={index}
+                                className='flex flex-row items-center w-full h-12
+                                border-b-2 border-slate-100 focus:bg-[#FFC800]
+                                hover:bg-[#FFC800] transition-all ease-linear duration-400'
+                                style={{ backgroundColor: NavBtn }}
+                                onClick={() => {
+                                    router.push({ pathname: items.link, query: { name: items.name } })
+                                }}
+                            >
+                                <Image src={items.image} className="ml-5 w-4 h-4" alt='' />
+                                <span className='ml-3 font-medium'>{items.name}</span>
+                            </button>
+                        )
+
+                        
                     })
                 }
             </div>
