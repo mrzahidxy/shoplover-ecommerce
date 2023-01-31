@@ -34,8 +34,8 @@ const Ticket = ({ data, Type, change }) => {
             {
                 TicketData.map((items, index) => (
                     <button className=' w-full h-32 border-b-1 grid grid-cols-4 focus:bg-[#FFC800]/5' key={index}
-                    // onClick={()=>{change(index)}}
-                    onClick={()=>{console.log("cliked");}}
+                    onClick={()=>{change(index)}}
+                    // onClick={()=>{console.log("cliked");}}
                     >
                         <div className='flex flex-col col-span-3 justify-start items-start pl-8 pt-4'>
                             <span className='py-0.5 text-blue-400 text-sm'>Ticket Code: {items.ticket_code}</span>
