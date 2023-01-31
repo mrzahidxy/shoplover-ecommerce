@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const ProductDetails = () => {
   const [count, setCount] = useState(0)
@@ -21,11 +21,12 @@ const ProductDetails = () => {
           <div className="w-16 flex flex-col gap-2 items-center">
             <img src="/arrow-up.svg" />
             {imgs.map((i) => (
-              <img
-                className="border rounded-sm p-2"
-                src={`/${i.link}`}
-                key={Math.random()}
-              />
+              <button className="border rounded-sm p-2 focus:border-primary ease-in-out duration-300 ">
+                <img
+                  src={`/${i.link}`}
+                  key={Math.random()}
+                />
+              </button>
             ))}
             <img src="/arrow-down.svg" />
           </div>
@@ -43,11 +44,11 @@ const ProductDetails = () => {
             softside spinners
           </span>
           <hr />
-          <div className="flex items-center gap-2 divide-x-2">
+          <div className="flex items-center gap-6 divide-x-2">
             <div className="font-normal text-base">
               Brand: <span className="text-primary font-medium">Quechua</span>
             </div>
-            <div className="flex items-center gap-1 text-sm font-normal ">
+            <div className="flex items-center gap-1 text-sm font-normal pl-5">
               {stars.map((s) => (
                 <img
                   className="w-4"
@@ -56,16 +57,15 @@ const ProductDetails = () => {
                 />
               ))}
               <span className="text-lightblack font-normal text-sm">
-                (10 Review)
+                (10 Reviews)
               </span>
             </div>
           </div>
           <hr />
-          <div>
-            <span className="text-[25px] font-bold">৳3400 </span>{" "}
-            <span className="text-[23px] text-lightblack font-normal">
-              {" "}
-              ৳4200{" "}
+          <div className="space-x-2">
+            <span className="text-[25px] font-bold">৳3400 </span>
+            <span className="text-[23px] text-lightblack font-normal line-through text-[#DADADA]">
+              ৳4200
             </span>
             <span className="text-[15px] text-green-600">15% off</span>
           </div>
@@ -80,10 +80,10 @@ const ProductDetails = () => {
             </div>
             <div className="flex items-center gap-2">
               Quantity:
-              <div className="flex border">
-                <span className="border border-collapse px-5 py-1" onClick={()=>count> 1 && setCount(count-1)}>-</span>
-                <span className="border border-collapse px-4 py-1">{count}</span>
-                <span className="border border-collapse px-4 py-1" onClick={()=>setCount(count+1)}>+</span>
+              <div className="flex gap-[1px]">
+                <button className="border  px-5 py-1 focus:bg-secondary focus:ring-1" onClick={() => count > 1 && setCount(count - 1)}>-</button>
+                <span className="border  px-4 py-1 focus:bg-secondary focus:ring-1">{count}</span>
+                <button className="border px-4 py-1 focus:bg-secondary focus:ring-1" onClick={() => setCount(count + 1)}>+</button>
               </div>
             </div>
           </div>
@@ -97,8 +97,8 @@ const ProductDetails = () => {
             </span>
           </div>
           <hr />
-          <div>
-            <div className="font-normal text-sm">
+          <di className="space-y-2 ">
+            <div className="font-normal text-sm pt-2">
               <span className="flex gap-9  text-lightblack">
                 Payment: <img src="/pay-method.png" />
               </span>
@@ -110,7 +110,7 @@ const ProductDetails = () => {
                 Praesent egestas tristique nibh. Nullam dictum View details
               </span>
             </span>
-          </div>
+          </di>
           <hr />
           <div className="flex items-center gap-9">
             <span className="text-lightblack">Share:</span>
