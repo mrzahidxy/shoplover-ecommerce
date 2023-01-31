@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "../components/Product";
+import Link from "next/link";
 
 const products = [
   {
@@ -171,10 +172,14 @@ const SellerAllProducts = () => {
 
       <div className="flex justify-between border">
         <div>
-          <button className="px-5 py-3">Home Page</button>
-          <button className="bg-[#FBEAF1] px-5 py-3 border-b-4 border-b-[#DE146A]">
-            All Products
-          </button>
+          <Link href={`/seller_page`}>
+            <button className="px-5 py-3">Home Page</button>
+          </Link>
+          <Link href={`/seller_all_products`}>
+            <button className="bg-[#FFECA5] px-5 py-3 border-b-4 border-b-[#000000]">
+              All Products
+            </button>
+          </Link>
         </div>
 
         <div>
