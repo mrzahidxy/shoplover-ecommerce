@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { flashSales } from "./demoData";
 
 const STATUS = {
   STARTED: "Started",
@@ -8,21 +9,6 @@ const STATUS = {
 
 // const INITIAL_COUNT = 11; // 11sec
 const INITIAL_COUNT = 172811; // 2days 11sec
-
-const flashSales = [
-  { id: 1, name: "Books Collection" },
-  { id: 2, name: "Books Collection" },
-  { id: 3, name: "Books Collection" },
-  { id: 4, name: "Books Collection" },
-  { id: 5, name: "Books Collection" },
-  { id: 6, name: "Books Collection" },
-  { id: 7, name: "Books Collection" },
-  { id: 8, name: "Books Collection" },
-  { id: 9, name: "Books Collection" },
-  { id: 10, name: "Books Collection" },
-  { id: 11, name: "Books Collection" },
-  { id: 12, name: "Books Collection" },
-];
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -89,15 +75,15 @@ function Flash_sale() {
                   <span className="bg-black text-white text-xs px-1 py-[2px] rounded-sm">
                     {twoDigits(daysToDisplay)}
                   </span>
-                  :
+                  <span className="text-[#FFC800]">:</span>
                   <span className="bg-black text-white text-xs px-1 py-[2px] rounded-sm">
                     {twoDigits(hoursToDisplay)}
                   </span>
-                  :
+                  <span className="text-[#FFC800]">:</span>
                   <span className="bg-black text-white text-xs px-1 py-[2px] rounded-sm">
                     {twoDigits(minutesToDisplay)}
                   </span>
-                  :
+                  <span className="text-[#FFC800]">:</span>
                   <span className="bg-black text-white text-xs px-1 py-[2px] rounded-sm">
                     {twoDigits(secondsToDisplay)}
                   </span>
