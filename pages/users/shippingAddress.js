@@ -37,7 +37,7 @@ const shippingAddress = () => {
                         </span>
                     </div>
                     <div>
-                        <span className="text-primary text-sm">EDIT</span>
+                        <span className="text-[#FFC800] text-sm">EDIT</span>
                         <div className="mt-11">
                             <Image src={white_dot} alt="" />
                         </div>
@@ -61,7 +61,7 @@ const shippingAddress = () => {
                         </span>
                     </div>
                     <div>
-                        <span className="text-primary text-sm">EDIT</span>
+                        <span className="text-[#FFC800] text-sm">EDIT</span>
                         <div className="mt-11">
                             <Image src={green_check} alt="" />
                         </div>

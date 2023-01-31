@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
-* {
+/* * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -13,16 +13,79 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
+} */
 
 /* zahid-style */
+
+/* language select */
+.css-1u9des2-indicatorSeparator {
+  display: none;
+}
+
+/* slider */
+.slick-dots {
+  bottom: 25px !important;
+  right: 45px !important;
+}
+
+/* mega menu */
+
+.dropdown:hover > .dropdown-content {
+	display: hidden;
+  
+}
+
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item:hover, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item:hover,
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active,
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active {
+  background-color: transparent;
+}
+
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active,
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active{
+    background-color: yellow;
+  }
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
+}
 
 /* product slider */
 .slick-track {
   display: flex !important;
   gap: 10px;
 }
-
 
 /* pagenation */
 .ant-tabs-tabpane {
@@ -59,8 +122,6 @@ body {
 }
 
 /* zahid-style */
-
-
 
 /* nahin-style */
 
