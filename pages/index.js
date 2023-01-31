@@ -1,4 +1,9 @@
+import Link from "next/link";
+import PopularProduct from "../components/PopularProduct";
 import Products from "../components/Products";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const categories = [
   { id: 1, name: "Mobile & Devices" },
@@ -20,153 +25,167 @@ const products = [
     id: 1,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
     price: " ৳1,86,400",
-    img: "/product1.png",
+    img: "/images/product1.png",
   },
   {
     id: 2,
     title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
     price: "৳1,449",
-    img: "/product2.png",
+    img: "/images/product2.png",
   },
   {
     id: 3,
     title: "Sony Mirrorless camera with Multifuncktion Key",
     price: "৳65,600",
-    img: "/product3.png",
+    img: "/images/product3.png",
   },
   {
     id: 4,
     title: "Mibro Waterproof Smartwatch 3” Display",
     price: "৳2,400",
-    img: "/product4.png",
+    img: "/images/product4.png",
   },
   {
     id: 5,
     title: "phillips Rice Cooker 8 Litre 2 Cups",
     price: "৳98,50",
-    img: "/product5.png",
+    img: "/images/product5.png",
   },
   {
     id: 6,
     title: "JBL Airdots WithNoise cancelletion -Black",
     price: "৳98,50",
-    img: "/product6.png",
+    img: "/images/product6.png",
   },
   {
     id: 7,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
     price: " ৳1,86,400",
-    img: "/product1.png",
+    img: "/images/product1.png",
   },
   {
     id: 8,
     title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
     price: "৳1,449",
-    img: "/product2.png",
+    img: "/images/product2.png",
   },
   {
     id: 9,
     title: "Sony Mirrorless camera with Multifuncktion Key",
     price: "৳65,600",
-    img: "/product3.png",
+    img: "/images/product3.png",
   },
   {
     id: 10,
     title: "Mibro Waterproof Smartwatch 3” Display",
     price: "৳2,400",
-    img: "/product4.png",
+    img: "/images/product4.png",
   },
   {
     id: 11,
     title: "phillips Rice Cooker 8 Litre 2 Cups",
     price: "৳98,50",
-    img: "/product5.png",
+    img: "/images/product5.png",
   },
   {
     id: 12,
     title: "JBL Airdots WithNoise cancelletion -Black",
     price: "৳98,50",
-    img: "/product6.png",
+    img: "/images/product6.png",
   },
   {
     id: 13,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
     price: " ৳1,86,400",
-    img: "/product1.png",
+    img: "/images/product1.png",
   },
   {
     id: 14,
     title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
     price: "৳1,449",
-    img: "/product2.png",
+    img: "/images/product2.png",
   },
   {
     id: 15,
     title: "Sony Mirrorless camera with Multifuncktion Key",
     price: "৳65,600",
-    img: "/product3.png",
+    img: "/images/product3.png",
   },
   {
     id: 16,
     title: "Mibro Waterproof Smartwatch 3” Display",
     price: "৳2,400",
-    img: "/product4.png",
+    img: "/images/product4.png",
   },
   {
     id: 17,
     title: "phillips Rice Cooker 8 Litre 2 Cups",
     price: "৳98,50",
-    img: "/product5.png",
+    img: "/images/product5.png",
   },
   {
     id: 18,
     title: "JBL Airdots WithNoise cancelletion -Black",
     price: "৳98,50",
-    img: "/product6.png",
+    img: "/images/product6.png",
   },
   {
     id: 19,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
     price: " ৳1,86,400",
-    img: "/product1.png",
+    img: "/images/product1.png",
   },
   {
     id: 20,
     title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
     price: "৳1,449",
-    img: "/product2.png",
+    img: "/images/product2.png",
   },
   {
     id: 21,
     title: "Sony Mirrorless camera with Multifuncktion Key",
     price: "৳65,600",
-    img: "/product3.png",
+    img: "/images/product3.png",
   },
   {
     id: 22,
     title: "Mibro Waterproof Smartwatch 3” Display",
     price: "৳2,400",
-    img: "/product4.png",
+    img: "/images/product4.png",
   },
   {
     id: 23,
     title: "phillips Rice Cooker 8 Litre 2 Cups",
     price: "৳98,50",
-    img: "/product5.png",
+    img: "/images/product5.png",
   },
   {
     id: 24,
     title: "JBL Airdots WithNoise cancelletion -Black",
     price: "৳98,50",
-    img: "/product6.png",
+    img: "/images/product6.png",
   },
 ];
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 800,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: true,
+};
 
 export default function Home() {
   return (
     <div>
       <div className="container pt-5">
-        <img src="/home-banner.png" className="w-full mb-4" />
+        <Slider {...settings}>
+          <img src="/home-banner.png" className="w-full mb-4" />
+          <img src="/home-banner.png" className="w-full mb-4" />
+          <img src="/home-banner.png" className="w-full mb-4" />
+        </Slider>
       </div>
 
       <div className="container grid grid-cols-2 lg:grid-cols-3 justify-items-stretch mb-10">
@@ -177,28 +196,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="md:hidden">
-        <Products
-          products={products.slice(0, 2)}
-          title="most popular products"
-        />
-      </div>
-      <div className="hidden md:block lg:hidden">
-        <Products
-          products={products.slice(0, 3)}
-          title="most popular products"
-        />
-      </div>
-
-      <div className="hidden md:hidden lg:block">
-        <Products
-          products={products.slice(0, 6)}
-          title="most popular products"
-        />
-      </div>
+      <PopularProduct products={products} />
 
       <div className="container mt-10">
-        <img src="/fruits.png" />
+        <img src="/images/banner-1.png" className="w-full" />
       </div>
 
       <div className="container my-10">
@@ -207,7 +208,10 @@ export default function Home() {
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5">
           {categories.map((c) => (
-            <div className="flex flex-col justify-center items-center border boreder-secondary" key={Math.random()}>
+            <div
+              className="flex flex-col justify-center items-center border boreder-secondary  hover:shadow-xl "
+              key={Math.random()}
+            >
               <div className="bg-secondary px-6 py-3 rounded-full my-5">
                 <img src="/categories.png" className="" />
               </div>
@@ -220,21 +224,31 @@ export default function Home() {
       </div>
 
       <div className="container mb-10 grid grid-cols-2 md:grid-cols-4 gap-2 justify-items-stretch">
-        <img src="/men-exlusive-banner.png" className=" col-span-2 h-full" />
-        <img src="/vouge-banner.png" />
-        <img src="/adidas-banner.png" />
+        <img
+          src="/images/men-exlusive-banner.png"
+          className=" col-span-2 h-full"
+        />
+        <img src="/images/vouge-banner.png" />
+        <img src="/images/adidas-banner.png" />
       </div>
 
-      <Products products={products.slice(0, 6)} title="new arrivals" />
+      <Products
+        products={products.slice(0, 6)}
+        title="new arrivals"
+        link="products/newarrival"
+      />
       <div className="container my-14 ">
-        <img src="/smart-watch.png" />
+        <img src="/images/banner-2.png" />
       </div>
-      <Products products={products} title="only for you" />
+      <Products products={products} title="only for you" link="/products" />
 
       <div className="text-base font-medium flex justify-center my-6">
-        <span className="text-primary border bg-[#de146a29] border-primary px-12 py-4 rounded-md">
+        <Link
+          href="/products"
+          className="text-black border bg-primary/[.16] hover:bg-primary/[.50] border-black px-10 py-2 rounded-md"
+        >
           Load More
-        </span>
+        </Link>
       </div>
     </div>
   );

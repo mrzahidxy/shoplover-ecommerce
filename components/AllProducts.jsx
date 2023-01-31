@@ -1,187 +1,188 @@
 import { Pagination, Select } from "antd";
-import Filters from "../components/Filters";
-import Product from "../components/Product";
+import { useRouter } from "next/router";
+import Filters from "./Filters";
+import Product from "./Product";
 
 const products = [
   {
     id: 1,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
     price: " ৳1,86,400",
-    img: "/product1.png",
+    img: "/images/product1.png",
   },
   {
     id: 2,
     title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
     price: "৳1,449",
-    img: "/product2.png",
+    img: "/images/product2.png",
   },
   {
     id: 3,
     title: "Sony Mirrorless camera with Multifuncktion Key",
     price: "৳65,600",
-    img: "/product3.png",
+    img: "/images/product3.png",
   },
   {
     id: 4,
     title: "Mibro Waterproof Smartwatch 3” Display",
     price: "৳2,400",
-    img: "/product4.png",
+    img: "/images/product4.png",
   },
   {
     id: 5,
     title: "phillips Rice Cooker 8 Litre 2 Cups",
     price: "৳98,50",
-    img: "/product5.png",
+    img: "/images/product5.png",
   },
   {
     id: 6,
     title: "JBL Airdots WithNoise cancelletion -Black",
     price: "৳98,50",
-    img: "/product6.png",
+    img: "/images/product6.png",
   },
   {
     id: 7,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
     price: " ৳1,86,400",
-    img: "/product1.png",
+    img: "/images/product1.png",
   },
   {
     id: 8,
     title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
     price: "৳1,449",
-    img: "/product2.png",
+    img: "/images/product2.png",
   },
   {
     id: 9,
     title: "Sony Mirrorless camera with Multifuncktion Key",
     price: "৳65,600",
-    img: "/product3.png",
+    img: "/images/product3.png",
   },
   {
     id: 10,
     title: "Mibro Waterproof Smartwatch 3” Display",
     price: "৳2,400",
-    img: "/product4.png",
+    img: "/images/product4.png",
   },
   {
     id: 11,
     title: "phillips Rice Cooker 8 Litre 2 Cups",
     price: "৳98,50",
-    img: "/product5.png",
+    img: "/images/product5.png",
   },
   {
     id: 12,
     title: "JBL Airdots WithNoise cancelletion -Black",
     price: "৳98,50",
-    img: "/product6.png",
+    img: "/images/product6.png",
   },
   {
     id: 13,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
     price: " ৳1,86,400",
-    img: "/product1.png",
+    img: "/images/product1.png",
   },
   {
     id: 14,
     title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
     price: "৳1,449",
-    img: "/product2.png",
+    img: "/images/product2.png",
   },
   {
     id: 15,
     title: "Sony Mirrorless camera with Multifuncktion Key",
     price: "৳65,600",
-    img: "/product3.png",
+    img: "/images/product3.png",
   },
   {
     id: 16,
     title: "Mibro Waterproof Smartwatch 3” Display",
     price: "৳2,400",
-    img: "/product4.png",
+    img: "/images/product4.png",
   },
   {
     id: 17,
     title: "phillips Rice Cooker 8 Litre 2 Cups",
     price: "৳98,50",
-    img: "/product5.png",
+    img: "/images/product5.png",
   },
   {
     id: 18,
     title: "JBL Airdots WithNoise cancelletion -Black",
     price: "৳98,50",
-    img: "/product6.png",
+    img: "/images/product6.png",
   },
   {
     id: 19,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
     price: " ৳1,86,400",
-    img: "/product1.png",
+    img: "/images/product1.png",
   },
   {
     id: 20,
     title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
     price: "৳1,449",
-    img: "/product2.png",
+    img: "/images/product2.png",
   },
   {
     id: 21,
     title: "Sony Mirrorless camera with Multifuncktion Key",
     price: "৳65,600",
-    img: "/product3.png",
+    img: "/images/product3.png",
   },
   {
     id: 22,
     title: "Mibro Waterproof Smartwatch 3” Display",
     price: "৳2,400",
-    img: "/product4.png",
+    img: "/images/product4.png",
   },
   {
     id: 23,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
     price: " ৳1,86,400",
-    img: "/product1.png",
+    img: "/images/product1.png",
   },
   {
     id: 24,
     title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
     price: "৳1,449",
-    img: "/product2.png",
+    img: "/images/product2.png",
   },
   {
     id: 25,
     title: "Sony Mirrorless camera with Multifuncktion Key",
     price: "৳65,600",
-    img: "/product3.png",
+    img: "/images/product3.png",
   },
   {
     id: 26,
     title: "Mibro Waterproof Smartwatch 3” Display",
     price: "৳2,400",
-    img: "/product4.png",
+    img: "/images/product4.png",
   },
   {
     id: 27,
     title: "phillips Rice Cooker 8 Litre 2 Cups",
     price: "৳98,50",
-    img: "/product5.png",
+    img: "/images/product5.png",
   },
   {
     id: 28,
     title: "JBL Airdots WithNoise cancelletion -Black",
     price: "৳98,50",
-    img: "/product6.png",
+    img: "/images/product6.png",
   },
   {
     id: 29,
     title: "Apple Macbook- 16core 16GB RAM 1TB",
     price: " ৳1,86,400",
-    img: "/product1.png",
+    img: "/images/product1.png",
   },
   {
     id: 30,
     title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
     price: "৳1,449",
-    img: "/product2.png",
+    img: "/images/product2.png",
   },
 ];
 
@@ -215,21 +216,28 @@ const colors = [
   { id: 6, label: "#F8EBD6" },
 ];
 
-const searchresult = () => {
+
+
+const AllProducts = ({ title }) => {
+  const { route } = useRouter()
+
   return (
-    <div className="container grid grid-cols-6 mt-[30px] lg:mt-11 mb-4">
+    <div className="container grid lg:grid-cols-5 xl:grid-cols-6 mt-[30px] lg:mt-11 mb-4">
       {/* //? FILTERS */}
       <div className="hidden lg:block col-span-1">
         <Filters />
       </div>
 
-      <div className="col-span-6 lg:col-span-5 space-y-8 lg:space-y-14">
-        {/* //?PRODUCTS */}
+      {/* //?PRODUCTS */}
+      <div className="col-span-6 lg:col-span-4 xl:col-span-5 space-y-8 lg:space-y-14">
         <div className="">
           <div className="flex justify-between">
-            <span className="text-[15px] font-base">
-              620 item found for “Mobile”
-            </span>
+            {
+              route.split('/')[2] !== 'searchresult' ?
+                <div><h3 className="text-2xl font-medium">{title}</h3>  <hr class="w-44 h-1 bg-black" /> </div>
+                : <div><span className="text-[15px] font-base ">{title}</span>  <hr class="w-52 h-1 bg-black mt-4" /> </div>
+            }
+
             <div className="hidden lg:block border px-2 mb-1 rounded-md">
               <span>Sort by: </span>
               <Select
@@ -258,13 +266,15 @@ const searchresult = () => {
             <Select defaultValue={"Size"} options={sizes}></Select>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
             {products.map((p) => (
               <Product product={p} key={p.id} />
             ))}
           </div>
         </div>
         <div className="flex justify-center pb-10">
+
+          {/* //? PAGENATIONS */}
           <Pagination
             defaultCurrent={1}
             // responsive={true}
@@ -277,4 +287,4 @@ const searchresult = () => {
   );
 };
 
-export default searchresult;
+export default AllProducts;

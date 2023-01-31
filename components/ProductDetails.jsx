@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const ProductDetails = () => {
+  const [count, setCount] = useState(0)
   const colors = ["red-400", "blue-400", "green-400", "yellow-400"];
   const stars = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
   const imgs = [
@@ -80,18 +81,18 @@ const ProductDetails = () => {
             <div className="flex items-center gap-2">
               Quantity:
               <div className="flex border">
-                <span className="border border-collapse px-5 py-1">-</span>
-                <span className="border border-collapse px-4 py-1">1</span>
-                <span className="border border-collapse px-4 py-1">+</span>
+                <span className="border border-collapse px-5 py-1" onClick={()=>count> 1 && setCount(count-1)}>-</span>
+                <span className="border border-collapse px-4 py-1">{count}</span>
+                <span className="border border-collapse px-4 py-1" onClick={()=>setCount(count+1)}>+</span>
               </div>
             </div>
           </div>
           <hr />
           <div className="space-x-2 py-4 font-medium text-lg ">
-            <span className="bg-[#DADADA] px-9 py-3 rounded-md">
+            <span className="bg-[#DADADA] px-9 py-3 rounded-md hover:bg-black hover:text-white">
               Add to Cart
             </span>
-            <span className="bg-black text-white px-9 py-3 rounded-md">
+            <span className="bg-black text-white px-9 py-3 rounded-md hover:bg-slate-700">
               Buy Now
             </span>
           </div>
@@ -136,9 +137,9 @@ const ProductDetails = () => {
               <img src="/money-icon.svg" /> Cash on Delivery Available
             </span>
           </div>
-          <div className="py-4 px-9 border border-[#F6F6F6] flex gap-4.5">
+          <div className="py-4 px-9 border border-[#F6F6F6] flex flex-col gap-4.5">
             <span className="font-semibold">Sold By:</span>
-            <div>
+            <div className="flex gap-2">
               <img src="/seller-logo.png" />
               <div>
                 <span className="font-semibold">The Game Changer</span>
@@ -148,7 +149,7 @@ const ProductDetails = () => {
                   <img className="w-4" src="/star-icon.svg" />
                   <img className="w-4" src="/star-icon.svg" />
                 </div>
-                <span className="px-2 py-1 bg-[#de146a29] border border-primary text-primary rounded-md">
+                <span className="px-2 py-1 bg-[#FFC800] border border-black text-black rounded-md hover:bg-white ">
                   Visit Store
                 </span>
               </div>
