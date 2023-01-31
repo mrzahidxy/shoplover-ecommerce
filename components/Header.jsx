@@ -144,7 +144,7 @@ const Header = () => {
             placeholder="I want to buy..."
           />
           <Link
-            href="/searchresult"
+            href="/products/searchresult"
             className="w-14  bg-primary flex items-center justify-center rounded-sm"
           >
             <img src="/icons/search.svg" />
@@ -219,7 +219,7 @@ const Header = () => {
           >
             <div className="space-y-2 ">
               {[{ id: 1 }, { id: 2 }, { id: 3 }].map((p) => (
-                <>
+                <div key={p.id}>
                   <div className="grid grid-cols-10 gap-2">
                     <div className="flex flex-col gap-[1px] col-span-1">
                       <button
@@ -270,7 +270,7 @@ const Header = () => {
                     </div>
                   </div>
                   <hr />
-                </>
+                </div>
               ))}
             </div>
           </Drawer>

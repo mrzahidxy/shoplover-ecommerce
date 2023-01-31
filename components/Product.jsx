@@ -26,11 +26,15 @@ const Product = ({ product }) => {
           <span className="text-xs md:text-sm lg:text-base font-normal">
             {product.title}
           </span>
-          <div className="flex ">
-            <img src="/star-icon.svg" />
-            <img src="/star-icon.svg" />
-            <img src="/star-icon.svg" />
-            <img src="/star-icon.svg" />
+
+          <div className="flex gap-2 items-center">
+
+            <div className="flex ">
+              <img src="/star-icon.svg" />
+              <img src="/star-icon.svg" />
+              <img src="/star-icon.svg" />
+              <img src="/star-icon.svg" />
+            </div>
             <span className="text-[10px] font-[#7A869A]">(10)</span>
           </div>
           <div className="flex gap-1 items-baseline">
