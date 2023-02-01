@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import Link from "next/link";
+import { useState } from "react";
 
 const ProductDetails = () => {
+  const [count, setCount] = useState(0)
   const colors = ["red-400", "blue-400", "green-400", "yellow-400"];
   const stars = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
   const imgs = [
@@ -20,11 +22,12 @@ const ProductDetails = () => {
           <div className="w-16 flex flex-col gap-2 items-center">
             <img src="/arrow-up.svg" />
             {imgs.map((i) => (
-              <img
-                className="border rounded-sm p-2"
-                src={`/${i.link}`}
-                key={Math.random()}
-              />
+              <button className="border rounded-sm p-2 focus:border-primary ease-in-out duration-300 ">
+                <img
+                  src={`/${i.link}`}
+                  key={Math.random()}
+                />
+              </button>
             ))}
             <img src="/arrow-down.svg" />
           </div>
@@ -42,11 +45,11 @@ const ProductDetails = () => {
             softside spinners
           </span>
           <hr />
-          <div className="flex items-center gap-2 divide-x-2">
+          <div className="flex items-center gap-6 divide-x-2">
             <div className="font-normal text-base">
               Brand: <span className="text-primary font-medium">Quechua</span>
             </div>
-            <div className="flex items-center gap-1 text-sm font-normal ">
+            <div className="flex items-center gap-1 text-sm font-normal pl-5">
               {stars.map((s) => (
                 <img
                   className="w-4"
@@ -55,16 +58,15 @@ const ProductDetails = () => {
                 />
               ))}
               <span className="text-lightblack font-normal text-sm">
-                (10 Review)
+                (10 Reviews)
               </span>
             </div>
           </div>
           <hr />
-          <div>
-            <span className="text-[25px] font-bold">৳3400 </span>{" "}
-            <span className="text-[23px] text-lightblack font-normal">
-              {" "}
-              ৳4200{" "}
+          <div className="space-x-2">
+            <span className="text-[25px] font-bold">৳3400 </span>
+            <span className="text-[23px] text-lightblack font-normal line-through text-[#DADADA]">
+              ৳4200
             </span>
             <span className="text-[15px] text-green-600">15% off</span>
           </div>
@@ -79,25 +81,25 @@ const ProductDetails = () => {
             </div>
             <div className="flex items-center gap-2">
               Quantity:
-              <div className="flex border">
-                <span className="border border-collapse px-5 py-1">-</span>
-                <span className="border border-collapse px-4 py-1">1</span>
-                <span className="border border-collapse px-4 py-1">+</span>
+              <div className="flex gap-[1px]">
+                <button className="border  px-5 py-1 focus:bg-secondary focus:ring-1" onClick={() => count > 1 && setCount(count - 1)}>-</button>
+                <span className="border  px-4 py-1 focus:bg-secondary focus:ring-1">{count}</span>
+                <button className="border px-4 py-1 focus:bg-secondary focus:ring-1" onClick={() => setCount(count + 1)}>+</button>
               </div>
             </div>
           </div>
           <hr />
           <div className="space-x-2 py-4 font-medium text-lg ">
-            <span className="bg-[#DADADA] px-9 py-3 rounded-md">
+            <span className="bg-[#DADADA] px-9 py-3 rounded-md hover:bg-black hover:text-white">
               Add to Cart
             </span>
-            <span className="bg-black text-white px-9 py-3 rounded-md">
+            <Link href='/cart' className="bg-black text-white px-9 py-3 rounded-md hover:bg-slate-700">
               Buy Now
-            </span>
+            </Link>
           </div>
           <hr />
-          <div>
-            <div className="font-normal text-sm">
+          <di className="space-y-2 ">
+            <div className="font-normal text-sm pt-2">
               <span className="flex gap-9  text-lightblack">
                 Payment: <img src="/pay-method.png" />
               </span>
@@ -109,7 +111,7 @@ const ProductDetails = () => {
                 Praesent egestas tristique nibh. Nullam dictum View details
               </span>
             </span>
-          </div>
+          </di>
           <hr />
           <div className="flex items-center gap-9">
             <span className="text-lightblack">Share:</span>
@@ -136,9 +138,9 @@ const ProductDetails = () => {
               <img src="/money-icon.svg" /> Cash on Delivery Available
             </span>
           </div>
-          <div className="py-4 px-9 border border-[#F6F6F6] flex gap-4.5">
+          <div className="py-4 px-9 border border-[#F6F6F6] flex flex-col gap-4.5">
             <span className="font-semibold">Sold By:</span>
-            <div>
+            <div className="flex gap-2">
               <img src="/seller-logo.png" />
               <div>
                 <span className="font-semibold">The Game Changer</span>
@@ -148,7 +150,7 @@ const ProductDetails = () => {
                   <img className="w-4" src="/star-icon.svg" />
                   <img className="w-4" src="/star-icon.svg" />
                 </div>
-                <span className="px-2 py-1 bg-[#de146a29] border border-primary text-primary rounded-md">
+                <span className="px-2 py-1 bg-[#FFC800] border border-black text-black rounded-md hover:bg-white ">
                   Visit Store
                 </span>
               </div>

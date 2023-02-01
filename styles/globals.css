@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
-* {
+/* * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -13,8 +13,87 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+} */
+
+/* zahid-style */
+
+/* language select */
+.css-1u9des2-indicatorSeparator {
+  display: none;
 }
 
+/* slider */
+.slick-dots {
+  bottom: 25px !important;
+  right: 45px !important;
+}
+
+/* mega menu */
+
+.dropdown:hover > .dropdown-content {
+	display: hidden;
+  
+}
+
+/* product */
+
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-tabs-top >.ant-tabs-nav, :where(.css-dev-only-do-not-override-1i9hnpv).ant-tabs-bottom >.ant-tabs-nav, :where(.css-dev-only-do-not-override-1i9hnpv).ant-tabs-top >div>.ant-tabs-nav, :where(.css-dev-only-do-not-override-1i9hnpv).ant-tabs-bottom >div>.ant-tabs-nav {
+  margin: 0 !important;
+}
+
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item:hover, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item:hover,
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active,
+/* :where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active, */
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown-menu-submenu
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active {
+  background-color: transparent;
+}
+
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title:hover,
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-item-active,
+:where(.css-dev-only-do-not-override-1i9hnpv).ant-dropdown
+  .ant-dropdown-menu
+  .ant-dropdown-menu-submenu-title-active{
+    background-color: yellow;
+  }
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
+}
+
+/* product slider */
+.slick-track {
+  display: flex !important;
+  gap: 10px;
+}
+
+/* pagenation */
 .ant-tabs-tabpane {
   border-inline: solid 1px #e9e9e9;
   border-bottom: solid 1px #e9e9e9;
@@ -48,17 +127,22 @@ body {
   color: #fff;
 }
 
+/* zahid-style */
+
+/* nahin-style */
+
 @layer components {
   .flexCenter {
-      @apply flex flex-col justify-center items-center rounded-md
+    @apply flex flex-col justify-center items-center rounded-md;
   }
 
-  .recentOrders{
-      @apply h-12 overflow-hidden flex flex-wrap items-center
+  .recentOrders {
+    @apply h-12 overflow-hidden flex flex-wrap items-center;
   }
 
-  .blaa{
-    font-family: 'Robot', sans-serif;
+  .blaa {
+    font-family: "Robot", sans-serif;
   }
 
 }
+/* nahin-style */

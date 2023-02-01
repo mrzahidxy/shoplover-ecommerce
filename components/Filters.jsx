@@ -51,7 +51,7 @@ const Filters = () => {
         <h3 className="text-lg font-bold capitalize">categories</h3>
         <ul className="space-y-2">
           {categories.map((c) => (
-            <li key={c.id} className="text-base font-normal text-[#6C6C6C]">
+            <li key={c.id} className="text-sm xl:text-base font-normal text-[#6C6C6C]">
               {c.name}
             </li>
           ))}
@@ -62,7 +62,7 @@ const Filters = () => {
         <h3 className="text-lg font-bold capitalize">brands</h3>
         <ul className="space-y-2">
           {brands.map((c) => (
-            <li key={c.id} className="text-base font-normal text-[#6C6C6C]">
+            <li key={c.id} className="text-sm xl:text-base font-normal text-[#6C6C6C]">
               <input type="checkbox" name="" className="mr-2" /> {c.name}
             </li>
           ))}
@@ -80,7 +80,7 @@ const Filters = () => {
             trackStyle={{ backgroundColor: "#000" }}
             handleStyle={{ borderColor: "#000" }}
           />
-          <span className="text-base font-normal text-[#6C6C6C]">
+          <span className="text-sm xl:text-base font-normal text-[#6C6C6C]">
             Range: $50 - $350{" "}
           </span>
           <hr className="mt-8" />
@@ -102,7 +102,7 @@ const Filters = () => {
           <h3 className="text-lg font-bold capitalize">size</h3>
           <ul className="space-y-2">
             {sizes.map((s) => (
-              <li key={s.id} className="text-base font-normal text-[#6C6C6C]">
+              <li key={s.id} className="text-sm xl:text-base font-normal text-[#6C6C6C]">
                 <input type="checkbox" name="" className="mr-2" />
                 {s.name}
               </li>

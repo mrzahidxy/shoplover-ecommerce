@@ -1,10 +1,11 @@
-import Product from "../components/Product";
+import Product from "../../components/Product";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Pagination, Select } from "antd";
 import Slider from "react-slick";
 
-import Filters from "../components/Filters";
+import Filters from "../../components/Filters";
+import Link from "next/link";
 
 const category = () => {
   const categories = [
@@ -26,7 +27,7 @@ const category = () => {
     { id: 2, name: "Mobile Accessories" },
     { id: 3, name: "Feature Phones" },
     { id: 4, name: "Headsets & Tab" },
-    { id: 5, name: "Smartwatches & Accessories" },
+    { id: 5, name: "Smartwatches " },
   ];
 
   const brands = [
@@ -46,181 +47,181 @@ const category = () => {
       id: 1,
       title: "Apple Macbook- 16core 16GB RAM 1TB",
       price: " ৳1,86,400",
-      img: "/product1.png",
+      img: "/images/product1.png",
     },
     {
       id: 2,
       title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
       price: "৳1,449",
-      img: "/product2.png",
+      img: "/images/product2.png",
     },
     {
       id: 3,
       title: "Sony Mirrorless camera with Multifuncktion Key",
       price: "৳65,600",
-      img: "/product3.png",
+      img: "/images/product3.png",
     },
     {
       id: 4,
       title: "Mibro Waterproof Smartwatch 3” Display",
       price: "৳2,400",
-      img: "/product4.png",
+      img: "/images/product4.png",
     },
     {
       id: 5,
       title: "phillips Rice Cooker 8 Litre 2 Cups",
       price: "৳98,50",
-      img: "/product5.png",
+      img: "/images/product5.png",
     },
     {
       id: 6,
       title: "JBL Airdots WithNoise cancelletion -Black",
       price: "৳98,50",
-      img: "/product6.png",
+      img: "/images/product6.png",
     },
     {
       id: 7,
       title: "Apple Macbook- 16core 16GB RAM 1TB",
       price: " ৳1,86,400",
-      img: "/product1.png",
+      img: "/images/product1.png",
     },
     {
       id: 8,
       title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
       price: "৳1,449",
-      img: "/product2.png",
+      img: "/images/product2.png",
     },
     {
       id: 9,
       title: "Sony Mirrorless camera with Multifuncktion Key",
       price: "৳65,600",
-      img: "/product3.png",
+      img: "/images/product3.png",
     },
     {
       id: 10,
       title: "Mibro Waterproof Smartwatch 3” Display",
       price: "৳2,400",
-      img: "/product4.png",
+      img: "/images/product4.png",
     },
     {
       id: 11,
       title: "phillips Rice Cooker 8 Litre 2 Cups",
       price: "৳98,50",
-      img: "/product5.png",
+      img: "/images/product5.png",
     },
     {
       id: 12,
       title: "JBL Airdots WithNoise cancelletion -Black",
       price: "৳98,50",
-      img: "/product6.png",
+      img: "/images/product6.png",
     },
     {
       id: 13,
       title: "Apple Macbook- 16core 16GB RAM 1TB",
       price: " ৳1,86,400",
-      img: "/product1.png",
+      img: "/images/product1.png",
     },
     {
       id: 14,
       title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
       price: "৳1,449",
-      img: "/product2.png",
+      img: "/images/product2.png",
     },
     {
       id: 15,
       title: "Sony Mirrorless camera with Multifuncktion Key",
       price: "৳65,600",
-      img: "/product3.png",
+      img: "/images/product3.png",
     },
     {
       id: 16,
       title: "Mibro Waterproof Smartwatch 3” Display",
       price: "৳2,400",
-      img: "/product4.png",
+      img: "/images/product4.png",
     },
     {
       id: 17,
       title: "phillips Rice Cooker 8 Litre 2 Cups",
       price: "৳98,50",
-      img: "/product5.png",
+      img: "/images/product5.png",
     },
     {
       id: 18,
       title: "JBL Airdots WithNoise cancelletion -Black",
       price: "৳98,50",
-      img: "/product6.png",
+      img: "/images/product6.png",
     },
     {
       id: 19,
       title: "Apple Macbook- 16core 16GB RAM 1TB",
       price: " ৳1,86,400",
-      img: "/product1.png",
+      img: "/images/product1.png",
     },
     {
       id: 20,
       title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
       price: "৳1,449",
-      img: "/product2.png",
+      img: "/images/product2.png",
     },
     {
       id: 21,
       title: "Sony Mirrorless camera with Multifuncktion Key",
       price: "৳65,600",
-      img: "/product3.png",
+      img: "/images/product3.png",
     },
     {
       id: 22,
       title: "Mibro Waterproof Smartwatch 3” Display",
       price: "৳2,400",
-      img: "/product4.png",
+      img: "/images/product4.png",
     },
     {
       id: 23,
       title: "Apple Macbook- 16core 16GB RAM 1TB",
       price: " ৳1,86,400",
-      img: "/product1.png",
+      img: "/images/product1.png",
     },
     {
       id: 24,
       title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
       price: "৳1,449",
-      img: "/product2.png",
+      img: "/images/product2.png",
     },
     {
       id: 25,
       title: "Sony Mirrorless camera with Multifuncktion Key",
       price: "৳65,600",
-      img: "/product3.png",
+      img: "/images/product3.png",
     },
     {
       id: 26,
       title: "Mibro Waterproof Smartwatch 3” Display",
       price: "৳2,400",
-      img: "/product4.png",
+      img: "/images/product4.png",
     },
     {
       id: 27,
       title: "phillips Rice Cooker 8 Litre 2 Cups",
       price: "৳98,50",
-      img: "/product5.png",
+      img: "/images/product5.png",
     },
     {
       id: 28,
       title: "JBL Airdots WithNoise cancelletion -Black",
       price: "৳98,50",
-      img: "/product6.png",
+      img: "/images/product6.png",
     },
     {
       id: 29,
       title: "Apple Macbook- 16core 16GB RAM 1TB",
       price: " ৳1,86,400",
-      img: "/product1.png",
+      img: "/images/product1.png",
     },
     {
       id: 30,
       title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
       price: "৳1,449",
-      img: "/product2.png",
+      img: "/images/product2.png",
     },
   ];
 
@@ -266,7 +267,7 @@ const category = () => {
     ],
   };
   return (
-    <div className="container grid grid-cols-6 mt-[30px] lg:mt-11 mb-4">
+    <div className="container lg:grid lg:grid-cols-5 xl:grid-cols-6 mt-[30px] lg:mt-11 mb-4">
       <div className="col-span-6 lg:hidden flex gap-2">
         Home <img src="/arrow-icon.svg" alt="" /> Mobile & Devices
       </div>
@@ -276,35 +277,33 @@ const category = () => {
         <Filters />
       </div>
 
-      <div className="col-span-6 lg:col-span-5 space-y-8 lg:space-y-14">
+      <div className="  lg:col-span-4 xl:col-span-5 space-y-8 lg:space-y-14">
         <div className="hidden lg:block">
-          <img src="/main-category.png" alt="" />
+          <img src="/images/banner-2.png" alt="" />
         </div>
 
         {/* //? SUB CATEGORY */}
 
         <Slider {...settings}>
           {subcategories.map((sub) => (
-            <div key={sub.id}>
-              <div className="border border-secondary mr-14">
-                <img src="/sub-catgory.png" alt="" className="w-full" />
-                <div>
-                  <div className="text-base font-medium text-center px-7 py-5">
-                    {sub.name}
-                  </div>
+            <Link href="/categories/subcategories/:id" className="border border-color-[#E3E3E3] rounded-md hover:shadow-xl ease-in-out duration-300" key={sub.id} >
+              <img src="/images/product2.png" alt="" className="mx-auto" />
+              <div>
+                <div className="text-base font-medium text-center px-7 py-5">
+                  {sub.name}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </Slider>
 
         {/* //?PRODUCTS */}
         <div className="">
           <div className="flex justify-between">
-            <h3 className="text-2xl font-medium">Mobile & Devices</h3>
-            <span className="text-[15px] font-base">Showing 1–20 of 75 Product </span>
+            <h3 className="md:text-2xl font-semibold">Mobile & Devices</h3>
+            <span className="text-[15px] font-base hidden lg:block">Showing 1–20 of 75 Product </span>
           </div>
-          <hr className="mb-8"/>
+          <hr className="mb-8" />
 
           {/* //? Small Screen FILTERS */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 lg:hidden mb-6">

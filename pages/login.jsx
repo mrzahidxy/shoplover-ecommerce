@@ -7,8 +7,8 @@ function login() {
         <p className="mx-auto text-2xl text-center mb-8">
           Login To Your Account
         </p>
-        <div className="flex justify-between">
-          <div className="absolute left-1/2 -ml-0.5 w-px h-44 mt-10 bg-gray-600"></div>
+        <div className="flex flex-col md:flex-row justify-between">
+          <div className="hidden md:block absolute left-1/2 -ml-0.5 w-px h-44 mt-10 bg-gray-600"></div>
 
           <div className="lg:ml-8">
             <p className="mb-2">Login or Register with Mobile Number</p>
@@ -61,7 +61,7 @@ function login() {
             </div>
           </div>
 
-          <div className="lg:mr-8">
+          <div className="lg:mr-8 md:mt-0 sm:mt-10">
             <form action="#">
               <p className="mb-2">Login with Phone Number or Email</p>
 

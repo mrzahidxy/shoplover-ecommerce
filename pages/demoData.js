@@ -1,0 +1,313 @@
+const products = [
+  {
+    id: 1,
+    title: "Apple Macbook- 16core 16GB RAM 1TB",
+    price: " ৳1,86,400",
+    img: "/images/product1.png",
+  },
+  {
+    id: 2,
+    title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
+    price: "৳1,449",
+    img: "/images/product2.png",
+  },
+  {
+    id: 3,
+    title: "Sony Mirrorless camera with Multifuncktion Key",
+    price: "৳65,600",
+    img: "/images/product3.png",
+  },
+  {
+    id: 4,
+    title: "Mibro Waterproof Smartwatch 3” Display",
+    price: "৳2,400",
+    img: "/images/product4.png",
+  },
+  {
+    id: 5,
+    title: "phillips Rice Cooker 8 Litre 2 Cups",
+    price: "৳98,50",
+    img: "/images/product5.png",
+  },
+  {
+    id: 6,
+    title: "JBL Airdots WithNoise cancelletion -Black",
+    price: "৳98,50",
+    img: "/images/product6.png",
+  },
+  {
+    id: 7,
+    title: "Apple Macbook- 16core 16GB RAM 1TB",
+    price: " ৳1,86,400",
+    img: "/images/product1.png",
+  },
+  {
+    id: 8,
+    title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
+    price: "৳1,449",
+    img: "/images/product2.png",
+  },
+  {
+    id: 9,
+    title: "Sony Mirrorless camera with Multifuncktion Key",
+    price: "৳65,600",
+    img: "/images/product3.png",
+  },
+  {
+    id: 10,
+    title: "Mibro Waterproof Smartwatch 3” Display",
+    price: "৳2,400",
+    img: "/images/product4.png",
+  },
+  {
+    id: 11,
+    title: "phillips Rice Cooker 8 Litre 2 Cups",
+    price: "৳98,50",
+    img: "/images/product5.png",
+  },
+  {
+    id: 12,
+    title: "JBL Airdots WithNoise cancelletion -Black",
+    price: "৳98,50",
+    img: "/images/product6.png",
+  },
+  {
+    id: 13,
+    title: "Apple Macbook- 16core 16GB RAM 1TB",
+    price: " ৳1,86,400",
+    img: "/images/product1.png",
+  },
+  {
+    id: 14,
+    title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
+    price: "৳1,449",
+    img: "/images/product2.png",
+  },
+  {
+    id: 15,
+    title: "Sony Mirrorless camera with Multifuncktion Key",
+    price: "৳65,600",
+    img: "/images/product3.png",
+  },
+  {
+    id: 16,
+    title: "Mibro Waterproof Smartwatch 3” Display",
+    price: "৳2,400",
+    img: "/images/product4.png",
+  },
+  {
+    id: 17,
+    title: "phillips Rice Cooker 8 Litre 2 Cups",
+    price: "৳98,50",
+    img: "/images/product5.png",
+  },
+  {
+    id: 18,
+    title: "JBL Airdots WithNoise cancelletion -Black",
+    price: "৳98,50",
+    img: "/images/product6.png",
+  },
+  {
+    id: 19,
+    title: "Apple Macbook- 16core 16GB RAM 1TB",
+    price: " ৳1,86,400",
+    img: "/images/product1.png",
+  },
+  {
+    id: 20,
+    title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
+    price: "৳1,449",
+    img: "/images/product2.png",
+  },
+  {
+    id: 21,
+    title: "Sony Mirrorless camera with Multifuncktion Key",
+    price: "৳65,600",
+    img: "/images/product3.png",
+  },
+  {
+    id: 22,
+    title: "Mibro Waterproof Smartwatch 3” Display",
+    price: "৳2,400",
+    img: "/images/product4.png",
+  },
+  {
+    id: 23,
+    title: "phillips Rice Cooker 8 Litre 2 Cups",
+    price: "৳98,50",
+    img: "/images/product5.png",
+  },
+  {
+    id: 24,
+    title: "JBL Airdots WithNoise cancelletion -Black",
+    price: "৳98,50",
+    img: "/images/product6.png",
+  },
+];
+
+const newArrivalsProducts = [
+  {
+    id: 1,
+    title: "Apple Macbook- 16core 16GB RAM 1TB",
+    price: " ৳1,86,400",
+    img: "/images/product1.png",
+  },
+  {
+    id: 2,
+    title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
+    price: "৳1,449",
+    img: "/images/product2.png",
+  },
+  {
+    id: 3,
+    title: "Sony Mirrorless camera with Multifuncktion Key",
+    price: "৳65,600",
+    img: "/images/product3.png",
+  },
+  {
+    id: 4,
+    title: "Mibro Waterproof Smartwatch 3” Display",
+    price: "৳2,400",
+    img: "/images/product4.png",
+  },
+  {
+    id: 5,
+    title: "phillips Rice Cooker 8 Litre 2 Cups",
+    price: "৳98,50",
+    img: "/images/product5.png",
+  },
+  {
+    id: 6,
+    title: "JBL Airdots WithNoise cancelletion -Black",
+    price: "৳98,50",
+    img: "/images/product6.png",
+  },
+  {
+    id: 7,
+    title: "Apple Macbook- 16core 16GB RAM 1TB",
+    price: " ৳1,86,400",
+    img: "/images/product1.png",
+  },
+  {
+    id: 8,
+    title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
+    price: "৳1,449",
+    img: "/images/product2.png",
+  },
+  {
+    id: 9,
+    title: "Sony Mirrorless camera with Multifuncktion Key",
+    price: "৳65,600",
+    img: "/images/product3.png",
+  },
+  {
+    id: 10,
+    title: "Mibro Waterproof Smartwatch 3” Display",
+    price: "৳2,400",
+    img: "/images/product4.png",
+  },
+  {
+    id: 11,
+    title: "phillips Rice Cooker 8 Litre 2 Cups",
+    price: "৳98,50",
+    img: "/images/product5.png",
+  },
+  {
+    id: 12,
+    title: "JBL Airdots WithNoise cancelletion -Black",
+    price: "৳98,50",
+    img: "/images/product6.png",
+  },
+];
+
+const topSellingProducts = [
+  {
+    id: 13,
+    title: "Apple Macbook- 16core 16GB RAM 1TB",
+    price: " ৳1,86,400",
+    img: "/images/product1.png",
+  },
+  {
+    id: 14,
+    title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
+    price: "৳1,449",
+    img: "/images/product2.png",
+  },
+  {
+    id: 15,
+    title: "Sony Mirrorless camera with Multifuncktion Key",
+    price: "৳65,600",
+    img: "/images/product3.png",
+  },
+  {
+    id: 16,
+    title: "Mibro Waterproof Smartwatch 3” Display",
+    price: "৳2,400",
+    img: "/images/product4.png",
+  },
+  {
+    id: 17,
+    title: "phillips Rice Cooker 8 Litre 2 Cups",
+    price: "৳98,50",
+    img: "/images/product5.png",
+  },
+  {
+    id: 18,
+    title: "JBL Airdots WithNoise cancelletion -Black",
+    price: "৳98,50",
+    img: "/images/product6.png",
+  },
+  {
+    id: 19,
+    title: "Apple Macbook- 16core 16GB RAM 1TB",
+    price: " ৳1,86,400",
+    img: "/images/product1.png",
+  },
+  {
+    id: 20,
+    title: "Motorolla Smartphone with 8GB RAM 128GB Storage",
+    price: "৳1,449",
+    img: "/images/product2.png",
+  },
+  {
+    id: 21,
+    title: "Sony Mirrorless camera with Multifuncktion Key",
+    price: "৳65,600",
+    img: "/images/product3.png",
+  },
+  {
+    id: 22,
+    title: "Mibro Waterproof Smartwatch 3” Display",
+    price: "৳2,400",
+    img: "/images/product4.png",
+  },
+  {
+    id: 23,
+    title: "phillips Rice Cooker 8 Litre 2 Cups",
+    price: "৳98,50",
+    img: "/images/product5.png",
+  },
+  {
+    id: 24,
+    title: "JBL Airdots WithNoise cancelletion -Black",
+    price: "৳98,50",
+    img: "/images/product6.png",
+  },
+];
+
+const flashSales = [
+  { id: 1, name: "Books Collection" },
+  { id: 2, name: "Books Collection" },
+  { id: 3, name: "Books Collection" },
+  { id: 4, name: "Books Collection" },
+  { id: 5, name: "Books Collection" },
+  { id: 6, name: "Books Collection" },
+  { id: 7, name: "Books Collection" },
+  { id: 8, name: "Books Collection" },
+  { id: 9, name: "Books Collection" },
+  { id: 10, name: "Books Collection" },
+  { id: 11, name: "Books Collection" },
+  { id: 12, name: "Books Collection" },
+];
+
+export { products, newArrivalsProducts, topSellingProducts, flashSales };

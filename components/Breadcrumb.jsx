@@ -1,12 +1,13 @@
 import styles from "../styles/Order.module.scss";
-const Breadcrumb = () => {
+const Breadcrumb = ({ delivery }) => {
+
   return (
     <div className="bg-[#F6F6F6] flex justify-center p-14 w-full">
       <div className={styles.crumb}>
         <span className={styles.active}>
           <a>Select Shipping Info</a>
         </span>
-        <span className={styles.active}>
+        <span className={delivery && styles.active}>
           <a>Select Delivery Info</a>
         </span>
         <span>

@@ -20,7 +20,7 @@ const Footer = () => {
       <div className="container grid grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-36 ">
         <div className="space-y-9 text-base font-normal">
           <div>
-            <img src="/sl-logo-2.svg" alt="" />
+            <img src="/images/sl-logo.svg" alt="" />
           </div>
           <div className="space-y-5">
             <div className=" text-justify">
@@ -63,8 +63,8 @@ const Footer = () => {
             </div>
             <div>
               <span className="text-lg font-bold">Be A Seller</span>
-              <div className="border border-primary rounded-md bg-black w-36 py-3 mt-5 flex justify-center items-center">
-                <span className="font-bold text-lg">Apply here</span>
+              <div className="border border-primary rounded-md bg-black w-36 py-3 mt-5 flex justify-center items-center hover:bg-primary ease-in-out duration-300">
+                <span className="font-bold text-lg ">Apply here</span>
               </div>
             </div>
           </div>

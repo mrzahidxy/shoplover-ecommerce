@@ -9,7 +9,7 @@ module.exports = {
     screens: {
       sm: "390px",
       md: "744px",
-      lg: "1320px",
+      lg: "1420px",
       xl: "1620px",
     },
     
@@ -26,6 +26,9 @@ module.exports = {
         'tnr': ["Times", 'Times New Roman', "serif"],
       },
       colors: {
+        primary: "#FFC800",
+        secondary: "#F6F6F6",
+      
         listBar: "#F8F5F5",
         borderColor: '#DADADA',
         mygrey: "#9C9C9C",
