@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react'
+import { TicketContext } from '../../../pages/users/supportTicket/Context';
 
 
-const Ticket = ({ data, Type, change }) => {
+const Ticket = ({Type}) => {
+    const {ChatID, setChatID, tickets} = useContext(TicketContext)
 
-    console.log(Type);
+    console.log(ChatID);
 
     const [TicketData, setTicketData] = useState([
         { ticket_code: "#2147483647", orderID: "SL6578932", complain: "Received damaged product", date: "14/12/22" },
@@ -12,8 +13,9 @@ const Ticket = ({ data, Type, change }) => {
     ]);
 
     useEffect(() => {
-        if (data != undefined) {
-            setTicketData(data)
+        // console.log(data);
+        if (tickets != undefined) {
+            setTicketData(tickets)
         }
     }, [])
 
@@ -34,15 +36,15 @@ const Ticket = ({ data, Type, change }) => {
             {
                 TicketData.map((items, index) => (
                     <button className=' w-full h-32 border-b-1 grid grid-cols-4 focus:bg-[#FFC800]/5' key={index}
-                    onClick={()=>{change(index)}}
+                    onClick={()=>{setChatID(index)}}
                     // onClick={()=>{console.log("cliked");}}
+                    style={{backgroundColor: (index == ChatID)?"#FFC80005":""}}
                     >
                         <div className='flex flex-col col-span-3 justify-start items-start pl-8 pt-4'>
                             <span className='py-0.5 text-blue-400 text-sm'>Ticket Code: {items.ticket_code}</span>
                             <span className='py-0.5 text-slate-400 text-toosm'>Order ID: {items.orderID}</span>
                             <span className='py-0.5 font-medium text-sm'>{items.complain}</span>
                             <span className='py-0.5 text-slate-400 text-toosm'>Created at {items.date}</span>
-
                         </div>
 
                         <div className='flex flex-col justify-between items-end py-5 pr-3'>

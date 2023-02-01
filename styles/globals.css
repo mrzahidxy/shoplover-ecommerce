@@ -133,7 +133,7 @@ body {
 
 @layer components {
   .flexCenter {
-    @apply flex flex-col justify-center items-center rounded-md;
+    @apply flex flex-col justify-center items-center;
   }
 
   .recentOrders {

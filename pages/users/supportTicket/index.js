@@ -1,18 +1,18 @@
 import React, { useState, useCallback } from 'react'
 
-import chat from "./chat.json"
-import tickets from "./data/tickets.json"
+import tickets from "../data/tickets.json"
 
-import PageName from "../../components/users/pageName"
+import PageName from "../../../components/users/pageName"
 
-import Ticket from '../../components/users/supportTicket.js/Ticket'
-import NoTicket from '../../components/users/supportTicket.js/NoTicket'
+import Ticket from '../../../components/users/supportTicket.js/Ticket'
+import NoTicket from '../../../components/users/supportTicket.js/NoTicket'
+import { TicketContext } from './Context'
 
-import pending from "../../public/Nahin/support_ticket/pending.svg"
-import down_arrow from "../../public/Nahin/support_ticket/down_arrow.svg"
-import notfound from "../../public/Nahin/support_ticket/notfound.svg"
-import emoji from "../../public/Nahin/support_ticket/emoji.svg"
-import attachment from "../../public/Nahin/support_ticket/attachment.svg"
+import pending from "../../../public/Nahin/support_ticket/pending.svg"
+import down_arrow from "../../../public/Nahin/support_ticket/down_arrow.svg"
+import notfound from "../../../public/Nahin/support_ticket/notfound.svg"
+import emoji from "../../../public/Nahin/support_ticket/emoji.svg"
+import attachment from "../../../public/Nahin/support_ticket/attachment.svg"
 
 import Image from 'next/image'
 
@@ -38,10 +38,10 @@ const supportTicket = () => {
     const ShowOptions = () => {
         if (Pending.length == 0 && Solved == 0) {
             console.log("showing option no ticket");
-            return <NoTicket />
+            return <NoTicket OptionSelected={OptionSelected}/>
         } else {
             console.log("showing option pending/solved");
-            return <Ticket data={tickets} Type={OptionSelected} change={chatHandler} />
+            return <Ticket OptionSelected={OptionSelected}/>
         }
     }
 
@@ -87,8 +87,11 @@ const supportTicket = () => {
                             <Image src={down_arrow} alt="" className="mx-2" />
                         </button>
                     </div>
+                    
+                    <TicketContext.Provider value={{ChatID, setChatID, tickets}}>
+                        <ShowOptions />
 
-                    <ShowOptions />
+                    </TicketContext.Provider>
 
                 </div>
 
