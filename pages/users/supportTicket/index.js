@@ -35,15 +35,17 @@ const supportTicket = () => {
     
     console.log("chat id- ",ChatID);
 
-    const ShowOptions = () => {
-        if (Pending.length == 0 && Solved == 0) {
-            console.log("showing option no ticket");
-            return <NoTicket OptionSelected={OptionSelected}/>
-        } else {
-            console.log("showing option pending/solved");
-            return <Ticket OptionSelected={OptionSelected}/>
+    const ShowOptions = useCallback(
+        () => {
+            if (Pending.length == 0 && Solved == 0) {
+                console.log("showing option no ticket");
+                return <NoTicket OptionSelected={OptionSelected}/>
+            } else {
+                console.log("showing option pending/solved");
+                return <Ticket OptionSelected={OptionSelected}/>
+            }
         }
-    }
+    ) 
 
 
     return (
