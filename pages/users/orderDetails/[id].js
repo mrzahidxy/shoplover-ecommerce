@@ -45,6 +45,7 @@ const orderDetails = () => {
 
     useEffect(()=>{
         let orderID = router.query
+        console.log("order id", orderID);
         console.log(dashboard.Orders[orderID.id])
         if(dashboard.Orders[orderID.id] != undefined){
             setDetails(dashboard.Orders[orderID.id])
@@ -53,7 +54,7 @@ const orderDetails = () => {
         if(dashboard.address != undefined){
             setUser(dashboard.address)
         }
-    },[])
+    })
 
     return (
         <div className='xl:w-285 mt-10 pt-6 lg:pl-10 bg-white'>

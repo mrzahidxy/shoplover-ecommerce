@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import shoe from "../../../public/Nahin/product/shoe.png"
@@ -11,7 +12,6 @@ import lemon from "../../../public/Nahin/product/lemon.png"
 import perfume from "../../../public/Nahin/product/perfume.png"
 import lens from "../../../public/Nahin/product/lens.png"
 import rightArrow from "../../../public/Nahin/icons/rarrow.svg"
-import Link from 'next/link'
 
 
 const RecentOrders = ({ data }) => {
@@ -39,38 +39,34 @@ const RecentOrders = ({ data }) => {
         <div>
             <h1 className='text-xl my-3'>Recent Orders</h1>
             {/* lg:w-285 */}
-            <div className='flex flex-col lg:w-full'>
-                {/* lg:w-[1073px] */}
-                {/* <div className='flex flex-row lg:w-full h-11 bg-listBar items-center font-sans font-semibold'>
-                    <h1 className='ml-6 sm:ml-12'>Order ID#</h1>
-                    <h1 className='hidden md:flex ml-20 lg:ml-28 '>Order Items</h1>
-                    <h1 className='ml-6 md:ml-36 lg:ml-56'>Order Placed On</h1>
-                    <h1 className='ml-10 lg:ml-20'>Amount</h1>
-                </div> */}
-                <div className='md:max-lg:mx-3 grid grid-cols-3 md:grid-cols-6 h-11 bg-listBar text-sm font-thin text-slate-500'>
-                    <h1 className='pl-8 flex items-center'>Order ID#</h1>
-                    <h1 className=' pl-6 hidden md:flex items-center col-span-2 '>Order Items</h1>
-                    <h1 className=' flexCenter'>Order Placed On</h1>
-                    <h1 className=' flexCenter'>Total Amount</h1>
+            <div className='flex flex-col lg:w-268'>
+                <div className='md:max-lg:mx-3 h-9 grid grid-cols-3 md:grid-cols-5  bg-listBar text-sm text-slate-600/80'>
+                    <h1 className='h-full pl-4 flex items-center text-toosm font-semibold'>Order ID#</h1>
+                    <h1 className='h-full hidden md:flex items-center justify-center text-toosm font-semibold'>Order Items</h1>
+                    <h1 className='h-full flexRowCenter text-toosm font-semibold'>Order Placed On</h1>
+                    <h1 className='h-full flexRowCenter text-toosm font-semibold'>Total Amount</h1>
                     {/* <h1 className='bg-indigo-500'>Amount</h1> */}
                 </div>
                 {
                     Orders.map((items, index) => (
-                        <div className='sm:max-lg:mx-3 py-3 grid grid-cols-3 md:grid-cols-6 text-sm font-thin text-slate-500 border-b-2' key={index}>
+                        <div className='sm:max-lg:mx-3 py-2 grid grid-cols-3 md:grid-cols-5 font-thin justify-start text-sm text-slate-500 border-b-1' key={index}>
                             {/* w-[1073px] */}
 
-                            <span className='pl-8  flex items-center'>{items.id}</span>
-                            <div className=' hidden md:flex col-span-2 pl-4  items-center'>
+                            <span className='pl-4 flexRowCenter justify-start'>{items.id}</span>
+                            <div className=' hidden w-full md:flex flexRowCenter flex-wrap text-toosm overflow-hidden'>
                                 {
                                     items.products.map((prod, index2) => (
-                                        <Image key={index2} src={prod.image} width={40} height={10} className="h-10 w-10 ml-2" alt='' />
+                                        <Image key={index2} src={prod.image} width={40} height={10} className="h-10 w-10 m-0.5 rounded-md" alt='' />
                                     ))
                                 }
                             </div>
-                            <span className='flexCenter text-slate-500'>{items.date}</span>
-                            <span className='flexCenter'>৳ {items.grand_total}</span>
-                            <Link href={`/users/orderDetails/${items._id}`} className='hidden lg:flex flexCenter items-start underline text-blue-400'>View Details</Link>
-                            <button className='hidden md:flex lg:hidden hover:text-blue-500 flexCenter items-end pr-10'><Image src={rightArrow} alt='' className="w-5 h-5" /></button>
+                            <span className='flexRowCenter text-toosm text-slate-500'>{items.date}</span>
+                            <span className='flexRowCenter text-toosm '>৳ {items.grand_total}</span>
+                            <span className='lg:flex flexRowCenter text-toosm underline text-blue-400'>
+                                <Link href={`/users/orderDetails/${items._id}`} className='hidden lg:flex underline text-blue-400'>View Details</Link>
+                                <button className='hidden md:flex lg:hidden hover:text-blue-500'><Image src={rightArrow} alt='' className="w-5 h-5" /></button>
+
+                            </span>
 
 
                         </div>
