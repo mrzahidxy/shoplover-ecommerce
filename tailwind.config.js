@@ -10,7 +10,7 @@ module.exports = {
       sm: "390px",
       md: "744px",
       lg: "1420px",
-      xl: "1620px",
+      xl: "1500px",
     },
     
     container: {
@@ -57,7 +57,7 @@ module.exports = {
         myshadow: "0 1px 1px 2px rgba(0, 0, 0, 0.1)"
       },
       fontSize:{
-        toosm: "12px",
+        toosm: "13px",
       },
       gridTemplateColumns:{
         "dashboard": "repeat(3, 210px)"
