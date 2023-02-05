@@ -4,14 +4,14 @@ import React from 'react'
 const ProductDetails = ({ Details, User }) => {
     return (
         <>
-            <div className=' my-2 rounded-md sm:max-md:border-2 sm:max-md:pt-3 sm:max-md:font-bold'>
+            <div className='sm:max-md:border-2 sm:max-md:pt-3 sm:max-md:font-bold'>
                 <div className='flex items-center ml-6'>
                     <h1 className=' text-sm sm:max-md:text-lg col-span-3'>Ordered Products</h1>
                     <h1 className='ml-2 w-5 h-5 flex justify-center items-center rounded-full bg-black text-white'>{Details.products.length}</h1>
 
                 </div>
 
-                <div className='mt-4 flex flex-col bg-white md:shadow-myshadow'>
+                <div className='mt-4 roundedb-b-md flex flex-col bg-white'>
 
                     {
                         Details.products.map((items, index) => (

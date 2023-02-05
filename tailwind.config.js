@@ -9,8 +9,8 @@ module.exports = {
     screens: {
       sm: "390px",
       md: "744px",
-      lg: "1420px",
-      xl: "1500px",
+      lg: "1024px",
+      xl: "1280px",
     },
     
     container: {
@@ -49,6 +49,9 @@ module.exports = {
         268: "1072px", //purchase history
         285: "1140px"
       },
+      height:{
+        18: "72px",
+      },
       backgroundColor:{
         lightgreen: "rgba(67, 160, 71, 0.12)",  //delivery status
         lightorange: "rgba(255, 130, 54, 0.12)",  //delivery status
@@ -57,10 +60,11 @@ module.exports = {
         myshadow: "0 1px 1px 2px rgba(0, 0, 0, 0.1)"
       },
       fontSize:{
-        toosm: "13px",
+        toosm: "12px",
       },
       gridTemplateColumns:{
-        "dashboard": "repeat(3, 210px)"
+        "dashboard": "repeat(3, 210px)",
+        "userlayout": "275px 1140px",
       }
       
     },

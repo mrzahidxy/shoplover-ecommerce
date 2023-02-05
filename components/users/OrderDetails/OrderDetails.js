@@ -31,21 +31,21 @@ const OrderDetails = ({ Details, User }) => {
         if(progress == 1){
             return(
                 <>
-                    <Image src={green} alt='' className="w-full ml-[2px]" />
+                    <Image src={green} alt='' className="w-full" />
                 </>
 
             ) 
         }else if(progress == 0){
             return(
                 <>
-                    <Lottie animationData={red} className="h-10"/>
+                    <Lottie animationData={red} className="h-10 "/>
                 </>
 
             ) 
         }else{
             return(
                 <>
-                    <Image src={white} alt='' className="w-full ml-[2px]" />
+                    <Image src={white} alt='' className="w-full" />
                 </>
 
             ) 
@@ -54,7 +54,7 @@ const OrderDetails = ({ Details, User }) => {
 
     return (
         <>
-            <div className='hidden md:grid col-span-2 grid-cols-7 items-center my-2'>
+            <div className='hidden md:grid col-span-2 grid-cols-7 items-center my-1'>
                 <h1 className='ml-8 text-sm col-span-3'>Order ID : {Details.id}</h1>
                 <div className='flex flex-row col-span-4 items-center ml-2'>
                     <h1 className='mr-1 text-sm'>Order status:</h1>
@@ -64,31 +64,31 @@ const OrderDetails = ({ Details, User }) => {
 
             
 
-            <div className='col-span-2 bg-white grid md:grid-cols-2 lg:grid-cols-7 md:shadow-myshadow'>
+            <div className='col-span-2 bg-white grid md:grid-cols-2 lg:grid-cols-7'>
 
                 {/* Left side, progress bar */}
                 <div className='flex flex-col md:col-span-1 lg:col-span-3 rounded-md sm:max-md:border-1'>
 
                     {/* Order Placed */}
 
-                    <div className='mt-8 flex flex-row h-20'>
+                    <div className='mt-6 flex flex-row h-18'>
                         <h1 className='ml-5 h-8 w-10 flex-wrap text-toosm text-mygrey'>{Details.progress_date[0]}</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
                             <Progress progress={Details.progress[0]} /> 
-                            {(Details.progress[0] == 1)?<div className='h-20 w-[3px] bg-green-500'></div>:<div className='h-20 w-[3px] bg-slate-300'></div>}
+                            {(Details.progress[0] == 1)?<div className='h-full w-1 bg-green-500'></div>:<div className='h-full w-1 bg-slate-300'></div>}
                         </div>
-                        <div className='flex flex-col w-56 mx-3 -mt-2'>
-                            <h1 className='font-medium'>Order Placed</h1>
+                        <div className='flex flex-col w-56 mx-3'>
+                            <h1 className='text-sm font-medium'>Order Placed</h1>
                             <h1 className='text-toosm text-mygrey'>Your order is successfully placed to Shoplover. Order ID #20345535334</h1>
                         </div>
                     </div>
 
                     {/* Confirmed */}
-                    <div className='flex flex-row h-20'>
+                    <div className='flex flex-row h-18'>
                         <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>{Details.progress_date[1]}</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
                             <Progress progress={Details.progress[1]} />
-                            {(Details.progress[1] == 1)?<div className='h-20 w-[3px] bg-green-500'></div>:<div className='h-20 w-[3px] bg-slate-300'></div>}
+                            {(Details.progress[1] == 1)?<div className='h-full w-1 bg-green-500'></div>:<div className='h-20 w-1 bg-slate-300'></div>}
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
                             <h1 className=' font-medium'>Confirmed</h1>
@@ -97,11 +97,11 @@ const OrderDetails = ({ Details, User }) => {
                     </div>
 
                     {/* Picked Up */}
-                    <div className='flex flex-row h-20'>
+                    <div className='flex flex-row h-18'>
                         <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>{Details.progress_date[2]}</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
                             <Progress progress={Details.progress[2]} />
-                            {(Details.progress[2] == 1)?<div className='h-20 w-[3px] bg-green-500'></div>:<div className='h-20 w-[3px] bg-slate-300'></div>}
+                            {(Details.progress[2] == 1)?<div className='h-20 w-1 bg-green-500'></div>:<div className='h-20 w-1 bg-slate-300'></div>}
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
                             <h1 className=' font-medium'>Picked Up</h1>
@@ -110,11 +110,11 @@ const OrderDetails = ({ Details, User }) => {
                     </div>
 
                     {/* On the way */}
-                    <div className='flex flex-row h-20'>
+                    <div className='flex flex-row h-18'>
                         <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>{Details.progress_date[3]}</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
                             <Progress progress={Details.progress[3]} />
-                            {(Details.progress[3] == 1)?<div className='h-20 w-[3px] bg-green-500'></div>:<div className='h-20 w-[3px] bg-slate-300'></div>}
+                            {(Details.progress[3] == 1)?<div className='h-20 w-1 bg-green-500'></div>:<div className='h-20 w-1 bg-slate-300'></div>}
                         </div>
                         <div className='flex flex-col w-56 mx-3'>
                             <h1 className=' font-medium'>On the way</h1>
@@ -123,7 +123,7 @@ const OrderDetails = ({ Details, User }) => {
                     </div>
 
                     {/* Delivered */}
-                    <div className='flex flex-row h-20'>
+                    <div className='flex flex-row h-18'>
                         <h1 className='ml-5 h-8 w-10 text-sm flex-wrap text-toosm text-mygrey'>{Details.progress_date[4]}</h1>
                         <div className='flex flex-col  items-center mx-3'>
                             <Progress progress={Details.progress[4]} />
