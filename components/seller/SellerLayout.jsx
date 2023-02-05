@@ -1,11 +1,11 @@
 import React from "react";
+import ProfileNav from "./ProfileNav";
 
 const SellerLayout = ({ children }) => {
-  console.log("This is seller layout");
-
   return (
-    <div>
-      <span>Hello Seller</span>
+    // <div className='container flex flex-col lg:flex-row xl:justify-center bg-white lg:bg-[#F6F6F6]'>
+    <div className="container flex flex-col lg:flex-row bg-white lg:bg-[#F6F6F6]">
+      <ProfileNav />
       {children}
     </div>
   );
