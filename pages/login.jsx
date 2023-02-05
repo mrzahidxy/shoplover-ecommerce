@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function login() {
   return (
@@ -81,9 +82,12 @@ function login() {
                 />
               </div>
 
-              <a href="#" className="mb-5 font-medium float-right">
+              <Link
+                href={`/forgot_password`}
+                className="mb-5 mt-1 font-medium float-right"
+              >
                 Forgot Password?
-              </a>
+              </Link>
 
               <div className="mb-2 w-78 lg:w-96 mx-auto">
                 <button className="rounded bg-black text-white w-full py-2 px-3">
@@ -94,9 +98,9 @@ function login() {
               <div className="mb-4 w-78 lg:w-96 mx-auto">
                 <p>
                   Don’t have any account?{" "}
-                  <a href="#" className="font-medium">
+                  <Link href={`/register`} className="font-medium">
                     Signup
-                  </a>
+                  </Link>
                 </p>
               </div>
             </form>
