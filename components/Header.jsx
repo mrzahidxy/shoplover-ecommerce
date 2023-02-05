@@ -150,10 +150,8 @@ const Header = () => {
             <img src="/icons/search.svg" />
           </Link>
         </div>
-        <div className="hidden col-span-2 lg:flex lg:gap-10 xl:gap-20 lg:justify-end">
+        <div className="hidden col-span-2 lg:flex lg:gap-10 xl:gap-15 lg:justify-end">
           <div className="flex items-center gap-2">
-
-
             <Select
               styles={customStyles}
               defaultValue={languages[0]}

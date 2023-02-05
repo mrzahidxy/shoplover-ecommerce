@@ -79,17 +79,16 @@ const payments = [
   { id: 1, title: "Rocket" },
   { id: 1, title: "Upay" },
   { id: 1, title: "Nagad" },
-  { id: 1, title: "Cash on Delivery" },
 ];
 
 const payment = () => {
   return (
     <div>
-      <Breadcrumb />
+      <Breadcrumb delivery={true} />
       <div className="container flex flex-col lg:flex-row justify-center gap-9 my-8">
         <div className="">
           <div className="text-lg font-medium mb-5 ml-5">Order Summary</div>
-          <div className="bg-[#E8EAEF] rounded-md px-6 py-3 divide-y-2 space-y-2">
+          <div className="bg-[#FAFBFF] rounded-md px-6 py-3 divide-y-1 space-y-2">
             {orders.map((o) => (
               <div className="flex justify-between items-center" key={o.id}>
                 <img src={o.img} alt="" className="h-10 mr-4" />
@@ -113,10 +112,10 @@ const payment = () => {
 
         <div className="max-w-[349px]">
           <div className="text-lg font-medium mb-5">Select Payment Option</div>
-          <div className="bg-[#E8EAEF] rounded-md divide-y-2">
+          <div className="bg-[#FAFBFF] rounded-md divide-y-1">
             {payments.map((p) => (
               <button
-                className=" focus:bg-[#FFEBEB] w-full  flex flex-row items-center justify-between gap-20 py-6 px-4"
+                className=" focus:bg-[#FAFBFF] w-full flex flex-row items-center justify-between gap-20 py-6 px-4"
                 key={p.id}
               >
                 <div className="flex flex-row items-center">
@@ -127,7 +126,17 @@ const payment = () => {
                 <img src="/arrow.svg" alt="" />
               </button>
             ))}
+
           </div>
+
+          <button className="bg-[#FFEBEB] w-full flex flex-row items-center justify-between gap-20 py-2 px-4 mt-2" >
+            <div className="flex flex-row items-center">
+              <input type="checkbox" name="" class="w-4 h-4 rounded-full" />
+              <img src="/credit-card-icon.svg" alt="" className="ml-2" />
+              <span className="ml-4">Cash on delivery</span>
+            </div>
+            <img src="/arrow.svg" alt="" />
+          </button>
           <div className="bg-black text-white py-3 rounded-md text-center mt-8">
             Place Order
           </div>
