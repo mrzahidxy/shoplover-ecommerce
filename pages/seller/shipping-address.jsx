@@ -58,7 +58,7 @@ const ShippingAddress = ({ Component, pageProps }) => {
               <div className=" bg-[#F6F6F6] grid grid-cols-6 gap-3 p-4">
                 <div className="col-span-5 flex flex-col gap-1">
                   <span className="w-[65px] mb-2 py-1 font-medium text-xs bg-black text-white text-center">
-                    Home
+                    Office
                   </span>
                   <span className="font-medium text-[15px]">Jany Doe</span>
                   <span className="font-base text-sm">
