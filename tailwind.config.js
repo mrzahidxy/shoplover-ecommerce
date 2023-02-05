@@ -11,6 +11,7 @@ module.exports = {
       md: "744px",
       lg: "1024px",
       xl: "1280px",
+      "2xl": "1536px",
     },
     
     container: {
@@ -47,7 +48,8 @@ module.exports = {
         100: "400px", //purchase history
         167: "668px", //purchase history tab
         268: "1072px", //purchase history
-        285: "1140px"
+        285: "1140px",
+        
       },
       height:{
         18: "72px",
@@ -63,7 +65,7 @@ module.exports = {
         toosm: "12px",
       },
       gridTemplateColumns:{
-        "dashboard": "repeat(3, 210px)",
+        "dashboard": "repeat(3, 190px)",
         "userlayout": "275px 1140px",
       }
       

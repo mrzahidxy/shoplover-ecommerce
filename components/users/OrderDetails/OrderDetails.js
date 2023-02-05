@@ -67,17 +67,17 @@ const OrderDetails = ({ Details, User }) => {
             <div className='col-span-2 bg-white grid md:grid-cols-2 lg:grid-cols-7'>
 
                 {/* Left side, progress bar */}
-                <div className='flex flex-col md:col-span-1 lg:col-span-3 rounded-md sm:max-md:border-1'>
+                <div className='flex flex-col md:col-span-1 lg:col-span-3 rounded-md sm:max-md:border-1 shrink'>
 
                     {/* Order Placed */}
 
-                    <div className='mt-6 flex flex-row h-18'>
+                    <div className='mt-6 flex flex-row h-18 '>
                         <h1 className='ml-5 h-8 w-10 flex-wrap text-toosm text-mygrey'>{Details.progress_date[0]}</h1>
                         <div className='flex flex-col justify-center items-center mx-3'>
                             <Progress progress={Details.progress[0]} /> 
                             {(Details.progress[0] == 1)?<div className='h-full w-1 bg-green-500'></div>:<div className='h-full w-1 bg-slate-300'></div>}
                         </div>
-                        <div className='flex flex-col w-56 mx-3'>
+                        <div className='flex flex-col w-56 mx-3 '>
                             <h1 className='text-sm font-medium'>Order Placed</h1>
                             <h1 className='text-toosm text-mygrey'>Your order is successfully placed to Shoplover. Order ID #20345535334</h1>
                         </div>

@@ -89,7 +89,7 @@ const purchaseHistory = () => {
                return (
                   // view for tab or above
                   <>
-                     <div key={index} className='mb-5 hidden md:flex md:flex-col xl:w-268 font-medium bg-listBar text-[#071529] max-h-[720px] overflow-auto shadow-md'>
+                     <div key={index} className='mb-5 hidden md:flex md:flex-col 2xl:w-268 font-medium bg-listBar text-[#071529] max-h-[720px] overflow-auto shadow-md'>
 
                         <div className='grid grid-cols-2 h-12 items-center'>
                            <div>

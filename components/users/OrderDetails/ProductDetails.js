@@ -11,7 +11,7 @@ const ProductDetails = ({ Details, User }) => {
 
                 </div>
 
-                <div className='mt-4 roundedb-b-md flex flex-col bg-white'>
+                <div className='mt-4 rounded-b-md flex flex-col bg-white'>
 
                     {
                         Details.products.map((items, index) => (

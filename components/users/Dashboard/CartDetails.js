@@ -23,27 +23,27 @@ const CartDetails = ({ data }) => {
 
     return (
 
-        <div className='flex flex-col xl:flex-row lg:gap-2'>
+        <div className='flex flex-col lg:flex-row lg:gap-2'>
 
             <span className='grid grid-cols-2 gap-2 md:grid-cols-dashboard  items-center'>
-                <div className='flexColCenter rounded-md w-[170px] md:w-52 h-[121px] md:h-36 border-1 border-[#004CFF]'>
+                <div className='flexColCenter rounded-md h-[121px] md:h-36 border-1 border-[#004CFF]'>
                     <div className='flexRowCenter w-16 h-16 rounded-full bg-[#D1DFFF] text-[#024DFF] text-3xl font-semibold '>{ProductsOrdered}</div>
                     Products Ordered
                 </div>
 
-                <div className='flexColCenter rounded-md w-[170px] md:w-52 h-[121px] md:h-36 border-1 border-[#FF8236]'>
+                <div className='flexColCenter rounded-md h-[121px] md:h-36 border-1 border-[#FF8236]'>
                     <div className='flexRowCenter w-16 h-16 rounded-full bg-[#FFE8DB] text-[#FF8236] text-3xl font-semibold '>{InCart}</div>
                     In Your Cart
                 </div>
 
-                <div className='flexColCenter rounded-md w-[170px] md:w-52 h-[121px] md:h-36 border-1 border-[#029549]'>
+                <div className='flexColCenter rounded-md h-[121px] md:h-36 border-1 border-[#029549]'>
                     <div className='flexRowCenter w-16 h-16 rounded-full bg-[#DEF1E7] text-[#029549] text-3xl font-semibold '>{WishList}</div>
                     In Your Wishlist
                 </div>
             </span>
 
 
-            <div className='flex flex-col pb-2 sm:max-lg:my-5 w-88 md:w-96 md:h-36 rounded-md border-1 border-[#DADADA] bg-[#F6F6F6]'>
+            <div className='flex flex-col pb-2 sm:max-lg:my-5 w-80 2xl:w-96 xl:h-36 rounded-md border-1 border-[#DADADA] bg-[#F6F6F6]'>
                 <div className='ml-5 my-2'>
                     <span className='flex flex-row items-center'>
                         <h1 className='mr-5 text-xl font-serif font-medium'>Shipping address</h1>
