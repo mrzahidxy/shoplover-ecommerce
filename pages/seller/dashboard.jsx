@@ -10,7 +10,7 @@ import paymentIcon from "../../public/seller/icons/payment.svg";
 const Dashboard = () => {
   return (
     <div>
-      <div className="flex flex-col flex-wrap  bg-white mt-10 py-3 lg:p-7">
+      <div className="flex flex-col flex-wrap  bg-white mt-10 py-3 lg:p-3">
         <div className="">
           <CartDetails data={dashboard} />
           {/* <RecentOrders data={dashboard} /> */}
