@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react'
+import React, { useState, useCallback, useEffect, useMemo } from 'react'
 
 import tickets from "../data/tickets.json"
 
@@ -19,7 +19,9 @@ import Image from 'next/image'
 const supportTicket = () => {
 
     const [Solved, setSolved] = useState([])
-    const [Pending, setPending] = useState([]);
+    const [Pending, setPending] = useState([
+        { ticketCode: "#2147483647", orderID: "SL6578932", problem: "Received damaged product", date: "14/12/22" }
+    ]);
     const [OptionSelected, setOptionSelected] = useState('pending');
     const [OptionColor, setOptionColor] = useState(["text-pink-500", ""])
 
@@ -27,65 +29,22 @@ const supportTicket = () => {
     const [ShowTicket, setShowTicket] = useState("block")
 
     const [ChatID, setChatID] = useState(0)
-    const chatHandler = useCallback((chatID) => {
+    const chatHandler = useCallback((chatID)=>{
         setChatID(chatID)
     })
-
-    const [TicketData, setTicketData] = useState([]);
-    useEffect(() => {
-        console.log("tickets ",tickets);
-        if (tickets != undefined) {
-            setTicketData(tickets)
-            setPending(tickets.length)
-        }
-    })
-
-    console.log("chat id- ", ChatID);
-
-
-    const TicketType = () => {
-        if (Type == "pending") {
-            return <span className='w-20 h-5 flexCenter rounded-sm text-toosm bg-lightorange text-lightorange'>Pending</span>
-
-        } else if (Type == "solved") {
-            return <span className='w-20 h-5 flexCenter rounded-sm text-toosm bg-lightgreen text-lightgreen'>Solved</span>
-
-        }
-
-    }
+    
+    // console.log("chat id- ",ChatID);
 
     const ShowOptions = () => {
         if (Pending.length == 0 && Solved == 0) {
             console.log("showing option no ticket");
-            return <NoTicket OptionSelected={OptionSelected} />
+            return <NoTicket />
+        } else if (OptionSelected == 'solved') {
+            console.log("showing option solved");
+            return <Ticket data={tickets} Type="solved" change={chatHandler} selected={ChatID}/>
         } else {
-            console.log("showing option pending/solved");
-            return (
-                <>
-                    {
-                        TicketData.map((items, index) => (
-                            <button className=' w-full h-32 border-b-1 grid grid-cols-4' key={index}
-                                onClick={() => { setChatID(index) }}
-                                // onClick={()=>{console.log("cliked");}}
-                                style={{ backgroundColor: (index == ChatID) ? "#FFC80005" : "" }}
-                            >
-                                <div className='flex flex-col col-span-3 justify-start items-start pl-5 pt-4'>
-                                    <span className='py-0.5 text-blue-400 text-sm'>Ticket Code: {items.ticket_code}</span>
-                                    <span className='py-0.5 text-slate-400 text-toosm'>Order ID: {items.orderID}</span>
-                                    <span className='py-0.5 font-medium text-sm w-full'>{items.complain}</span>
-                                    <span className='py-0.5 text-slate-400 text-toosm'>Created at {items.date}</span>
-                                </div>
-
-                                <div className='flex flex-col justify-between items-end py-5 pr-3'>
-                                    <TicketType />
-                                    <span className='mb-2 w-5 h-5 rounded-full flex justify-center items-center bg-green-400 text-white '>1</span>
-                                </div>
-
-                            </button>
-                        ))
-                    }
-                </>
-            )
+            console.log("showing option pending");
+            return <Ticket data={tickets} Type="pending" change={chatHandler} selected={ChatID} />
         }
     }
 
@@ -94,7 +53,7 @@ const supportTicket = () => {
         <div className='mt-10 xl:w-285 bg-white'>
             <div className='flex flex-row px-6 items-center justify-between ' >
                 <PageName name={"Support Ticket"} />
-                <button className="lg:hidden transition-all ease-in-out duration-700" style={{ rotate: Rotate + "deg" }} onClick={() => {
+                <button className="lg:hidden transition-all ease-in-out duration-700" style={{rotate: Rotate+"deg"}} onClick={() => {
                     if (Rotate == "180") {
                         setRotate("0")
                         setShowTicket("none")
@@ -108,7 +67,7 @@ const supportTicket = () => {
             {/* <div className='mt-2 lg:w-268 border-1 lg:h-[730px] sm:max-lg:mx-6 mb-2'> */}
             <div className='grid grid-cols-1 lg:grid-cols-3 border-1 sm:max-lg:mx-6 mb-2'>
                 {/* <div className={'mb-2 lg:w-[377px] h-[500px] lg:h-[730px] lg:border-r-2 col-span-1 overflow-y-auto sm:max-lg:'+ShowTicket}> */}
-                <div className={'mb-2 xl:w-[377px] h-[500px] lg:h-[730px] lg:border-r-2 col-span-1 overflow-y-auto'} style={{ display: ShowTicket }} >
+                <div className={'mb-2 xl:w-[377px] h-[500px] lg:h-[730px] lg:border-r-2 col-span-1 overflow-y-auto'} style={{display:ShowTicket}} >
                     <div className='flex flex-row h-10 pl-6 items-center border-b-1'>
                         <button className='flex text-toosm '
                             onClick={() => {
@@ -132,13 +91,11 @@ const supportTicket = () => {
                         </button>
                     </div>
 
-                    <TicketContext.Provider value={{ ChatID, setChatID, tickets }}>
-
-
-                    </TicketContext.Provider>
+                    <ShowOptions />
 
                 </div>
 
+                {/* Chat view */}
                 <div className='col-span-2 bg-[#D3DCFC] p-6 min-h-[500px] lg:h-[730px]'>
                     <div className='w-full h-3/4 overflow-y-auto flex flex-col'>
                         {
@@ -147,7 +104,7 @@ const supportTicket = () => {
                                     return (
                                         <span key={index} className='flex flex-row'>
 
-                                            <span className='w-10 h-10 flexCenter bg-white'>{item.user[0]}</span>
+                                            <span className='w-10 h-10 rounded-md flex flex-row items-center justify-center bg-white'>{item.user[0]}</span>
 
                                             <span className=' w-full max-w-[70%]'>
                                                 {
@@ -171,7 +128,7 @@ const supportTicket = () => {
                                             <span className='w-full max-w-[70%]'>
                                                 {
                                                     item.chat.map((item2, index2) => (
-                                                        <span key={index2} className=' mt-5 flex flex-row justify-end'>
+                                                        <span key={index2} className=' mt-5 flex flex-row  justify-end'>
                                                             <span className='bg-white min-h-[50px] p-2 flex items-center rounded-md'>{item2}</span>
                                                         </span>
                                                     ))
@@ -185,6 +142,7 @@ const supportTicket = () => {
                         }
                     </div>
 
+                    {/* comment view in chat */}
                     <div className='bg-white flex flex-col mt-8 pb-2 w-full h-36 rounded-md border-1'>
                         <div className='w-full h-9 border-b-1 flex flex-row items-center'>
                             <span className='h-full w-16 border-b-2 border-black  flex flex-row justify-center'>
