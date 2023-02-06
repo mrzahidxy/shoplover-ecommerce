@@ -470,8 +470,8 @@ const Header = () => {
                         </Link>
                         <div className="flex gap-1 xl:gap-2 justify-center items-center">
                             <img
-                                className="bg-[#ffffff21] w-6 rounded-full"
-                                src="/icons/home.svg"
+                                className="bg-white w-6 rounded-full"
+                                src="/icons/location.png"
                             />
 
                             <span className="flex flex-col text-xs md:text-sm xl:text-toosm font-normal">
