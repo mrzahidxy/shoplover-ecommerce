@@ -88,32 +88,26 @@ const ProfileNav = () => {
       link: "/seller/shipping-address",
       pop: "",
     },
-    {
-      image: icon6,
-      name: "Refund Request",
-      color: "none",
-      link: "/seller",
-      pop: "",
-    },
-    {
-      image: icon7,
-      name: "Manage Shipping Address",
-      color: "none",
-      link: "/seller/shippingAddress",
-      pop: "",
-    },
+
     {
       image: icon8,
       name: "Change Password",
       color: "none",
-      link: "/seller/changePassword",
+      link: "/seller/change-password",
       pop: "",
     },
     {
       image: downloadIcon,
       name: "Download",
       color: "none",
-      link: "/seller/changePassword",
+      link: "#",
+      pop: "",
+    },
+    {
+      image: icon6,
+      name: "Send Refund Request",
+      color: "none",
+      link: "/seller/sent-refund-request",
       pop: "",
     },
     {
