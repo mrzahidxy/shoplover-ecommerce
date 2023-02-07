@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const ForgotPassword = () => {
   return (
@@ -25,7 +26,7 @@ const ForgotPassword = () => {
 
           <div className="mb-4 w-100 mx-auto">
             <p className="underline underline-offset-1">
-              <a href="#">Back to Login</a>
+              <Link href={`/login`}>Back to Login</Link>
             </p>
           </div>
         </form>
