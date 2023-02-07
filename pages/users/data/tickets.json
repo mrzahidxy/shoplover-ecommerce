@@ -1,126 +1,166 @@
-[
-    {
-        "ticket_code": "#234567891",
-        "orderID": "RAN2345",
-        "complain": "Amar jibon dhoshe porse",
-        "status": "pending",
-        "date": "29/01/2023",
-        "chat":[
-            {
-                "user": "Master Oogoway",
-                "chat": [
-                    "Yesterday was history",
-                    "Tomorrow is a mystery",
-                    "But today is a gift",
-                    "That is why it is called present"
-                ] 
-            },
-        
-            {
-                "user": "Me",
-                "chat": [
-                    "Do you have any other advice",
-                    "I am depressed. Could you find a way to let me down slowly? A little sympathy, I hope you can show me"
-                ]
-            },
-        
-            {
-                "user": "Uchiha Madara",
-                "chat": [
-                    "Destroy the world or dominate it",
-                    "If you want power come to me"
-                ]
-            },
-        
-            {
-                "user": "Luffy",
-                "chat": [
-                    "Eat first then go to sleep",
-                    "Ignore problems"
-                ]
-            },
+{
+    "pending": [
+        {
+            "ticket_code": "#20230207",
+            "orderID": "RAN-P-0207",
+            "complain": "Amar jibon dhoshe porse",
+            "status": "pending",
+            "date": "29/01/2023",
+            "chat":[
+                {
+                    "user": "Master Oogoway",
+                    "chat": [
+                        "Yesterday was history",
+                        "Tomorrow is a mystery",
+                        "But today is a gift",
+                        "That is why it is called present"
+                    ] 
+                },
             
-            {
-                "user": "Me",
-                "chat": ["Best solution "]
-            }
-        ]
-    },
-
-    {
-        "ticket_code": "#123456789",
-        "orderID": "RAN1234",
-        "complain": "Received damaged product",
-        "status": "pending",
-        "date": "30/01/2023",
-        "chat":[
-            {
-                "user": "Master Oogoway",
-                "chat": [
-                    "Yesterday was history",
-                    "Tomorrow is a mystery",
-                    "But today is a gift",
-                    "That is why it is called present"
-                ] 
-            },
-        
-            {
-                "user": "Po",
-                "chat": [
-                    "But I am hungry also ",
-                    "Today",
-                    "Tomorrow",
-                    "and Yesterday"
-                ]
-            },
-        
-            {
-                "user": "French guy",
-                "chat": ["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "]
-            },
-        
-            {
-                "user": "Bangali",
-                "chat": ["Ore vai English ko naito chup thak. Doya kore ajaira chat e ajgobi kotha bole manushder vivokto korben na nahole apnar bashay mora eidur chura hobe"]
-            },
+                {
+                    "user": "Me",
+                    "chat": [
+                        "Do you have any other advice",
+                        "I am depressed. Could you find a way to let me down slowly? A little sympathy, I hope you can show me"
+                    ]
+                },
             
-            {
-                "user": "Bangali2",
-                "chat": ["Vai age tui English ko murkho!!!! "]
-            }
-        ]
-    },
+                {
+                    "user": "Uchiha Madara",
+                    "chat": [
+                        "Destroy the world or dominate it",
+                        "If you want power come to me"
+                    ]
+                },
+            
+                {
+                    "user": "Luffy",
+                    "chat": [
+                        "Eat first then go to sleep",
+                        "Ignore problems"
+                    ]
+                },
+                
+                {
+                    "user": "Me",
+                    "chat": ["Best solution "]
+                }
+            ]
+        },
 
-    {
-        "ticket_code": "#XXY66589",
-        "orderID": "RAN1235",
-        "complain": "Humans have outlived their live span",
-        "status": "pending",
-        "date": "01/02/2023",
-        "chat":[
-            {
-                "user": "Hasina",
-                "chat": [
-                    "We are creating digital Bangladesh",
-                    "That is why we are good politician"
-                ] 
-            },
-        
-            {
-                "user": "Modi",
-                "chat": [
-                    "Secularity is a myth",
-                    "So I vote for me."
-                ]
-            },
-        
-            {
-                "user": "Joe Biden",
-                "chat": [
-                    "We will make America great again",
-                    "By doing nothing"
-                ]
-            }
-        ]
-    }
-]
+        {
+            "ticket_code": "#20230208",
+            "orderID": "RAN-P-0208",
+            "complain": "Idiot leaders chat",
+            "status": "pending",
+            "date": "30/01/2023",
+            "chat":[
+                {
+                    "user": "Kim Jong Un",
+                    "chat": [
+                        "I have a complain",
+                        "Missiles are not working",
+                        "I wanna blow up America"
+                    ] 
+                },
+            
+                {
+                    "user": "Donald Trump",
+                    "chat": [
+                        "Keep trying shorty",
+                        "I will nuke your nuke"    
+                    ]
+                },
+            
+                {
+                    "user": "Charles III",
+                    "chat": [
+                        "If these two iditos destroy each other I am starting colonialism 2.0",
+                        "Does anyone have any objection"
+                    ]
+                }
+            ]
+        }
+    ],
+
+    "open": [
+        {
+            "ticket_code": "#123456789",
+            "orderID": "RAN1234",
+            "complain": "Received damaged product",
+            "status": "pending",
+            "date": "30/01/2023",
+            "chat":[
+                {
+                    "user": "Master Oogoway",
+                    "chat": [
+                        "Yesterday was history",
+                        "Tomorrow is a mystery",
+                        "But today is a gift",
+                        "That is why it is called present"
+                    ] 
+                },
+            
+                {
+                    "user": "Po",
+                    "chat": [
+                        "But I am hungry also ",
+                        "Today",
+                        "Tomorrow",
+                        "and Yesterday"
+                    ]
+                },
+            
+                {
+                    "user": "French guy",
+                    "chat": ["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "]
+                },
+            
+                {
+                    "user": "Bangali",
+                    "chat": ["Ore vai English ko naito chup thak. Doya kore ajaira chat e ajgobi kotha bole manushder vivokto korben na nahole apnar bashay mora eidur chura hobe"]
+                },
+                
+                {
+                    "user": "Bangali2",
+                    "chat": ["Vai age tui English ko murkho!!!! "]
+                }
+            ]
+        }
+    ],
+
+    "solved": [
+        {
+            "ticket_code": "#XXY66589",
+            "orderID": "RAN1235",
+            "complain": "Humans have outlived their life span",
+            "status": "pending",
+            "date": "01/02/2023",
+            "chat":[
+                {
+                    "user": "Hasina",
+                    "chat": [
+                        "We are creating digital Bangladesh",
+                        "That is why we are good politician"
+                    ] 
+                },
+            
+                {
+                    "user": "Modi",
+                    "chat": [
+                        "Secularity is a myth",
+                        "So I vote for me."
+                    ]
+                },
+            
+                {
+                    "user": "Joe Biden",
+                    "chat": [
+                        "We will make America great again",
+                        "By doing nothing"
+                    ]
+                }
+            ]
+        }
+    ]
+}

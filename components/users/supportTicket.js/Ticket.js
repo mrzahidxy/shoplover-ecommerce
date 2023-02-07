@@ -3,9 +3,8 @@ import { TicketContext } from '../../../pages/users/supportTicket/Context';
 
 
 const Ticket = ({ data, Type, change,  selected }) => {
-    // const {ChatID, setChatID, tickets} = useContext(TicketContext)
 
-    // console.log(ChatID);
+    console.log("components", data, Type, change,  selected);
 
     const [TicketData, setTicketData] = useState([
         { ticket_code: "#2147483647", orderID: "SL6578932", complain: "Received damaged product", date: "14/12/22" },
@@ -15,28 +14,21 @@ const Ticket = ({ data, Type, change,  selected }) => {
     useEffect(() => {
         console.log(data);
         if (data != undefined) {
-            let x = []
-            data.map((item, index) => {
-                x.push({
-                    complain: "Amar jibon dhoshe porse",
-                    date: "29/01/2023",
-                    orderID: "RAN2345",
-                    status: "pending",
-                    ticket_code: "#234567891"
-                })
-            })
 
-            setTicketData(x)
+            setTicketData(data)
         }
     }, [])
 
 
     const TicketType = () => {
         if (Type == "pending") {
-            return <span className='w-20 h-5 flexCenter rounded-sm text-toosm bg-lightorange text-lightorange'>Pending</span>
+            return <span className='w-20 py-1 flexRowCenter rounded-md text-toosm bg-lightorange text-lightorange'>Pending</span>
 
-        } else if (Type == "solved") {
-            return <span className='w-20 h-5 flexCenter rounded-sm text-toosm bg-lightgreen text-lightgreen'>Solved</span>
+        } else if (Type == "open") {
+            return <span className='w-20 py-1 flexRowCenter rounded-md text-toosm bg-lightorange text-lightorange'>Open</span>
+
+        }else if (Type == "solved") {
+            return <span className='w-20 py-1 flexRowCenter rounded-md text-toosm bg-lightgreen text-lightgreen'>Solved</span>
 
         }
 
@@ -46,15 +38,15 @@ const Ticket = ({ data, Type, change,  selected }) => {
         <>
             {
                 TicketData.map((items, index) => (
-                    <button className=' w-full h-32 border-b-1 grid grid-cols-4 hover:bg-[#FFC800]/25' key={index}
+                    <button className=' w-full h-32 border-b-1 flex justify-between hover:bg-[#FFC800]/25' key={index}
                         onClick={() => { change(index) }}
                     // onClick={()=>{console.log("cliked");}}
-                    style={{backgroundColor: (index == selected)?"#FFC800":""}}
+                    style={{backgroundColor: (index == selected)?"#FFECF0":""}}
                     >
                         <div className='flex flex-col col-span-3 justify-start items-start pl-5 pt-4'>
                             <span className='py-0.5 text-blue-400 text-sm'>Ticket Code: {items.ticket_code}</span>
                             <span className='py-0.5 text-slate-400 text-toosm'>Order ID: {items.orderID}</span>
-                            <span className='py-0.5 font-medium text-sm w-full'>{items.complain}</span>
+                            <span className='py-0.5 font-medium text-sm'>{items.complain}</span>
                             <span className='py-0.5 text-slate-400 text-toosm'>Created at {items.date}</span>
                         </div>
 

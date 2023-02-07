@@ -456,7 +456,7 @@ const Header = () => {
         // </div>
 
         <div className="bg-black flexRowCenter">
-            <div className="w-full xl:w-[1500px] py-2 xl:py-4 h-full flex flex-col xl:flex-row md:px-5 text-white">
+            <div className="w-full xl:w-[1500px] py-2 h-full flex flex-col xl:flex-row md:px-5 text-white">
 
                 {/* left */}
                 <div className="flexRowCenter sm:max-md:justify-start md:max-xl:justify-between shrink-0 gap-8 sm:max-xl:px-6 md:max-xl:pt-2">
@@ -491,8 +491,8 @@ const Header = () => {
                 </div>
 
                 {/* middle */}
-                <div className="flex flex-row shrink xl:w-[900px] h-18">
-                    <div className="w-full flex flex-row py-4 sm:px-4">
+                <div className="flex flex-row shrink xl:w-[900px] h-16">
+                    <div className="w-full flex flex-row py-3 sm:px-4">
                         <input
                             className="w-full rounded-l-md pl-2 text-black focus:outline-none"
                             placeholder="I want to buy..."
