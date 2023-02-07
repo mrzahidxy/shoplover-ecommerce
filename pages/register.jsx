@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function register() {
   return (
@@ -48,7 +49,7 @@ function register() {
 
           <div className="mb-4 w-96 mx-auto">
             <p>
-              Already have an account? <a href="#">Login</a>
+              Already have an account? <Link href={`/login`}>Login</Link>
             </p>
           </div>
         </form>

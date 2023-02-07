@@ -1,3 +1,11 @@
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaYoutube,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
+
 const Footer = () => {
   const Informations = [
     { id: 1, name: "About Us" },
@@ -16,20 +24,20 @@ const Footer = () => {
     { id: 4, name: " Blogs" },
   ];
   return (
-    <div className="bg-[#1B1B1B] text-white pt-20 pb-11">
-      <div className="container grid grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-36 ">
-        <div className="space-y-9 text-base font-normal">
+    <div className="bg-[#1B1B1B] text-white pt-10 pb-11 px-7">
+      <div className="container grid grid-cols-1 lg:grid-cols-3 lg:gap-36 ">
+        <div className="space-y-4 text-base font-normal">
           <div>
             <img src="/images/sl-logo.svg" alt="" />
           </div>
-          <div className="space-y-5">
-            <div className=" text-justify">
+          <div className="space-y-3">
+            <div className=" text-justify text-sm">
               <span className="font-bold">Shoplover </span> is your nearby
               e-commerce solution for everything you need to buy in Bangladesh.
               Shoplover e-commerce is the sister concern of{" "}
               <span className="font-bold"> US-Bangla Airlines</span>.
             </div>
-            <div className="text-justify">
+            <div className="text-justify text-sm">
               Now you can choose from a wide range of branded products including
               home appliances, apparel items, cosmetics products, electronics
               gadgets, health, and medicine items, food and groceries items,
@@ -38,19 +46,36 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex gap-3">
-            <img src="/fb-icon.svg" alt="" />
-            <img src="/twitter-icon.svg" alt="" />
-            <img src="/youtube-icon.svg" alt="" />
-            <img src="/linkedin-icon.svg" alt="" />
-            <img src="/instagram-icon.svg" alt="" />
+            <FaFacebookF
+              style={{ color: "#1b74e4", backgroundColor: "white" }}
+              className="rounded-full p-2 text-[40px]"
+            />
+            <FaTwitter
+              style={{ color: "#1da1f2", backgroundColor: "white" }}
+              className="rounded-full p-2 text-[40px]"
+            />
+            <FaYoutube
+              style={{ color: "red", backgroundColor: "white" }}
+              className="rounded-full p-2 text-[40px]"
+            />
+            <FaLinkedinIn
+              style={{ color: "#0077b5", backgroundColor: "white" }}
+              className="rounded-full p-2 text-[40px]"
+            />
+            <FaInstagram
+              style={{ color: "#9f0aec", backgroundColor: "white" }}
+              className="rounded-full p-2 text-[40px]"
+            />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row md:justify-center gap-10 md:gap-44">
+        <div className="flex flex-col md:flex-row lg:justify-center gap-10 md:gap-20 sm:mt-5 md:mt-0">
           <div className="space-y-4">
-            <div className="font-bold text-lg ">INFORMATIONS</div>
+            <div className="font-bold text-lg">INFORMATIONS</div>
             <div className="space-y-2">
               {Informations.map((i) => (
-                <div className="font-normal text-base" key={i.id}>{i.name}</div>
+                <div className="font-normal text-sm" key={i.id}>
+                  {i.name}
+                </div>
               ))}
             </div>
           </div>
@@ -58,7 +83,9 @@ const Footer = () => {
             <span className="font-bold text-lg">QUICK LINKS</span>
             <div className="space-y-2">
               {links.map((l) => (
-                <div className="font-normal text-base" key={l.id}>{l.name}</div>
+                <div className="font-normal text-sm" key={l.id}>
+                  {l.name}
+                </div>
               ))}
             </div>
             <div>
@@ -69,20 +96,20 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="space-y-7">
+        <div className="space-y-4 sm:mt-5 md:mt-0">
           <span className="font-bold text-lg">CONTACT</span>
-          <div className="space-y-3">
+          <div className="space-y-1">
             <div className="flex flex-col">
               <span className="text-base font-bold">Address:</span>
-              <span className="fonnt-base font-normal">
+              <span className="text-sm">
                 Corporate Office: Road no-1A, House No-32, Baridhara J Block,
                 Dhaka.
               </span>
             </div>
             <div className="flex flex-col">
               <span className="text-base font-bold">Phone:</span>
-              <span className="text-base font-normal">+880 9678-161161</span>
-              <span className="text-base font-normal">
+              <span className="text-sm">+880 9678-161161</span>
+              <span className="text-sm">
                 (Saturday to Thursday, 9:30 AM to 6:30 PM).
               </span>
             </div>
