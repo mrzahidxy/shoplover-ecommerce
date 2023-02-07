@@ -69,7 +69,7 @@ const Dashboard = () => {
             </div>
             <div className="w-[253px]">
               <p className="mb-0 text-lg font-semibold">Shop</p>
-              <div className="flexCenter w-[250px] h-[200px]  border-1 border-gray mt-3">
+              <div className="flexColCenter w-[250px] h-[200px]  border-1 border-gray mt-3">
                 <div className="flexCenter">
                   <Image src={shopIcon} className="" alt="" />
                 </div>
@@ -84,7 +84,7 @@ const Dashboard = () => {
             </div>
             <div className="w-[253px]">
               <p className="mb-0 text-lg font-semibold">Payment</p>
-              <div className="flexCenter w-[250px] h-[200px]  border-1 border-gray mt-3">
+              <div className="flexColCenter w-[250px] h-[200px]  border-1 border-gray mt-3">
                 <div className="flexCenter">
                   <Image src={paymentIcon} className="" alt="" />
                 </div>

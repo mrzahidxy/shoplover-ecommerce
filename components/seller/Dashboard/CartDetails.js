@@ -22,22 +22,22 @@ const CartDetails = ({ data }) => {
   return (
     <div className="flex flex-col xl:flex-row lg:gap-5">
       <span className="grid grid-cols-2 gap-5 md:grid-cols-dashboard  items-center">
-        <div className="flexCenter w-[170px] md:w-52 h-[121px] md:h-36 border-1 border-[#004CFF]">
-          <div className="flexCenter w-16 h-16 rounded-full bg-[#D1DFFF] text-[#024DFF] text-3xl font-semibold ">
+        <div className="flexColCenter w-[170px] md:w-52 h-[121px] md:h-36 border-1 border-[#004CFF]">
+          <div className="flexRowCenter w-16 h-16 rounded-full bg-[#D1DFFF] text-[#024DFF] text-3xl font-semibold ">
             {ProductsOrdered}
           </div>
           Total Products
         </div>
 
-        <div className="flexCenter w-[170px] md:w-52 h-[121px] md:h-36 border-1 border-[#FF8236]">
-          <div className="flexCenter w-16 h-16 rounded-full bg-[#FFE8DB] text-[#FF8236] text-3xl font-semibold ">
+        <div className="flexColCenter w-[170px] md:w-52 h-[121px] md:h-36 border-1 border-[#FF8236]">
+          <div className="flexRowCenter w-16 h-16 rounded-full bg-[#FFE8DB] text-[#FF8236] text-3xl font-semibold ">
             {InCart}
           </div>
           Total Sales
         </div>
 
-        <div className="flexCenter w-[170px] md:w-52 h-[121px] md:h-36 border-1 border-[#029549]">
-          <div className="flexCenter w-16 h-16 rounded-full bg-[#DEF1E7] text-[#029549] text-3xl font-semibold ">
+        <div className="flexColCenter w-[170px] md:w-52 h-[121px] md:h-36 border-1 border-[#029549]">
+          <div className="flexRowCenter w-16 h-16 rounded-full bg-[#DEF1E7] text-[#029549] text-3xl font-semibold ">
             {WishList}
           </div>
           Successfull Order
