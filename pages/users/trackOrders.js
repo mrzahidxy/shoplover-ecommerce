@@ -8,7 +8,7 @@ const TrackOrders = () => {
 
     return (
 
-        <div className=' lg:w-268 flex flex-col bg-white py-4 lg:mt-10 sm:max-md:h-[500px] md:max-lg:h-[800px]'>
+        <div className='w-full max-w-[1072px] flex flex-col bg-white py-4 lg:mt-10 sm:max-md:h-[500px] md:max-lg:h-[800px]'>
 
             {/* <h1 className='text-lg ml-9 lg:mb-4'>Change Password</h1> */}
             <div className='lg:border-b-2 lg:pl-6'>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const ProductDetails = () => {
   const [count, setCount] = useState(0)
@@ -50,11 +50,11 @@ const ProductDetails = () => {
               Brand: <span className="text-primary font-medium">Quechua</span>
             </div>
             <div className="flex items-center gap-1 text-sm font-normal pl-5">
-              {stars.map((s) => (
+              {stars.map((s, c) => (
                 <img
                   className="w-4"
                   src="/star-icon-orange.svg"
-                  key={Math.random()}
+                  key={c}
                 />
               ))}
               <span className="text-lightblack font-normal text-sm">

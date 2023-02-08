@@ -126,9 +126,9 @@ const Header = () => {
                 }}
                 trigger={["click"]}
             >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 text-sm">
                     <img src="/user-icon.svg " />
-                    <span>Hi, User</span>
+                    <span>Login/Signup</span>
                 </div>
             </Dropdown>
 
