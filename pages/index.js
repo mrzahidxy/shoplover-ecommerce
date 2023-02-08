@@ -183,17 +183,29 @@ export default function Home() {
     <div>
       <div className="container pt-5">
         <Slider {...settings}>
-          <img src="/home-banner.png" className="w-full mb-4" />
-          <img src="/home-banner.png" className="w-full mb-4" />
-          <img src="/home-banner.png" className="w-full mb-4" />
+          <img src="/images/slider1.webp" className="w-full mb-4" />
+          <img src="/images/slider2.webp" className="w-full mb-4" />
+          <img src="/images/slider3.webp" className="w-full mb-4" />
         </Slider>
       </div>
 
-      <div className="container grid grid-cols-2 lg:grid-cols-3 justify-items-stretch mb-10">
+      {/* <div className="container grid grid-cols-2 lg:grid-cols-3 justify-items-stretch mb-10">
         <img src="/flash-sale.png" />
         <img src="/discount.png" />
         <div className="hidden lg:block">
           <img src="/chorki.png" />
+        </div>
+      </div> */}
+
+      <div className="container grid grid-cols-2 lg:grid-cols-3 justify-items-stretch mb-10 gap-4">
+        <div>
+          <img src="/images/webp1.webp" className="p-1 rounded-xl" />
+        </div>
+        <div>
+          <img src="/images/webp2.webp" className="p-1 rounded-xl" />
+        </div>
+        <div className="hidden lg:block">
+          <img src="/images/webp3.webp" className="p-1 rounded-xl" />
         </div>
       </div>
 
@@ -228,7 +240,7 @@ export default function Home() {
       <div className="container mb-10 grid grid-cols-2 md:grid-cols-4 gap-2 justify-items-stretch">
         <img
           src="/images/men-exlusive-banner.png"
-          className=" col-span-2 h-full"
+          className="col-span-2 h-full"
         />
         <img src="/images/vouge-banner.png" />
         <img src="/images/adidas-banner.png" />
