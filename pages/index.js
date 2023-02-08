@@ -198,8 +198,12 @@ export default function Home() {
       </div> */}
 
       <div className="container grid grid-cols-2 lg:grid-cols-3 justify-items-stretch mb-10 gap-4">
-        <img src="/images/webp1.webp" className="p-1 rounded-xl" />
-        <img src="/images/webp2.webp" className="p-1 rounded-xl" />
+        <div>
+          <img src="/images/webp1.webp" className="p-1 rounded-xl" />
+        </div>
+        <div>
+          <img src="/images/webp2.webp" className="p-1 rounded-xl" />
+        </div>
         <div className="hidden lg:block">
           <img src="/images/webp3.webp" className="p-1 rounded-xl" />
         </div>
