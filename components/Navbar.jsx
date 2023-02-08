@@ -211,7 +211,10 @@ const Navbar = () => {
                             <img src="/icons/category.svg" alt="" />
                             <span>All Categories</span>
                         </div>
-                        <CategoryList />
+                        <div className="absolute z-10 hidden group-hover/main:block">
+                            <CategoryList />
+
+                        </div>
                     </div>
                 </div>
 

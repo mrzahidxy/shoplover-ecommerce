@@ -139,7 +139,7 @@ const CategoryList = () => {
 
   return (
     <>
-      <ul className="absolute hidden bg-white text-black w-[273px] h-[400px] pt-1 z-40 shadow-xl rounded-md group-hover/main:block">
+      <ul className=" block bg-white text-black w-[273px] h-[400px] pt-1 z-40 shadow-xl rounded-md group-hover/main:block">
         {
           category.map((c) => (
             <li className="group/sub active:bg-slate-200" key={c.id}>

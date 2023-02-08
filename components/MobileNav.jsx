@@ -2,6 +2,7 @@ import { Button } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import CategoryList from "./CategoryList";
 
 import ProfileNav from "./users/ProfileNav";
 
@@ -26,13 +27,73 @@ const MobileNav = () => {
     }
   }
 
-  console.log(UserNav)
+  const [Category, setCategory] = useState([
+    { title: "Men's Lifestyle", link: "/product/1" },
+    { title: "Necklaces & Pendants", link: "/product/1" },
+    { title: "Mobiles & Devices", link: "/product/1" },
+    { title: "Grocery & Food", link: "/product/1" },
+    { title: "Consumer Electronics", link: "/product/1" },
+    { title: "Kids & Mom", link: "/product/1" },
+  ])
+
+  const [Header, setHeader] = [
+    { title: "Flash Sale Category", link: "/product/1" },
+    { title: "All Brands", link: "/products/popularproducts" },
+    { title: "Home", link: "/" },
+    { title: "Flash Sale", link: "/flash_sale" },
+    { title: "Demo Page", link: "/" }
+
+  ]
+
+  const [MenuNav, setMenuNav] = useState("-400");
+
+  const changeMenuNav = () => {
+    if (MenuNav == "-400") {
+      setMenuNav("0");
+    } else {
+      setMenuNav("-400")
+    }
+  }
 
   return (
     <section
       id="bottom-navigation"
       className="block fixed inset-x-0 bottom-0 z-10 bg-white drop-shadow-2xl lg:hidden"
     >
+
+      <div className="w-80 absolute flex flex-col bottom-0 pl-6 py-4 bg-white transition-all ease-in-out duration-700" style={{ transform: `translateX(${MenuNav}px) translateY(-114px)` }}>
+        <span className="text-sm font-semibold">Category</span>
+        <div className="p-4 flex flex-col">
+          {
+            Category.map((items, index) => (
+              <Link href={items.link} className="hover:bg-pink-300">
+                <div className="border-b-1 h-10 w-full flex items-center py-2 text-sm font-medium">
+                  <span className="mr-4"> <img src="/icons/arrow-r.svg" alt="" /></span>
+                  {items.title}
+
+                </div>
+              </Link>
+            ))
+          }
+        </div>
+        <span className="text-sm font-semibold">Header Menu</span>
+        <div className="p-4 flex flex-col">
+          {
+            Category.map((items, index) => (
+              <Link href={items.link} className="hover:bg-pink-300">
+                <div className="border-b-1 h-10 w-full flex items-center py-2 text-sm font-medium">
+                  {/* <span className="mr-4"> <img src="/icons/arrow-r.svg" alt="" /></span> */}
+                  {items.title}
+
+                </div>
+              </Link>
+            ))
+          }
+        </div>
+
+        <button className="text-5xl flex justify-end px-4 shadow-myshadow" onClick={()=>changeMenuNav()}>&times;</button>
+
+      </div>
 
       <div className="absolute right-2 bottom-0  transition-all ease-in-out duration-700" style={{ transform: `translateX(${UserNav}px) translateY(-114px)` }}>
         <ProfileNav />
@@ -41,7 +102,7 @@ const MobileNav = () => {
 
       <div className="p-4 flex flex-row items-center justify-between">
 
-        <Link href="">
+        {/* <Link href="">
           {route === "" ? (
             <div className="w-20 h-20 rounded-full flex flex-col justify-center items-center bg-black text-white group">
               <svg width="24" height="17">
@@ -63,7 +124,17 @@ const MobileNav = () => {
               <span className="text-xs font-medium mt-2">Menu</span>
             </div>
           )}
-        </Link>
+        </Link> */}
+
+        <div className="w-20 h-20 rounded-full flex flex-col justify-center items-center " onClick={()=>{changeMenuNav()}}>
+          <svg width="24" height="17">
+            <path
+              d="M0 0V3.32308H24V0H0ZM0 6.64616V9.96923H24V6.64616H0ZM0 13.2923V16.6154H24V13.2923H0Z"
+              fill="#656070"
+            />
+          </svg>
+          <span className="text-xs font-medium mt-2">Menu</span>
+        </div>
 
         <Link href="">
           <div className="w-16 h-16 rounded-full flex flex-col justify-center items-center ">
