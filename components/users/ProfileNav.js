@@ -35,7 +35,7 @@ const ProfileNav = () => {
 
 
     return (
-        <div className=' hidden xl:block border-1 rounded-md bg-white shadow-sm border-[#DADADA] max-h-[795px] mt-10 min-w-[275px] max-w-[275px]'>
+        <div className=' border-1 rounded-md bg-white shadow-sm border-[#DADADA] max-h-[795px] mt-10 min-w-[275px] max-w-[275px]'>
             <div className='group pl-6 h-44 pt-3 flexColCenter items-start border-b-1'>
                 <div className=' flexRowCenter items-start'>
                     <h1 className='text-xl text-black/60'>My Profile | </h1>

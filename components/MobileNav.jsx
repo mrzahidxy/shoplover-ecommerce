@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
+
+import ProfileNav from "./users/ProfileNav";
 
 // const navigations = [
 //   { id: 1, name: "Deals", img: "deals-icon.svg", link: "/" },
@@ -9,21 +12,33 @@ import { useRouter } from "next/router";
 //   { id: 5, name: "Profile", img: "profile-icon.svg", link: "users" },
 // ];
 
+
 const MobileNav = () => {
   let { route } = useRouter();
+  const [UserNav, setUserNav] = useState((route === "/users")?0:288);
+
+  const changeNav = () => {
+    if (UserNav == "288") {
+      setUserNav("0");
+    } else {
+      setUserNav("288")
+    }
+  }
+
+  console.log(UserNav)
 
   return (
     <section
       id="bottom-navigation"
       className="block fixed inset-x-0 bottom-0 z-10 bg-white drop-shadow-2xl lg:hidden"
     >
+
+      <div className="absolute right-0 bottom-0  transition-all ease-in-out duration-700" style={{ transform: `translateX(${UserNav}px) translateY(-114px)` }}>
+        <ProfileNav />
+      </div>
+
+
       <div className="p-4 flex flex-row items-center justify-between">
-        <Link href="">
-          <div className="w-16 h-16 rounded-full flex flex-col justify-center items-center ">
-            <img src="/sales-icon.svg" alt=""/>
-            <span className="text-xs font-medium mt-2">Menu</span>
-          </div>
-        </Link>
 
         <Link href="">
           {route === "" ? (
@@ -47,6 +62,13 @@ const MobileNav = () => {
               <span className="text-xs font-medium mt-2">Menu</span>
             </div>
           )}
+        </Link>
+
+        <Link href="">
+          <div className="w-16 h-16 rounded-full flex flex-col justify-center items-center ">
+            <img src="/sales-icon.svg" alt="" className="animate-spin" />
+            <span className="text-xs font-medium mt-2">Deals</span>
+          </div>
         </Link>
 
         <Link href="/">
@@ -76,32 +98,46 @@ const MobileNav = () => {
         <Link href="/cart">
           {route === "/cart" ? (
             <div className="w-16 h-16 rounded-full flex flex-col justify-center items-center bg-black text-white group">
-              <svg width="22" height="22">
-                <path
-                  className="group-focus:fill-white"
-                  d="M6.48744 21.8748C5.89276 21.8748 5.38385 21.6632 4.96073 21.2401C4.53688 20.8163 4.32496 20.307 4.32496 19.7123C4.32496 19.1176 4.53688 18.6084 4.96073 18.1845C5.38385 17.7614 5.89276 17.5498 6.48744 17.5498C7.08212 17.5498 7.59102 17.7614 8.01415 18.1845C8.43799 18.6084 8.64992 19.1176 8.64992 19.7123C8.64992 20.307 8.43799 20.8163 8.01415 21.2401C7.59102 21.6632 7.08212 21.8748 6.48744 21.8748ZM17.2998 21.8748C16.7051 21.8748 16.1962 21.6632 15.7731 21.2401C15.3493 20.8163 15.1374 20.307 15.1374 19.7123C15.1374 19.1176 15.3493 18.6084 15.7731 18.1845C16.1962 17.7614 16.7051 17.5498 17.2998 17.5498C17.8945 17.5498 18.4038 17.7614 18.8276 18.1845C19.2507 18.6084 19.4623 19.1176 19.4623 19.7123C19.4623 20.307 19.2507 20.8163 18.8276 21.2401C18.4038 21.6632 17.8945 21.8748 17.2998 21.8748ZM5.56838 4.57496L8.16336 9.98116H15.732L18.7054 4.57496H5.56838ZM4.54121 2.41248H20.4895C20.904 2.41248 21.2193 2.59701 21.4356 2.96607C21.6518 3.33586 21.6608 3.70997 21.4626 4.0884L17.6242 11.0083C17.426 11.3687 17.16 11.6481 16.8262 11.8463C16.4932 12.0445 16.1285 12.1436 15.732 12.1436H7.6768L6.48744 14.3061H19.4623V16.4686H6.48744C5.67651 16.4686 5.06381 16.1125 4.64933 15.4003C4.23485 14.6889 4.21683 13.9817 4.59527 13.2789L6.05494 10.6299L2.16248 2.41248H0V0.25H3.51403L4.54121 2.41248ZM8.16336 9.98116H15.732H8.16336Z"
-                  fill="#fff"
-                />
-              </svg>
+              <div className="relative flex">
+                <svg width="22" height="22">
+                  <path
+                    className="group-focus:fill-white"
+                    d="M6.48744 21.8748C5.89276 21.8748 5.38385 21.6632 4.96073 21.2401C4.53688 20.8163 4.32496 20.307 4.32496 19.7123C4.32496 19.1176 4.53688 18.6084 4.96073 18.1845C5.38385 17.7614 5.89276 17.5498 6.48744 17.5498C7.08212 17.5498 7.59102 17.7614 8.01415 18.1845C8.43799 18.6084 8.64992 19.1176 8.64992 19.7123C8.64992 20.307 8.43799 20.8163 8.01415 21.2401C7.59102 21.6632 7.08212 21.8748 6.48744 21.8748ZM17.2998 21.8748C16.7051 21.8748 16.1962 21.6632 15.7731 21.2401C15.3493 20.8163 15.1374 20.307 15.1374 19.7123C15.1374 19.1176 15.3493 18.6084 15.7731 18.1845C16.1962 17.7614 16.7051 17.5498 17.2998 17.5498C17.8945 17.5498 18.4038 17.7614 18.8276 18.1845C19.2507 18.6084 19.4623 19.1176 19.4623 19.7123C19.4623 20.307 19.2507 20.8163 18.8276 21.2401C18.4038 21.6632 17.8945 21.8748 17.2998 21.8748ZM5.56838 4.57496L8.16336 9.98116H15.732L18.7054 4.57496H5.56838ZM4.54121 2.41248H20.4895C20.904 2.41248 21.2193 2.59701 21.4356 2.96607C21.6518 3.33586 21.6608 3.70997 21.4626 4.0884L17.6242 11.0083C17.426 11.3687 17.16 11.6481 16.8262 11.8463C16.4932 12.0445 16.1285 12.1436 15.732 12.1436H7.6768L6.48744 14.3061H19.4623V16.4686H6.48744C5.67651 16.4686 5.06381 16.1125 4.64933 15.4003C4.23485 14.6889 4.21683 13.9817 4.59527 13.2789L6.05494 10.6299L2.16248 2.41248H0V0.25H3.51403L4.54121 2.41248ZM8.16336 9.98116H15.732H8.16336Z"
+                    fill="#fff"
+                  />
+                </svg>
+                <span className="bg-yellow-400 rounded-full w-5 h-5 flexRowCenter absolute text-sm text-black font-semibold translate-x-4 -translate-y-4">0</span>
+              </div>
+
+
               <span className="text-xs font-medium mt-2">Cart</span>
             </div>
           ) : (
             <div className="w-16 h-16 rounded-full flex flex-col justify-center items-center">
-              <svg width="22" height="22">
-                <path
-                  className="group-focus:fill-white"
-                  d="M6.48744 21.8748C5.89276 21.8748 5.38385 21.6632 4.96073 21.2401C4.53688 20.8163 4.32496 20.307 4.32496 19.7123C4.32496 19.1176 4.53688 18.6084 4.96073 18.1845C5.38385 17.7614 5.89276 17.5498 6.48744 17.5498C7.08212 17.5498 7.59102 17.7614 8.01415 18.1845C8.43799 18.6084 8.64992 19.1176 8.64992 19.7123C8.64992 20.307 8.43799 20.8163 8.01415 21.2401C7.59102 21.6632 7.08212 21.8748 6.48744 21.8748ZM17.2998 21.8748C16.7051 21.8748 16.1962 21.6632 15.7731 21.2401C15.3493 20.8163 15.1374 20.307 15.1374 19.7123C15.1374 19.1176 15.3493 18.6084 15.7731 18.1845C16.1962 17.7614 16.7051 17.5498 17.2998 17.5498C17.8945 17.5498 18.4038 17.7614 18.8276 18.1845C19.2507 18.6084 19.4623 19.1176 19.4623 19.7123C19.4623 20.307 19.2507 20.8163 18.8276 21.2401C18.4038 21.6632 17.8945 21.8748 17.2998 21.8748ZM5.56838 4.57496L8.16336 9.98116H15.732L18.7054 4.57496H5.56838ZM4.54121 2.41248H20.4895C20.904 2.41248 21.2193 2.59701 21.4356 2.96607C21.6518 3.33586 21.6608 3.70997 21.4626 4.0884L17.6242 11.0083C17.426 11.3687 17.16 11.6481 16.8262 11.8463C16.4932 12.0445 16.1285 12.1436 15.732 12.1436H7.6768L6.48744 14.3061H19.4623V16.4686H6.48744C5.67651 16.4686 5.06381 16.1125 4.64933 15.4003C4.23485 14.6889 4.21683 13.9817 4.59527 13.2789L6.05494 10.6299L2.16248 2.41248H0V0.25H3.51403L4.54121 2.41248ZM8.16336 9.98116H15.732H8.16336Z"
-                  fill="#656070"
-                />
-              </svg>
+              <div className="relative flex">
+                <svg width="22" height="22">
+                  <path
+                    className="group-focus:fill-white"
+                    d="M6.48744 21.8748C5.89276 21.8748 5.38385 21.6632 4.96073 21.2401C4.53688 20.8163 4.32496 20.307 4.32496 19.7123C4.32496 19.1176 4.53688 18.6084 4.96073 18.1845C5.38385 17.7614 5.89276 17.5498 6.48744 17.5498C7.08212 17.5498 7.59102 17.7614 8.01415 18.1845C8.43799 18.6084 8.64992 19.1176 8.64992 19.7123C8.64992 20.307 8.43799 20.8163 8.01415 21.2401C7.59102 21.6632 7.08212 21.8748 6.48744 21.8748ZM17.2998 21.8748C16.7051 21.8748 16.1962 21.6632 15.7731 21.2401C15.3493 20.8163 15.1374 20.307 15.1374 19.7123C15.1374 19.1176 15.3493 18.6084 15.7731 18.1845C16.1962 17.7614 16.7051 17.5498 17.2998 17.5498C17.8945 17.5498 18.4038 17.7614 18.8276 18.1845C19.2507 18.6084 19.4623 19.1176 19.4623 19.7123C19.4623 20.307 19.2507 20.8163 18.8276 21.2401C18.4038 21.6632 17.8945 21.8748 17.2998 21.8748ZM5.56838 4.57496L8.16336 9.98116H15.732L18.7054 4.57496H5.56838ZM4.54121 2.41248H20.4895C20.904 2.41248 21.2193 2.59701 21.4356 2.96607C21.6518 3.33586 21.6608 3.70997 21.4626 4.0884L17.6242 11.0083C17.426 11.3687 17.16 11.6481 16.8262 11.8463C16.4932 12.0445 16.1285 12.1436 15.732 12.1436H7.6768L6.48744 14.3061H19.4623V16.4686H6.48744C5.67651 16.4686 5.06381 16.1125 4.64933 15.4003C4.23485 14.6889 4.21683 13.9817 4.59527 13.2789L6.05494 10.6299L2.16248 2.41248H0V0.25H3.51403L4.54121 2.41248ZM8.16336 9.98116H15.732H8.16336Z"
+                    fill="#656070"
+                  />
+                </svg>
+                <span className="bg-yellow-400 rounded-full w-5 h-5 flexRowCenter absolute text-sm text-black font-semibold translate-x-4 -translate-y-4">0</span>
+
+              </div>
+
+
               <span className="text-xs font-medium mt-2">Cart</span>
             </div>
           )}
         </Link>
 
+
         <Link href="/users">
           {route === "/users" ? (
-            <div className="w-20 h-20 rounded-full flex flex-col justify-center items-center bg-black text-white group">
+            <div className="w-20 h-20 rounded-full flex flex-col justify-center items-center bg-black text-white group"
+            onClick={()=>changeNav()}
+            >
               <svg width="24" height="24">
                 <path
                   fillRule="evenodd"
@@ -113,7 +149,9 @@ const MobileNav = () => {
               <span className="text-xs font-medium mt-2">Profile</span>
             </div>
           ) : (
-            <div className="w-20 h-20 rounded-full flex flex-col justify-center items-center focus:bg-black focus:text-white group">
+            <div className="w-20 h-20 rounded-full flex flex-col justify-center items-center focus:bg-black focus:text-white group"
+            onClick={() => changeNav()}
+            >
               <svg width="24" height="24">
                 <path
                   fillRule="evenodd"
@@ -126,6 +164,7 @@ const MobileNav = () => {
             </div>
           )}
         </Link>
+
       </div>
     </section>
   );
